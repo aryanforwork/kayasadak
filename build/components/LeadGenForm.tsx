@@ -1,0 +1,257 @@
+'use client';
+
+import React, { useState } from 'react';
+import { CONTACT_INFO, SERVICE_LINES } from '@/config/pricing';
+import { KayaLeafMotif } from './KayaLeafMotif';
+import {
+  FaWhatsapp,
+  FaLock,
+  FaPhoneAlt,
+  FaUser,
+  FaMapMarkerAlt,
+  FaShieldAlt,
+  FaSpa,
+  FaClock,
+  FaArrowRight,
+  FaChevronDown,
+} from 'react-icons/fa';
+
+interface LeadGenFormProps {
+  title?: string;
+  subtitle?: string;
+  defaultService?: string;
+  defaultLocality?: string;
+  className?: string;
+}
+
+export const LeadGenForm: React.FC<LeadGenFormProps> = ({
+  title = 'Book Your Free Trial Home Session',
+  subtitle = 'Connect directly with Nivil Chaudhary & senior faculty on WhatsApp',
+  defaultService = '',
+  defaultLocality = '',
+  className = '',
+}) => {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [service, setService] = useState(defaultService || 'Personal Yoga at Home');
+  const [locality, setLocality] = useState(defaultLocality || '');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name || !phone || !service) {
+      alert('Please fill in your Name, Phone Number, and Service Interest.');
+      return;
+    }
+
+    let messageText =
+      `Hi KayaSadhak! I am interested in booking a trial session.\n\n` +
+      `*Name:* ${name}\n` +
+      `*Phone:* ${phone}\n` +
+      `*Service:* ${service}`;
+
+    if (locality) {
+      messageText += `\n*Locality:* ${locality}`;
+    }
+
+    const waUrl = `${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(messageText)}`;
+    window.open(waUrl, '_blank');
+  };
+
+  return (
+    <div className={`bg-[#FAF6F0] rounded-[32px] border-4 border-[#16302B]/10 shadow-[0_25px_60px_rgba(0,0,0,0.12)] overflow-hidden relative w-full ${className}`}>
+      
+      {/* Top Dark Green Header Bar (Matching Reference Image) */}
+      <div className="bg-[#16302B] text-white py-4 px-6 flex items-center justify-center gap-2.5 font-display text-xs font-bold uppercase tracking-[0.18em] text-[#E5C384] border-b border-[#C08A3E]/30">
+        <div className="w-6 h-6 rounded-full bg-[#C08A3E]/20 border border-[#C08A3E]/40 flex items-center justify-center flex-shrink-0">
+          <FaWhatsapp className="w-3.5 h-3.5 text-[#E5C384]" />
+        </div>
+        <span>INSTANT WHATSAPP CALLBACK</span>
+      </div>
+
+      {/* Form Body Container */}
+      <div className="p-6 sm:p-8 md:p-10 space-y-6 text-left font-body">
+        
+        {/* Title & Subtitle */}
+        <div className="text-center space-y-2">
+          <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#16302B] leading-tight">
+            {title}
+          </h3>
+          <p className="font-body text-xs sm:text-sm text-[#5A574F]">
+            {subtitle}
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          
+          {/* Input 1: FULL NAME */}
+          <div>
+            <label className="block text-[11px] font-bold text-[#16302B] uppercase tracking-wider mb-1.5">
+              FULL NAME <span className="text-[#C08A3E]">*</span>
+            </label>
+            <div className="relative flex items-center">
+              <div className="absolute left-3.5 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
+                <FaUser className="w-3.5 h-3.5 text-[#C08A3E]" />
+              </div>
+              <input
+                type="text"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="e.g. Priya Sharma"
+                className="w-full pl-14 pr-4 py-3.5 rounded-xl border border-[#DCD3C0] text-sm focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
+              />
+            </div>
+          </div>
+
+          {/* Input 2: WHATSAPP MOBILE NUMBER */}
+          <div>
+            <label className="block text-[11px] font-bold text-[#16302B] uppercase tracking-wider mb-1.5">
+              WHATSAPP MOBILE NUMBER <span className="text-[#C08A3E]">*</span>
+            </label>
+            <div className="relative flex items-center">
+              <div className="absolute left-3.5 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
+                <FaWhatsapp className="w-4 h-4 text-[#C08A3E]" />
+              </div>
+              <input
+                type="tel"
+                required
+                pattern="[6-9][0-9]{9}"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
+                placeholder="10-digit mobile number"
+                className="w-full pl-14 pr-4 py-3.5 rounded-xl border border-[#DCD3C0] text-sm focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
+              />
+            </div>
+          </div>
+
+          {/* 2-Column Row: SERVICE INTEREST & LOCALITY */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            {/* Service Dropdown */}
+            <div>
+              <label className="block text-[11px] font-bold text-[#16302B] uppercase tracking-wider mb-1.5">
+                SERVICE INTEREST <span className="text-[#C08A3E]">*</span>
+              </label>
+              <div className="relative flex items-center">
+                <div className="absolute left-3.5 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
+                  <FaSpa className="w-3.5 h-3.5 text-[#C08A3E]" />
+                </div>
+                <select
+                  value={service}
+                  onChange={(e) => setService(e.target.value)}
+                  className="w-full pl-14 pr-8 py-3.5 rounded-xl border border-[#DCD3C0] text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] appearance-none shadow-inner"
+                >
+                  {SERVICE_LINES.map((s) => (
+                    <option key={s.id} value={s.name}>
+                      {s.name}
+                    </option>
+                  ))}
+                  <option value="Yoga Teacher Training (YTT)">Yoga Teacher Training (YTT)</option>
+                </select>
+                <FaChevronDown className="w-3 h-3 text-gray-400 absolute right-3 pointer-events-none" />
+              </div>
+            </div>
+
+            {/* Locality Input */}
+            <div>
+              <label className="block text-[11px] font-bold text-[#16302B] uppercase tracking-wider mb-1.5">
+                YOUR LOCALITY / SECTOR <span className="text-[#5A574F] font-normal lowercase">(optional)</span>
+              </label>
+              <div className="relative flex items-center">
+                <div className="absolute left-3.5 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
+                  <FaMapMarkerAlt className="w-3.5 h-3.5 text-[#C08A3E]" />
+                </div>
+                <input
+                  type="text"
+                  value={locality}
+                  onChange={(e) => setLocality(e.target.value)}
+                  placeholder="e.g. South Delhi, DLF Phase 5, Sector 17"
+                  className="w-full pl-14 pr-3 py-3.5 rounded-xl border border-[#DCD3C0] text-xs focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
+                />
+              </div>
+            </div>
+
+          </div>
+
+          {/* 4-Feature Micro Grid Strip Inside Form */}
+          <div className="bg-[#EFE8DC] border border-[#E0D7C4] rounded-2xl p-4 grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center my-3">
+            
+            {/* Feature 1 */}
+            <div className="flex flex-col items-center justify-center space-y-1 p-1">
+              <div className="w-7 h-7 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
+                <FaShieldAlt className="w-3.5 h-3.5" />
+              </div>
+              <span className="text-[10px] font-bold text-[#16302B] leading-tight">
+                Verified & Certified Instructors
+              </span>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="flex flex-col items-center justify-center space-y-1 p-1">
+              <div className="w-7 h-7 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
+                <FaSpa className="w-3.5 h-3.5" />
+              </div>
+              <span className="text-[10px] font-bold text-[#16302B] leading-tight">
+                Yoga, Ayurveda & Panchakarma Expertise
+              </span>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="flex flex-col items-center justify-center space-y-1 p-1">
+              <div className="w-7 h-7 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
+                <FaClock className="w-3.5 h-3.5" />
+              </div>
+              <span className="text-[10px] font-bold text-[#16302B] leading-tight">
+                Flexible Rescheduling & Family Friendly
+              </span>
+            </div>
+
+            {/* Feature 4 */}
+            <div className="flex flex-col items-center justify-center space-y-1 p-1">
+              <div className="w-7 h-7 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
+                <FaLock className="w-3.5 h-3.5" />
+              </div>
+              <span className="text-[10px] font-bold text-[#16302B] leading-tight">
+                100% Privacy Guaranteed
+              </span>
+            </div>
+
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="w-full py-4.5 px-6 bg-[#16302B] hover:bg-[#0E211D] text-white font-body font-bold text-xs sm:text-sm rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-between group mt-3"
+          >
+            <div className="flex items-center gap-3">
+              <FaWhatsapp className="w-5 h-5 text-[#25D366] group-hover:scale-110 transition-transform" />
+              <span className="uppercase tracking-wider">REQUEST INSTANT CALLBACK ON WHATSAPP</span>
+            </div>
+            <FaArrowRight className="w-4 h-4 text-[#E5C384] group-hover:translate-x-1 transition-transform" />
+          </button>
+
+          {/* Footer Call & Privacy Info */}
+          <div className="text-center pt-3 space-y-1.5 font-body">
+            <p className="text-[11px] text-[#5A574F] flex items-center justify-center gap-1.5">
+              <FaLock className="w-3 h-3 text-[#C08A3E] flex-shrink-0" />
+              <span>Privacy guaranteed. Direct connection to official line</span>
+              <strong className="text-[#16302B]">{CONTACT_INFO.phone}</strong>
+            </p>
+            <p className="text-xs flex items-center justify-center gap-1.5 pt-0.5">
+              <span className="text-[#5A574F]">Prefer calling?</span>
+              <a
+                href={`tel:${CONTACT_INFO.phoneClean}`}
+                className="text-[#16302B] font-bold hover:underline inline-flex items-center gap-1"
+              >
+                <FaPhoneAlt className="w-3 h-3 text-[#C08A3E]" />
+                <span>Call {CONTACT_INFO.phone} Directly</span>
+              </a>
+            </p>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  );
+};
