@@ -1,0 +1,11 @@
+{
+  "name": "kayasadhak",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd build && npm run dev",
+    "build": "cd build && npm run build",
+    "start": "cd build && npm run start",
+    "lint": "cd build && npm run lint"
+  }
+}
