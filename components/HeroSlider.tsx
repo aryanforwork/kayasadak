@@ -164,10 +164,10 @@ export const HeroSlider: React.FC = () => {
       {/* Main Content Overlay */}
       <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-8 sm:py-12">
         <div className="max-w-3xl space-y-4 sm:space-y-6 text-left">
-          {/* Eyebrow Location Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#1F4A3C]/60 backdrop-blur-md border border-[#1F4A3C]/80 px-3 sm:px-4 py-1.5 rounded-full shadow-lg">
-            <KayaLeafMotif size={14} color="#C08A3E" />
-            <span className="font-display font-semibold text-[10px] sm:text-xs md:text-sm text-brand-gold-500 tracking-[0.14em] uppercase">
+          {/* Eyebrow Location Badge — Transparent styling for clear background visibility */}
+          <div className="inline-flex items-center gap-2 bg-black/15 sm:bg-black/25 backdrop-blur-[2px] border border-white/20 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full shadow-sm">
+            <KayaLeafMotif size={13} color="#E5C384" />
+            <span className="font-display font-semibold text-[10px] sm:text-xs md:text-sm text-[#E5C384] tracking-[0.14em] uppercase drop-shadow-sm">
               {SLIDES[currentIndex].badge}
             </span>
           </div>

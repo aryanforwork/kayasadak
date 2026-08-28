@@ -2,16 +2,11 @@
 
 import React, { useState } from 'react';
 import { CONTACT_INFO, SERVICE_LINES } from '@/config/pricing';
-import { KayaLeafMotif } from './KayaLeafMotif';
 import {
   FaWhatsapp,
-  FaLock,
-  FaPhoneAlt,
   FaUser,
   FaMapMarkerAlt,
-  FaShieldAlt,
   FaSpa,
-  FaClock,
   FaArrowRight,
   FaChevronDown,
 } from 'react-icons/fa';
@@ -172,55 +167,10 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
             </div>
           </div>
 
-          {/* 4-Feature Micro Grid Strip Inside Form */}
-          <div className="bg-[#EFE8DC] border border-[#E0D7C4] rounded-2xl p-3 grid grid-cols-2 sm:grid-cols-4 gap-2 text-center my-2">
-            
-            {/* Feature 1 */}
-            <div className="flex flex-col items-center justify-center space-y-1 p-1">
-              <div className="w-8 h-8 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
-                <FaShieldAlt className="w-3.5 h-3.5" />
-              </div>
-              <span className="text-[10px] font-bold text-[#16302B] leading-tight">
-                Verified & Certified Instructors
-              </span>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="flex flex-col items-center justify-center space-y-1 p-1">
-              <div className="w-8 h-8 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
-                <FaSpa className="w-3.5 h-3.5" />
-              </div>
-              <span className="text-[10px] font-bold text-[#16302B] leading-tight">
-                Yoga, Ayurveda & Panchakarma Expertise
-              </span>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="flex flex-col items-center justify-center space-y-1 p-1">
-              <div className="w-8 h-8 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
-                <FaClock className="w-3.5 h-3.5" />
-              </div>
-              <span className="text-[10px] font-bold text-[#16302B] leading-tight">
-                Flexible Rescheduling & Family Friendly
-              </span>
-            </div>
-
-            {/* Feature 4 */}
-            <div className="flex flex-col items-center justify-center space-y-1 p-1">
-              <div className="w-8 h-8 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
-                <FaLock className="w-3.5 h-3.5" />
-              </div>
-              <span className="text-[10px] font-bold text-[#16302B] leading-tight">
-                100% Privacy Guaranteed
-              </span>
-            </div>
-
-          </div>
-
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-4.5 px-6 bg-[#16302B] hover:bg-[#0E211D] text-white font-body font-bold text-xs sm:text-sm rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-between group mt-3"
+            className="w-full py-4 px-6 bg-[#16302B] hover:bg-[#0E211D] text-white font-body font-bold text-xs sm:text-sm rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-between group mt-2"
           >
             <div className="flex items-center gap-3">
               <FaWhatsapp className="w-5 h-5 text-[#25D366] group-hover:scale-110 transition-transform" />
@@ -228,26 +178,6 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
             </div>
             <FaArrowRight className="w-4 h-4 text-[#E5C384] group-hover:translate-x-1 transition-transform" />
           </button>
-
-          {/* Footer Call & Privacy Info */}
-          <div className="text-center pt-3 space-y-1.5 font-body">
-            <p className="text-[11px] text-[#5A574F] flex items-center justify-center gap-1.5">
-              <FaLock className="w-3 h-3 text-[#C08A3E] flex-shrink-0" />
-              <span>Privacy guaranteed. Direct connection to official line</span>
-              <strong className="text-[#16302B]">{CONTACT_INFO.phone}</strong>
-            </p>
-            <p className="text-xs flex items-center justify-center gap-1.5 pt-0.5">
-              <span className="text-[#5A574F]">Prefer calling?</span>
-              <a
-                href={`tel:${CONTACT_INFO.phoneClean}`}
-                className="text-[#16302B] font-bold hover:underline inline-flex items-center gap-1"
-              >
-                <FaPhoneAlt className="w-3 h-3 text-[#C08A3E]" />
-                <span>Call {CONTACT_INFO.phone} Directly</span>
-              </a>
-            </p>
-          </div>
-
         </form>
       </div>
 
