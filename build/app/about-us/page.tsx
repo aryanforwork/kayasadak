@@ -16,30 +16,30 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
+    <div className="space-y-12 sm:space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
       {/* Hero Banner */}
-      <section className="relative bg-[#16302B] text-white pt-16 pb-24 overflow-hidden border-b border-brand-gold-500/20">
+      <section className="relative bg-[#16302B] text-white pt-10 sm:pt-16 pb-14 sm:pb-24 overflow-hidden border-b border-brand-gold-500/20">
         <div className="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style={{ backgroundImage: "url('/images/logo.webp')" }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#16302B] via-[#16302B]/90 to-[#1F4A3C]/70 z-10"></div>
 
-        <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-brand-gold-500/20 border border-brand-gold-500/40 px-4 py-1.5 rounded-full text-xs font-body font-semibold text-brand-gold-500 tracking-widest uppercase">
-            <KayaLeafMotif size={14} color="#C08A3E" />
+        <div className="relative z-20 w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-12 text-center space-y-4 sm:space-y-6">
+          <div className="inline-flex items-center gap-2 bg-brand-gold-500/20 border border-brand-gold-500/40 px-3.5 py-1 rounded-full text-[11px] font-body font-semibold text-brand-gold-500 tracking-widest uppercase">
+            <KayaLeafMotif size={12} color="#C08A3E" />
             <span>Our Leadership & Mission</span>
           </div>
 
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto">
+          <h1 className="font-heading text-2.5xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto">
             Authentic Yoga Leadership & Institutional Excellence
           </h1>
 
-          <p className="font-body text-base sm:text-lg text-brand-green-50/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-body text-xs sm:text-lg text-brand-green-50/90 max-w-3xl mx-auto leading-relaxed">
             KayaSadhak was established to bring structured, authentic yogic science and Ayurvedic care directly into homes and professional training institutes across India.
           </p>
         </div>
       </section>
 
       {/* Founder Spotlight Section */}
-      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+      <section className="w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-12">
         <div className="bg-white border border-[#1F4A3C]/15 rounded-3xl p-8 sm:p-14 shadow-xl grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
           <div className="md:col-span-4 flex justify-center">
             <div className="w-56 h-64 bg-[#F3EEE2] border-2 border-brand-gold-500/30 rounded-3xl flex flex-col items-center justify-center p-6 text-center shadow-inner">

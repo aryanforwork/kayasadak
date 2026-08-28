@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
     <footer className="w-full bg-[#071611] text-white font-body relative overflow-hidden select-none border-t border-[#C08A3E]/40">
       
       {/* 1. TOP SPIRITUAL HERO BANNER (Himalayan Sunrise & Meditating Practitioner) */}
-      <div className="relative w-full py-20 px-4 sm:px-8 lg:px-12 text-center flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative w-full py-12 sm:py-20 px-3 sm:px-8 lg:px-12 text-center flex flex-col items-center justify-center overflow-hidden">
         {/* Background Image */}
         <img
           src="/images/footer_himalayan_hero.webp"

@@ -1,0 +1,86 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Personal Yoga at Home",
+  "provider": {
+    "@type": "Organization",
+    "name": "KayaSadhak",
+    "url": "https://kayasadhak.com"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Delhi" },
+    { "@type": "City", "name": "Noida" },
+    { "@type": "City", "name": "Greater Noida" },
+    { "@type": "City", "name": "Ghaziabad" },
+    { "@type": "City", "name": "Faridabad" },
+    { "@type": "City", "name": "Gurugram" },
+    { "@type": "City", "name": "Chandigarh" },
+    { "@type": "City", "name": "Mohali" },
+    { "@type": "City", "name": "Panchkula" }
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Platinum Tier - 3 days/week (12 sessions)",
+      "price": "12000",
+      "priceCurrency": "INR",
+      "description": "Platinum Tier Instructor (Masters + 10+ yrs exp), 12 sessions/month"
+    },
+    {
+      "@type": "Offer",
+      "name": "Platinum Tier - 4 days/week (16 sessions)",
+      "price": "16000",
+      "priceCurrency": "INR",
+      "description": "Platinum Tier Instructor (Masters + 10+ yrs exp), 16 sessions/month"
+    },
+    {
+      "@type": "Offer",
+      "name": "Platinum Tier - 5 days/week (20 sessions)",
+      "price": "20000",
+      "priceCurrency": "INR",
+      "description": "Platinum Tier Instructor (Masters + 10+ yrs exp), 20 sessions/month"
+    },
+    {
+      "@type": "Offer",
+      "name": "Gold Tier - 3 days/week (12 sessions)",
+      "price": "9000",
+      "priceCurrency": "INR",
+      "description": "Gold Tier Instructor (Graduation + 7+ yrs exp), 12 sessions/month"
+    },
+    {
+      "@type": "Offer",
+      "name": "Gold Tier - 4 days/week (16 sessions)",
+      "price": "12000",
+      "priceCurrency": "INR",
+      "description": "Gold Tier Instructor (Graduation + 7+ yrs exp), 16 sessions/month"
+    },
+    {
+      "@type": "Offer",
+      "name": "Gold Tier - 5 days/week (20 sessions)",
+      "price": "15000",
+      "priceCurrency": "INR",
+      "description": "Gold Tier Instructor (Graduation + 7+ yrs exp), 20 sessions/month"
+    },
+    {
+      "@type": "Offer",
+      "name": "Silver Tier - 3 days/week (12 sessions)",
+      "price": "6000",
+      "priceCurrency": "INR",
+      "description": "Silver Tier Instructor (Diploma + 5+ yrs exp), 12 sessions/month"
+    },
+    {
+      "@type": "Offer",
+      "name": "Silver Tier - 4 days/week (16 sessions)",
+      "price": "8000",
+      "priceCurrency": "INR",
+      "description": "Silver Tier Instructor (Diploma + 5+ yrs exp), 16 sessions/month"
+    },
+    {
+      "@type": "Offer",
+      "name": "Silver Tier - 5 days/week (20 sessions)",
+      "price": "10000",
+      "priceCurrency": "INR",
+      "description": "Silver Tier Instructor (Diploma + 5+ yrs exp), 20 sessions/month"
+    }
+  ]
+}

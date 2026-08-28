@@ -167,18 +167,18 @@ export const ServicesCarousel: React.FC = () => {
         </div>
       </div>
 
-      {/* Horizontal Scroll Cards Container (Auto Slides & Pauses on Hover) */}
+      {/* Horizontal Scroll Cards Container (Auto Slides, Touch Swipe & CSS Snap) */}
       <div
         ref={scrollContainerRef}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
-        className="flex items-stretch gap-6 overflow-x-auto scrollbar-none scroll-smooth pb-4 pt-1"
+        className="flex items-stretch gap-4 sm:gap-6 overflow-x-auto scrollbar-none scroll-smooth pb-4 pt-1 snap-x snap-mandatory px-1"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {SERVICE_CARDS.map((card) => (
           <div
             key={card.id}
-            className="w-[280px] sm:w-[320px] lg:w-[340px] flex-shrink-0 h-[480px] sm:h-[520px] rounded-3xl overflow-hidden relative shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group"
+            className="w-[82vw] max-w-[310px] sm:w-[320px] lg:w-[340px] flex-shrink-0 h-[430px] sm:h-[500px] rounded-3xl overflow-hidden relative shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group snap-center"
           >
             {/* Background Image */}
             <img
@@ -190,18 +190,18 @@ export const ServicesCarousel: React.FC = () => {
             />
 
             {/* Dark Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity group-hover:from-black/95" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-transparent transition-opacity group-hover:from-black/95" />
 
             {/* Subtitle Badge */}
             <div className="absolute top-4 left-4 z-10">
-              <span className="bg-black/40 backdrop-blur-md border border-white/20 text-brand-gold-500 font-display text-[10px] sm:text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest">
+              <span className="bg-black/50 backdrop-blur-md border border-white/20 text-brand-gold-500 font-display text-[9px] sm:text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest">
                 {card.subtitle}
               </span>
             </div>
 
             {/* Content Container (Bottom Aligned) */}
-            <div className="absolute bottom-0 inset-x-0 p-6 z-10 space-y-4 text-left">
-              <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white leading-tight">
+            <div className="absolute bottom-0 inset-x-0 p-5 sm:p-6 z-10 space-y-3 sm:space-y-4 text-left">
+              <h3 className="font-heading font-bold text-xl sm:text-2xl lg:text-3xl text-white leading-tight">
                 {card.title}
               </h3>
               <p className="font-body text-xs sm:text-sm text-gray-200/90 leading-relaxed line-clamp-3">
@@ -209,10 +209,10 @@ export const ServicesCarousel: React.FC = () => {
               </p>
 
               {/* Rounded Pill Outline Button */}
-              <div className="pt-2">
+              <div className="pt-1.5 sm:pt-2">
                 <Link
                   href={card.btnLink}
-                  className="w-full py-3.5 px-5 rounded-full border border-white/40 hover:border-brand-gold-500 bg-black/30 hover:bg-brand-gold-500 text-white font-display font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2.5 transition-all duration-300 shadow-md group/btn"
+                  className="w-full py-3 sm:py-3.5 px-4 sm:px-5 rounded-full border border-white/40 hover:border-brand-gold-500 bg-black/30 hover:bg-brand-gold-500 text-white font-display font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-all duration-300 shadow-md group/btn active:scale-[0.98]"
                 >
                   <span>{card.btnText}</span>
                   <FaArrowRight className="w-3 h-3 text-brand-gold-500 group-hover/btn:text-white group-hover/btn:translate-x-1 transition-all" />

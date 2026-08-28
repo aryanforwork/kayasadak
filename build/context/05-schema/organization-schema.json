@@ -1,0 +1,45 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.kayasadhak.com/#organization",
+  "name": "KayaSadhak",
+  "url": "https://www.kayasadhak.com",
+  "logo": "https://www.kayasadhak.com/images/logo.png",
+  "founder": {
+    "@type": "Person",
+    "name": "Nivil Chaudhary",
+    "jobTitle": "Founder & Lead Yoga Instructor",
+    "description": "Fully qualified yoga instructor with 12+ years of clinical and home yoga teaching experience."
+  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91-8273264561",
+      "contactType": "customer service",
+      "email": "contact@kayasadhak.com",
+      "availableLanguage": ["English", "Hindi"]
+    },
+    {
+      "@type": "ContactPoint",
+      "email": "kayasadhak@gmail.com",
+      "contactType": "secondary contact"
+    }
+  ],
+  "sameAs": [
+    "https://instagram.com/kayasadhak",
+    "https://facebook.com/kayasadhak",
+    "https://twitter.com/kayasadhak",
+    "https://youtube.com/@kayasadhak"
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Delhi" },
+    { "@type": "City", "name": "Noida" },
+    { "@type": "City", "name": "Greater Noida" },
+    { "@type": "City", "name": "Ghaziabad" },
+    { "@type": "City", "name": "Faridabad" },
+    { "@type": "City", "name": "Gurugram" },
+    { "@type": "City", "name": "Chandigarh" },
+    { "@type": "City", "name": "Mohali" },
+    { "@type": "City", "name": "Panchkula" }
+  ]
+}

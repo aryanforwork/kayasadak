@@ -69,11 +69,11 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
       </div>
 
       {/* Form Body Container */}
-      <div className="p-6 sm:p-8 md:p-10 space-y-6 text-left font-body">
+      <div className="p-4 sm:p-8 md:p-10 space-y-5 sm:space-y-6 text-left font-body">
         
         {/* Title & Subtitle */}
-        <div className="text-center space-y-2">
-          <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#16302B] leading-tight">
+        <div className="text-center space-y-1.5">
+          <h3 className="font-heading font-bold text-xl sm:text-2xl md:text-3xl text-[#16302B] leading-tight">
             {title}
           </h3>
           <p className="font-body text-xs sm:text-sm text-[#5A574F]">
@@ -81,15 +81,15 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4">
           
           {/* Input 1: FULL NAME */}
           <div>
-            <label className="block text-[11px] font-bold text-[#16302B] uppercase tracking-wider mb-1.5">
+            <label className="block text-[10px] sm:text-[11px] font-bold text-[#16302B] uppercase tracking-wider mb-1">
               FULL NAME <span className="text-[#C08A3E]">*</span>
             </label>
             <div className="relative flex items-center">
-              <div className="absolute left-3.5 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
+              <div className="absolute left-3 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
                 <FaUser className="w-3.5 h-3.5 text-[#C08A3E]" />
               </div>
               <input
@@ -98,18 +98,18 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g. Priya Sharma"
-                className="w-full pl-14 pr-4 py-3.5 rounded-xl border border-[#DCD3C0] text-sm focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
+                className="w-full pl-13 pr-4 py-3 sm:py-3.5 rounded-xl border border-[#DCD3C0] text-base focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
               />
             </div>
           </div>
 
           {/* Input 2: WHATSAPP MOBILE NUMBER */}
           <div>
-            <label className="block text-[11px] font-bold text-[#16302B] uppercase tracking-wider mb-1.5">
+            <label className="block text-[10px] sm:text-[11px] font-bold text-[#16302B] uppercase tracking-wider mb-1">
               WHATSAPP MOBILE NUMBER <span className="text-[#C08A3E]">*</span>
             </label>
             <div className="relative flex items-center">
-              <div className="absolute left-3.5 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
+              <div className="absolute left-3 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
                 <FaWhatsapp className="w-4 h-4 text-[#C08A3E]" />
               </div>
               <input
@@ -119,27 +119,27 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
                 value={phone}
                 onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
                 placeholder="10-digit mobile number"
-                className="w-full pl-14 pr-4 py-3.5 rounded-xl border border-[#DCD3C0] text-sm focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
+                className="w-full pl-13 pr-4 py-3 sm:py-3.5 rounded-xl border border-[#DCD3C0] text-base focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
               />
             </div>
           </div>
 
           {/* 2-Column Row: SERVICE INTEREST & LOCALITY */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
             
             {/* Service Dropdown */}
             <div>
-              <label className="block text-[11px] font-bold text-[#16302B] uppercase tracking-wider mb-1.5">
+              <label className="block text-[10px] sm:text-[11px] font-bold text-[#16302B] uppercase tracking-wider mb-1">
                 SERVICE INTEREST <span className="text-[#C08A3E]">*</span>
               </label>
               <div className="relative flex items-center">
-                <div className="absolute left-3.5 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
+                <div className="absolute left-3 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
                   <FaSpa className="w-3.5 h-3.5 text-[#C08A3E]" />
                 </div>
                 <select
                   value={service}
                   onChange={(e) => setService(e.target.value)}
-                  className="w-full pl-14 pr-8 py-3.5 rounded-xl border border-[#DCD3C0] text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] appearance-none shadow-inner"
+                  className="w-full pl-13 pr-8 py-3 sm:py-3.5 rounded-xl border border-[#DCD3C0] text-base font-semibold focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] appearance-none shadow-inner"
                 >
                   {SERVICE_LINES.map((s) => (
                     <option key={s.id} value={s.name}>
@@ -154,23 +154,22 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
 
             {/* Locality Input */}
             <div>
-              <label className="block text-[11px] font-bold text-[#16302B] uppercase tracking-wider mb-1.5">
-                YOUR LOCALITY / SECTOR <span className="text-[#5A574F] font-normal lowercase">(optional)</span>
+              <label className="block text-[10px] sm:text-[11px] font-bold text-[#16302B] uppercase tracking-wider mb-1">
+                LOCALITY <span className="text-[#5A574F] font-normal lowercase">(optional)</span>
               </label>
               <div className="relative flex items-center">
-                <div className="absolute left-3.5 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
+                <div className="absolute left-3 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
                   <FaMapMarkerAlt className="w-3.5 h-3.5 text-[#C08A3E]" />
                 </div>
                 <input
                   type="text"
                   value={locality}
                   onChange={(e) => setLocality(e.target.value)}
-                  placeholder="e.g. South Delhi, DLF Phase 5, Sector 17"
-                  className="w-full pl-14 pr-3 py-3.5 rounded-xl border border-[#DCD3C0] text-xs focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
+                  placeholder="e.g. South Extension / Sector 54"
+                  className="w-full pl-13 pr-4 py-3 sm:py-3.5 rounded-xl border border-[#DCD3C0] text-base focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
                 />
               </div>
             </div>
-
           </div>
 
           {/* 4-Feature Micro Grid Strip Inside Form */}

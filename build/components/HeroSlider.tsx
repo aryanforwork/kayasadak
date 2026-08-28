@@ -78,6 +78,8 @@ export const SLIDES: SlideData[] = [
 export const HeroSlider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
   const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % SLIDES.length);
@@ -86,6 +88,34 @@ export const HeroSlider: React.FC = () => {
   const prevSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);
   }, []);
+
+  // Touch Swipe Handlers for Native Mobile Feel
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+    setIsPaused(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) {
+      setIsPaused(false);
+      return;
+    }
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 45;
+    const isRightSwipe = distance < -45;
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+    setTouchStart(null);
+    setTouchEnd(null);
+    setIsPaused(false);
+  };
 
   useEffect(() => {
     if (isPaused) return;
@@ -97,9 +127,12 @@ export const HeroSlider: React.FC = () => {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-black min-h-[580px] sm:min-h-[640px] lg:min-h-[720px] h-[82vh] max-h-[880px] flex items-center select-none"
+      className="relative w-full overflow-hidden bg-black min-h-[500px] sm:min-h-[640px] lg:min-h-[720px] h-[78vh] sm:h-[82vh] max-h-[860px] flex items-center select-none"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       {/* Background Slides with Crossfade */}
       {SLIDES.map((slide, index) => {
@@ -122,63 +155,58 @@ export const HeroSlider: React.FC = () => {
             />
 
             {/* Gradient Overlays for Contrast */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/30 sm:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/40" />
           </div>
         );
       })}
 
       {/* Main Content Overlay */}
-      <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12">
-        <div className="max-w-3xl space-y-6 text-left">
+      <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-8 sm:py-12">
+        <div className="max-w-3xl space-y-4 sm:space-y-6 text-left">
           {/* Eyebrow Location Badge */}
-          <div className="inline-flex items-center gap-2.5 bg-[#1F4A3C]/50 backdrop-blur-md border border-[#1F4A3C]/70 px-4 py-2 rounded-full shadow-lg">
-            <KayaLeafMotif size={16} color="#C08A3E" />
-            <span className="font-display font-semibold text-xs sm:text-sm text-brand-gold-500 tracking-[0.14em] uppercase">
+          <div className="inline-flex items-center gap-2 bg-[#1F4A3C]/60 backdrop-blur-md border border-[#1F4A3C]/80 px-3 sm:px-4 py-1.5 rounded-full shadow-lg">
+            <KayaLeafMotif size={14} color="#C08A3E" />
+            <span className="font-display font-semibold text-[10px] sm:text-xs md:text-sm text-brand-gold-500 tracking-[0.14em] uppercase">
               {SLIDES[currentIndex].badge}
             </span>
           </div>
 
           {/* Service Headline */}
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] tracking-tight drop-shadow-md">
+          <h1 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.12] tracking-tight drop-shadow-md">
             {SLIDES[currentIndex].titlePrefix}
-            <span className="text-[#529983] underline decoration-[#1F4A3C] underline-offset-8">
+            <span className="text-[#529983] underline decoration-[#1F4A3C] underline-offset-4 sm:underline-offset-8">
               {SLIDES[currentIndex].titleHighlight}
             </span>
             {SLIDES[currentIndex].titleSuffix}
           </h1>
 
           {/* Service Short Description Quote */}
-          <p className="font-body text-base sm:text-lg lg:text-xl text-gray-200/90 leading-relaxed max-w-2xl drop-shadow">
+          <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200/95 leading-relaxed max-w-2xl drop-shadow line-clamp-3 sm:line-clamp-none">
             {SLIDES[currentIndex].description}
           </p>
 
           {/* CTA Action Button */}
-          <div className="pt-3 flex items-center gap-4">
+          <div className="pt-2 sm:pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             {SLIDES[currentIndex].isExternal ? (
               <a
                 href={SLIDES[currentIndex].ctaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-brand-green-900 hover:bg-brand-green-700 text-white font-body font-semibold text-sm sm:text-base rounded-xl transition-all shadow-xl hover:shadow-2xl flex items-center gap-3 group border border-brand-green-700/50"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#16302B] hover:bg-brand-green-700 text-white font-body font-bold text-xs sm:text-base rounded-xl transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-2.5 border border-[#C08A3E]/40 active:scale-[0.98]"
               >
                 <span>{SLIDES[currentIndex].ctaText}</span>
-                <FaArrowRight className="w-3.5 h-3.5 text-brand-gold-500 group-hover:translate-x-1 transition-transform" />
+                <FaArrowRight className="w-3.5 h-3.5 text-brand-gold-500" />
               </a>
             ) : (
               <Link
                 href={SLIDES[currentIndex].ctaLink}
-                className="px-8 py-4 bg-brand-green-900 hover:bg-brand-green-700 text-white font-body font-semibold text-sm sm:text-base rounded-xl transition-all shadow-xl hover:shadow-2xl flex items-center gap-3 group border border-brand-green-700/50"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#16302B] hover:bg-brand-green-700 text-white font-body font-bold text-xs sm:text-base rounded-xl transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-2.5 border border-[#C08A3E]/40 active:scale-[0.98]"
               >
                 <span>{SLIDES[currentIndex].ctaText}</span>
-                <FaArrowRight className="w-3.5 h-3.5 text-brand-gold-500 group-hover:translate-x-1 transition-transform" />
+                <FaArrowRight className="w-3.5 h-3.5 text-brand-gold-500" />
               </Link>
             )}
-
-            <span className="hidden sm:inline-flex items-center gap-1.5 font-body text-xs sm:text-sm text-gray-200/90 pl-2">
-              <FaMapMarkerAlt className="w-3.5 h-3.5 text-brand-gold-500" />
-              <span>{SLIDES[currentIndex].locationLabel}</span>
-            </span>
           </div>
         </div>
       </div>

@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { CONTACT_INFO } from '@/config/pricing';
 import { KayaLeafMotif } from './KayaLeafMotif';
 import {
@@ -14,14 +16,56 @@ import {
 } from 'react-icons/fa';
 
 export const PricingTable: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<'platinum' | 'gold' | 'silver'>('gold');
+
   return (
-    <div className="w-full max-w-[1600px] mx-auto my-12 font-body select-none">
+    <div className="w-full max-w-[1600px] mx-auto my-8 sm:my-12 font-body select-none">
       
-      {/* 3 Pricing Cards Grid: Platinum (Left) -> Gold (Middle) -> Silver (Right) */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+      {/* Mobile-Only Segmented Control Tab Switcher */}
+      <div className="md:hidden flex items-center p-1.5 bg-[#EAE2D2] rounded-2xl mb-6 shadow-inner border border-[#D9CEB9]">
+        <button
+          onClick={() => setActiveTab('gold')}
+          className={`flex-1 py-2.5 px-2 rounded-xl font-display font-bold text-xs transition-all flex items-center justify-center gap-1.5 ${
+            activeTab === 'gold'
+              ? 'bg-[#C08A3E] text-white shadow-md'
+              : 'text-[#5A574F] hover:text-[#16302B]'
+          }`}
+        >
+          <FaStar className="w-3 h-3 text-[#FFE082]" />
+          <span>Gold (₹750)</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab('platinum')}
+          className={`flex-1 py-2.5 px-2 rounded-xl font-display font-bold text-xs transition-all flex items-center justify-center gap-1.5 ${
+            activeTab === 'platinum'
+              ? 'bg-[#16302B] text-[#E5C384] shadow-md'
+              : 'text-[#5A574F] hover:text-[#16302B]'
+          }`}
+        >
+          <FaCrown className="w-3 h-3 text-[#E5C384]" />
+          <span>Platinum (₹1k)</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab('silver')}
+          className={`flex-1 py-2.5 px-2 rounded-xl font-display font-bold text-xs transition-all flex items-center justify-center gap-1.5 ${
+            activeTab === 'silver'
+              ? 'bg-white text-[#16302B] shadow-md border border-[#D9CEB9]'
+              : 'text-[#5A574F] hover:text-[#16302B]'
+          }`}
+        >
+          <span>Silver (₹500)</span>
+        </button>
+      </div>
+
+      {/* 3 Pricing Cards Grid: Tabbed on Mobile (< md), 3-col on Desktop (>= md) */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
         
         {/* CARD 1: PLATINUM TIER (Left Card - Master Credential) */}
-        <div className="bg-[#FAF6F0] border-2 border-[#16302B] rounded-[32px] p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+        <div className={`bg-[#FAF6F0] border-2 border-[#16302B] rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex-col justify-between relative overflow-hidden group ${
+          activeTab === 'platinum' ? 'flex' : 'hidden md:flex'
+        }`}>
           
           {/* Top Dark Green Ribbon Badge */}
           <div className="absolute top-0 right-0 bg-[#16302B] text-[#E5C384] font-display text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-bl-2xl shadow-sm flex items-center gap-1.5 border-b border-l border-[#C08A3E]/30">
@@ -131,7 +175,9 @@ export const PricingTable: React.FC = () => {
         </div>
 
         {/* CARD 2: GOLD TIER (Middle Card - MOST POPULAR) */}
-        <div className="bg-[#FAF6F0] border-2 border-[#C08A3E] rounded-[32px] p-6 sm:p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden transform lg:-translate-y-2 group">
+        <div className={`bg-[#FAF6F0] border-2 border-[#C08A3E] rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 flex-col justify-between relative overflow-hidden transform lg:-translate-y-2 group ${
+          activeTab === 'gold' ? 'flex' : 'hidden md:flex'
+        }`}>
           
           {/* Top Gold Ribbon Badge */}
           <div className="absolute top-0 right-0 bg-[#C08A3E] text-white font-display text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-bl-2xl shadow-md flex items-center gap-1.5">
@@ -241,7 +287,9 @@ export const PricingTable: React.FC = () => {
         </div>
 
         {/* CARD 3: SILVER TIER (Right Card) */}
-        <div className="bg-[#FAF6F0] border border-[#D9CEB9] rounded-[32px] p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+        <div className={`bg-[#FAF6F0] border border-[#D9CEB9] rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex-col justify-between relative overflow-hidden group ${
+          activeTab === 'silver' ? 'flex' : 'hidden md:flex'
+        }`}>
           
           <div className="space-y-6 pt-3">
             

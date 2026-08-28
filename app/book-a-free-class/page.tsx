@@ -53,34 +53,34 @@ export default function BookFreeClassPage() {
   };
 
   return (
-    <div className="space-y-16 pb-16 bg-[#F3EEE2] text-[#26241F]">
+    <div className="space-y-10 sm:space-y-16 pb-16 bg-[#F3EEE2] text-[#26241F]">
       {/* Hero Banner */}
-      <section className="relative bg-[#16302B] text-white pt-16 pb-20 overflow-hidden border-b border-brand-gold-500/20">
-        <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 text-center space-y-4">
-          <div className="inline-flex items-center gap-2 bg-brand-gold-500/20 border border-brand-gold-500/40 px-4 py-1.5 rounded-full text-xs font-body font-semibold text-brand-gold-500 tracking-widest uppercase">
-            <KayaLeafMotif size={14} color="#C08A3E" />
+      <section className="relative bg-[#16302B] text-white pt-10 sm:pt-16 pb-12 sm:pb-20 overflow-hidden border-b border-brand-gold-500/20">
+        <div className="relative z-20 w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-12 text-center space-y-3 sm:space-y-4">
+          <div className="inline-flex items-center gap-2 bg-brand-gold-500/20 border border-brand-gold-500/40 px-3.5 py-1 rounded-full text-[11px] font-body font-semibold text-brand-gold-500 tracking-widest uppercase">
+            <KayaLeafMotif size={12} color="#C08A3E" />
             <span>4-Step Guided Booking Wizard</span>
           </div>
 
-          <h1 className="font-heading text-4xl sm:text-5xl font-bold leading-tight max-w-4xl mx-auto">
+          <h1 className="font-heading text-2.5xl sm:text-5xl font-bold leading-tight max-w-4xl mx-auto">
             Book Your Personal Home Yoga Consultation
           </h1>
 
-          <p className="font-body text-sm sm:text-base text-brand-green-50/90 max-w-2xl mx-auto">
+          <p className="font-body text-xs sm:text-base text-brand-green-50/90 max-w-2xl mx-auto">
             Match with verified Platinum, Gold, or Silver instructors in your area.
           </p>
         </div>
       </section>
 
       {/* Progress Bar */}
-      <div className="w-full max-w-3xl mx-auto px-4">
+      <div className="w-full max-w-3xl mx-auto px-3 sm:px-4">
         <div className="w-full bg-gray-200 h-2.5 rounded-full overflow-hidden">
           <div
             className="bg-brand-green-900 h-full transition-all duration-300 ease-in-out"
             style={{ width: `${step * 25}%` }}
           ></div>
         </div>
-        <div className="grid grid-cols-4 text-center text-xs font-body font-semibold text-neutral-grey mt-2">
+        <div className="grid grid-cols-4 text-center text-[11px] sm:text-xs font-body font-semibold text-neutral-grey mt-2">
           <span className={step >= 1 ? 'text-brand-green-900 font-bold' : ''}>1. Service</span>
           <span className={step >= 2 ? 'text-brand-green-900 font-bold' : ''}>2. Tier</span>
           <span className={step >= 3 ? 'text-brand-green-900 font-bold' : ''}>3. Schedule</span>
@@ -89,12 +89,12 @@ export default function BookFreeClassPage() {
       </div>
 
       {/* Form Wizard Container */}
-      <div className="bg-white border border-[#1F4A3C]/15 rounded-3xl p-6 sm:p-10 shadow-xl max-w-3xl mx-auto">
+      <div className="bg-white border border-[#1F4A3C]/15 rounded-2xl sm:rounded-3xl p-4 sm:p-10 shadow-xl max-w-3xl mx-auto mx-3 sm:mx-auto">
         <form onSubmit={handleNext} className="space-y-6">
           {/* STEP 1 */}
           {step === 1 && (
             <div className="space-y-5">
-              <h3 className="font-heading font-bold text-2xl text-brand-green-900">
+              <h3 className="font-heading font-bold text-xl sm:text-2xl text-brand-green-900">
                 Step 1 of 4: Select Your Region & Service Line
               </h3>
 
@@ -102,7 +102,7 @@ export default function BookFreeClassPage() {
                 <label className="block font-body text-xs font-semibold text-neutral-charcoal mb-2">
                   Select Your Region <span className="text-brand-gold-500">*</span>
                 </label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
                   {[
                     { title: 'Delhi NCR', desc: 'Delhi, Gurugram, Noida, Ghaziabad' },
                     { title: 'Chandigarh Tricity', desc: 'Chandigarh, Mohali, Panchkula' },
@@ -112,13 +112,13 @@ export default function BookFreeClassPage() {
                       type="button"
                       key={r.title}
                       onClick={() => setRegion(r.title)}
-                      className={`p-4 text-left rounded-xl border text-xs transition-all ${
+                      className={`p-3 sm:p-4 text-left rounded-xl border text-xs transition-all ${
                         region === r.title
                           ? 'border-brand-green-900 bg-[#F3EEE2] text-brand-green-900 font-semibold shadow-sm'
                           : 'border-gray-200 hover:border-brand-green-900/40 text-neutral-charcoal'
                       }`}
                     >
-                      <div className="font-heading font-bold text-sm">{r.title}</div>
+                      <div className="font-heading font-bold text-xs sm:text-sm">{r.title}</div>
                       <div className="text-[10px] text-neutral-grey mt-0.5">{r.desc}</div>
                     </button>
                   ))}
@@ -135,7 +135,7 @@ export default function BookFreeClassPage() {
                   value={locality}
                   onChange={(e) => setLocality(e.target.value)}
                   placeholder="e.g. Vasant Kunj, DLF Phase 5, Sector 17"
-                  className="w-full px-4 py-3.5 rounded-xl border border-gray-300 font-body text-sm focus:ring-2 focus:ring-brand-green-900 bg-[#F3EEE2]/30"
+                  className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-gray-300 font-body text-base focus:ring-2 focus:ring-brand-green-900 bg-[#F3EEE2]/30"
                 />
               </div>
 
@@ -317,7 +317,7 @@ export default function BookFreeClassPage() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="e.g. Priya Sharma"
-                  className="w-full px-4 py-3.5 rounded-xl border border-gray-300 font-body text-sm bg-[#F3EEE2]/30"
+                  className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-gray-300 font-body text-base bg-[#F3EEE2]/30"
                 />
               </div>
 
@@ -332,7 +332,7 @@ export default function BookFreeClassPage() {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
                   placeholder="10-digit mobile number"
-                  className="w-full px-4 py-3.5 rounded-xl border border-gray-300 font-body text-sm bg-[#F3EEE2]/30"
+                  className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-gray-300 font-body text-base bg-[#F3EEE2]/30"
                 />
               </div>
 

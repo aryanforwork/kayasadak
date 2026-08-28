@@ -100,13 +100,13 @@ export const OmniSanctuary: React.FC = () => {
         </div>
 
         {/* Center Column: Glowing Illuminated Lotus & Yogi Silhouette Mandala */}
-        <div className="lg:col-span-4 flex items-center justify-center relative my-8 lg:my-0">
-          <div className="relative w-[340px] h-[340px] sm:w-[420px] sm:h-[420px] lg:w-[460px] lg:h-[460px] flex items-center justify-center">
+        <div className="lg:col-span-4 flex items-center justify-center relative my-6 lg:my-0">
+          <div className="relative w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] flex items-center justify-center">
             
             {/* Outer Glowing Pulsing Lotus Ring */}
             <div className="absolute inset-0 rounded-full border border-brand-gold-400/35 bg-radial from-brand-gold-500/25 via-transparent to-transparent animate-pulse" />
             
-            {/* Smoothly Rotating Golden Sacred Geometry Chakra & Mandala Wheel (Exact requirement) */}
+            {/* Smoothly Rotating Golden Sacred Geometry Chakra & Mandala Wheel */}
             <svg className="absolute inset-0 w-full h-full text-brand-gold-400/50 animate-[spin_45s_linear_infinite] filter drop-shadow-[0_0_20px_rgba(192,138,62,0.5)]" viewBox="0 0 200 200" fill="none">
               <circle cx="100" cy="100" r="96" stroke="currentColor" strokeWidth="0.8" strokeDasharray="3 3" />
               <circle cx="100" cy="100" r="88" stroke="currentColor" strokeWidth="0.5" />
@@ -129,36 +129,38 @@ export const OmniSanctuary: React.FC = () => {
             </svg>
 
             {/* Inner Radiant Aura Circle */}
-            <div className="absolute inset-6 rounded-full bg-radial from-brand-gold-500/30 via-[#529983]/30 to-transparent blur-md" />
+            <div className="absolute inset-4 sm:inset-6 rounded-full bg-radial from-brand-gold-500/30 via-[#529983]/30 to-transparent blur-md" />
 
-            {/* The Masterpiece Yogi & Luminous Lotus Bloom Artwork (Matches Screenshot 1:1) */}
+            {/* The Masterpiece Yogi & Luminous Lotus Bloom Artwork */}
             <img
               src="/images/sanctuary_yogi_lotus.webp"
               alt="KayaSadhak Sacred Yogi Lotus Mandala"
-              className="relative z-10 w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] lg:w-[410px] lg:h-[410px] object-contain drop-shadow-[0_0_40px_rgba(192,138,62,0.75)] rounded-full transition-transform duration-500 hover:scale-105"
+              className="relative z-10 w-[230px] h-[230px] sm:w-[340px] sm:h-[340px] lg:w-[410px] lg:h-[410px] object-contain drop-shadow-[0_0_30px_rgba(192,138,62,0.7)] rounded-full transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
 
         {/* Right Column: Get Started Action Node */}
-        <div className="lg:col-span-4 text-left space-y-6 lg:pl-6">
-          <div className="space-y-3">
-            <h3 className="font-heading font-semibold text-2xl text-white tracking-wider uppercase border-b border-white/20 pb-1.5 inline-block">
+        <div className="lg:col-span-4 text-left space-y-4 sm:space-y-6 lg:pl-6">
+          <div className="space-y-2 sm:space-y-3">
+            <h3 className="font-heading font-semibold text-xl sm:text-2xl text-white tracking-wider uppercase border-b border-white/20 pb-1.5 inline-block">
               GET STARTED
             </h3>
-            <p className="text-sm text-gray-200/90 leading-relaxed">
+            <p className="text-xs sm:text-sm text-gray-200/90 leading-relaxed">
               Contact our sadhak matching team to tailor your personal 1-on-1 home yoga experience. We will match you with a certified male or female instructor in your locality.
             </p>
           </div>
 
-          <div className="pt-2">
+          <div className="pt-1 sm:pt-2">
             <a
               href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(
                 'Hi KayaSadhak! I want to join the KayaSadhak Sanctuary and book a 1-on-1 home yoga trial.'
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-white hover:bg-brand-gold-400 text-brand-green-900 font-display font-bold text-sm uppercase tracking-wider rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] transform hover:scale-105"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-white hover:bg-brand-gold-400 text-brand-green-900 font-display font-bold text-xs sm:text-sm uppercase tracking-wider rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] active:scale-[0.98]"
             >
               <span>JOIN SANCTUARY NOW</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

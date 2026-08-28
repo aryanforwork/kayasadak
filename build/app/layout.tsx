@@ -3,6 +3,7 @@ import './globals.css';
 import { TopUtilityBar } from '@/components/TopUtilityBar';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { MobileBottomDock } from '@/components/MobileBottomDock';
 
 export const metadata: Metadata = {
   title: 'Home Yoga, YTT & Panchkarma in Delhi NCR | KayaSadhak',
@@ -102,8 +103,9 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col bg-[#F3EEE2] text-[#26241F] antialiased">
         <TopUtilityBar />
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow pb-20 md:pb-0">{children}</main>
         <Footer />
+        <MobileBottomDock />
       </body>
     </html>
   );

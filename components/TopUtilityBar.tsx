@@ -5,7 +5,7 @@ import { CONTACT_INFO } from '@/config/pricing';
 
 export const TopUtilityBar: React.FC = () => {
   return (
-    <div className="bg-[#16302B] text-white text-xs font-body py-2 px-4 sm:px-8 border-b border-white/10">
+    <div className="hidden md:block bg-[#16302B] text-white text-xs font-body py-2 px-4 sm:px-8 border-b border-white/10">
       <div className="w-full max-w-[1600px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
         {/* Left Info Links */}
         <div className="flex items-center gap-6 text-[11px] sm:text-xs">

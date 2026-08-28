@@ -60,8 +60,8 @@ export const ConditionChips: React.FC = () => {
   const row2 = CONDITIONS.slice(4, 7);
 
   return (
-    <section className="w-full max-w-[1600px] mx-auto my-16 select-none font-body">
-      <div className="bg-[#F7F3EA] border border-[#E5DEC9] rounded-[36px] sm:rounded-[44px] p-8 sm:p-12 lg:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.04)] relative overflow-hidden text-center space-y-10">
+    <section className="w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-12 my-10 sm:my-16 select-none font-body">
+      <div className="bg-[#F7F3EA] border border-[#E5DEC9] rounded-[28px] sm:rounded-[44px] p-4 sm:p-10 lg:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.04)] relative overflow-hidden text-center space-y-6 sm:space-y-10">
         
         {/* Background Spiritual Sketch Overlay */}
         <img
@@ -76,27 +76,27 @@ export const ConditionChips: React.FC = () => {
         <div className="absolute inset-0 bg-radial from-[#F7F3EA]/70 via-[#F7F3EA]/40 to-transparent pointer-events-none" />
 
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto space-y-3.5 relative z-10">
+        <div className="max-w-3xl mx-auto space-y-2.5 sm:space-y-3.5 relative z-10">
           
           {/* Top Golden Lotus */}
-          <div className="flex items-center justify-center gap-3 text-[#C08A3E]">
-            <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#C08A3E]/80" />
-            <KayaLeafMotif size={26} color="#C08A3E" />
-            <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#C08A3E]/80" />
+          <div className="flex items-center justify-center gap-2 sm:gap-3 text-[#C08A3E]">
+            <div className="h-[1px] w-8 sm:w-12 bg-gradient-to-r from-transparent to-[#C08A3E]/80" />
+            <KayaLeafMotif size={22} color="#C08A3E" />
+            <div className="h-[1px] w-8 sm:w-12 bg-gradient-to-l from-transparent to-[#C08A3E]/80" />
           </div>
 
           {/* Tag */}
-          <div className="font-display font-bold text-xs sm:text-sm tracking-[0.25em] text-[#B37B2E] uppercase">
+          <div className="font-display font-bold text-[10px] sm:text-xs tracking-[0.22em] text-[#B37B2E] uppercase">
             ✦ PERSONALIZED CARE FOR EVERY BODY ✦
           </div>
 
           {/* Main Title */}
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[48px] text-[#16302B] tracking-tight leading-[1.14]">
+          <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-[46px] text-[#16302B] tracking-tight leading-[1.15]">
             What Health Goal or Condition Are You Looking to Address?
           </h2>
 
           {/* Sub-description */}
-          <p className="font-body text-sm sm:text-base text-[#5A574F] max-w-xl mx-auto leading-relaxed">
+          <p className="font-body text-xs sm:text-base text-[#5A574F] max-w-xl mx-auto leading-relaxed">
             Choose your concern and we'll connect you with the right yoga, ayurveda & wellness experts for your journey.
           </p>
 

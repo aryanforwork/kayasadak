@@ -15,30 +15,30 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
+    <div className="space-y-12 sm:space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
       {/* Hero Banner */}
-      <section className="relative bg-[#16302B] text-white pt-16 pb-24 overflow-hidden border-b border-brand-gold-500/20">
+      <section className="relative bg-[#16302B] text-white pt-10 sm:pt-16 pb-14 sm:pb-24 overflow-hidden border-b border-brand-gold-500/20">
         <div className="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style={{ backgroundImage: "url('/images/logo.webp')" }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#16302B] via-[#16302B]/90 to-[#1F4A3C]/70 z-10"></div>
 
-        <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-brand-gold-500/20 border border-brand-gold-500/40 px-4 py-1.5 rounded-full text-xs font-body font-semibold text-brand-gold-500 tracking-widest uppercase">
-            <KayaLeafMotif size={14} color="#C08A3E" />
+        <div className="relative z-20 w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-12 text-center space-y-4 sm:space-y-6">
+          <div className="inline-flex items-center gap-2 bg-brand-gold-500/20 border border-brand-gold-500/40 px-3.5 py-1 rounded-full text-[11px] font-body font-semibold text-brand-gold-500 tracking-widest uppercase">
+            <KayaLeafMotif size={12} color="#C08A3E" />
             <span>Direct WhatsApp & Helpline Support</span>
           </div>
 
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto">
+          <h1 className="font-heading text-2.5xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto">
             Connect with KayaSadhak: Direct WhatsApp & Helpline
           </h1>
 
-          <p className="font-body text-base sm:text-lg text-brand-green-50/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-body text-xs sm:text-lg text-brand-green-50/90 max-w-3xl mx-auto leading-relaxed">
             Have questions about booking a personal home yoga instructor, enrolling in a YTT program, or scheduling Panchkarma? Reach out directly.
           </p>
         </div>
       </section>
 
       {/* 2-Column Section */}
-      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+      <section className="w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column */}
           <div className="lg:col-span-6 space-y-6">

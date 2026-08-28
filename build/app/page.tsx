@@ -68,9 +68,9 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Pillar 1: Home Yoga */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group border border-[#1F4A3C]/20 flex flex-col justify-between min-h-[580px]">
+          <div className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group border border-[#1F4A3C]/20 flex flex-col justify-between min-h-[460px] sm:min-h-[580px]">
             {/* Background Image & Gradient Overlay */}
             <img
               src="/images/pillar_home_yoga.webp"
@@ -82,7 +82,7 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/30 group-hover:from-black/95" />
 
             {/* Top Badges */}
-            <div className="relative z-10 p-6 sm:p-8 flex items-center justify-between">
+            <div className="relative z-10 p-5 sm:p-8 flex items-center justify-between">
               <span className="bg-brand-gold-500 text-white font-display text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-md">
                 Pillar 01
               </span>
@@ -92,9 +92,9 @@ export default function HomePage() {
             </div>
 
             {/* Bottom Content */}
-            <div className="relative z-10 p-6 sm:p-8 space-y-5 text-left text-white mt-auto">
-              <div className="space-y-2">
-                <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white group-hover:text-brand-gold-400 transition-colors">
+            <div className="relative z-10 p-5 sm:p-8 space-y-4 sm:space-y-5 text-left text-white mt-auto">
+              <div className="space-y-1.5 sm:space-y-2">
+                <h3 className="font-heading font-bold text-xl sm:text-2xl lg:text-3xl text-white group-hover:text-brand-gold-400 transition-colors">
                   1. Personal Home Yoga
                 </h3>
                 <p className="font-body text-xs sm:text-sm text-gray-200/90 leading-relaxed">
@@ -103,7 +103,7 @@ export default function HomePage() {
               </div>
 
               {/* Tiers List */}
-              <div className="space-y-2 text-xs font-body pt-1 border-t border-white/15">
+              <div className="space-y-1.5 sm:space-y-2 text-xs font-body pt-1 border-t border-white/15">
                 <div className="flex items-center gap-2.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#E5E7EB] shadow-sm flex-shrink-0" />
                   <span className="text-gray-200">
@@ -125,10 +125,10 @@ export default function HomePage() {
               </div>
 
               {/* CTA Button */}
-              <div className="pt-2">
+              <div className="pt-1.5 sm:pt-2">
                 <Link
                   href="/services/yoga-at-home"
-                  className="w-full py-3.5 bg-brand-gold-500 hover:bg-brand-gold-600 text-white text-center font-body text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group/btn"
+                  className="w-full py-3.5 bg-brand-gold-500 hover:bg-brand-gold-600 text-white text-center font-body text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group/btn active:scale-[0.98]"
                 >
                   <span>Explore Home Yoga Services</span>
                   <FaArrowRight className="w-3 h-3 text-white group-hover/btn:translate-x-1 transition-transform" />
@@ -160,55 +160,51 @@ export default function HomePage() {
             </div>
 
             {/* Bottom Content */}
-            <div className="relative z-10 p-6 sm:p-8 space-y-5 text-left text-white mt-auto">
-              <div className="space-y-2">
-                <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white group-hover:text-brand-gold-400 transition-colors">
-                  2. Yoga Teacher Training (YTT)
+            <div className="relative z-10 p-5 sm:p-8 space-y-4 sm:space-y-5 text-left text-white mt-auto">
+              <div className="space-y-1.5 sm:space-y-2">
+                <h3 className="font-heading font-bold text-xl sm:text-2xl lg:text-3xl text-white group-hover:text-brand-gold-400 transition-colors">
+                  2. Teacher Training Courses
                 </h3>
                 <p className="font-body text-xs sm:text-sm text-gray-200/90 leading-relaxed">
-                  Launch or advance your teaching career with internationally accredited teacher training courses across 9 centers including Delhi NCR, Rishikesh, Haridwar, Dehradun, and Dharamshala.
+                  Transform into a world-class certified instructor with Yoga Alliance USA & Ayush Ministry credentials.
                 </p>
               </div>
 
-              {/* Course Highlights */}
-              <div className="space-y-2 text-xs font-body pt-1 border-t border-white/15">
+              {/* Course Features */}
+              <div className="space-y-1.5 sm:space-y-2 text-xs font-body pt-1 border-t border-white/15">
                 <div className="flex items-center gap-2">
-                  <span className="text-brand-gold-400 font-bold">•</span>
-                  <span className="text-gray-200">200-Hour Foundation TTC (Rishikesh & Delhi)</span>
+                  <span className="text-brand-gold-400 font-bold">✓</span>
+                  <span className="text-gray-200">100-Hour Foundation & 200-Hour RYT</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-brand-gold-400 font-bold">•</span>
-                  <span className="text-gray-200">300-Hour Advanced TTC (Anatomy & Alignment)</span>
+                  <span className="text-brand-gold-400 font-bold">✓</span>
+                  <span className="text-gray-200">300-Hr Advanced & 500-Hr Master Degree</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-brand-gold-400 font-bold">•</span>
-                  <span className="text-gray-200">500-Hour Master TTC (Comprehensive Mastery)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-brand-gold-400 font-bold">•</span>
-                  <span className="text-gray-200">200-Hour Kundalini & 50-Hour Yin TTC</span>
+                  <span className="text-brand-gold-400 font-bold">✓</span>
+                  <span className="text-gray-200">Rishikesh, Dharamshala & Online Hybrid</span>
                 </div>
               </div>
 
               {/* CTA Button */}
-              <div className="pt-2">
+              <div className="pt-1.5 sm:pt-2">
                 <Link
-                  href="/yoga-teacher-training/200-hour-ttc"
-                  className="w-full py-3.5 bg-brand-gold-500 hover:bg-brand-gold-600 text-white text-center font-body text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group/btn"
+                  href="/yoga-teacher-training"
+                  className="w-full py-3.5 bg-brand-gold-500 hover:bg-brand-gold-600 text-white text-center font-body text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group/btn active:scale-[0.98]"
                 >
-                  <span>Explore YTT Courses</span>
+                  <span>Explore YTT Certifications</span>
                   <FaArrowRight className="w-3 h-3 text-white group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
           </div>
 
-          {/* Pillar 3: Panchkarma */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group border border-[#1F4A3C]/20 flex flex-col justify-between min-h-[580px]">
+          {/* Pillar 3: Panchkarma & Ayurveda */}
+          <div className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group border border-[#1F4A3C]/20 flex flex-col justify-between min-h-[460px] sm:min-h-[580px]">
             {/* Background Image & Gradient Overlay */}
             <img
               src="/images/pillar_panchkarma.webp"
-              alt="Authentic Home Panchkarma"
+              alt="Ayurveda Panchkarma"
               className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
               decoding="async"
@@ -216,51 +212,47 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/30 group-hover:from-black/95" />
 
             {/* Top Badges */}
-            <div className="relative z-10 p-6 sm:p-8 flex items-center justify-between">
+            <div className="relative z-10 p-5 sm:p-8 flex items-center justify-between">
               <span className="bg-brand-gold-500 text-white font-display text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-md">
                 Pillar 03
               </span>
               <span className="bg-black/50 backdrop-blur-md border border-white/20 text-brand-gold-300 font-display text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
-                Vaidya Supervised
+                Clinical Detox
               </span>
             </div>
 
             {/* Bottom Content */}
-            <div className="relative z-10 p-6 sm:p-8 space-y-5 text-left text-white mt-auto">
-              <div className="space-y-2">
-                <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white group-hover:text-brand-gold-400 transition-colors">
-                  3. Authentic Home Panchkarma
+            <div className="relative z-10 p-5 sm:p-8 space-y-4 sm:space-y-5 text-left text-white mt-auto">
+              <div className="space-y-1.5 sm:space-y-2">
+                <h3 className="font-heading font-bold text-xl sm:text-2xl lg:text-3xl text-white group-hover:text-brand-gold-400 transition-colors">
+                  3. Panchkarma & Ayurveda
                 </h3>
                 <p className="font-body text-xs sm:text-sm text-gray-200/90 leading-relaxed">
-                  Experience clinical Ayurvedic detoxification and rejuvenation therapies at home under Vaidya supervision with full portable equipment and medicated herbal oils.
+                  Doctor-supervised Ayurvedic treatments, Abhyanga, Shirodhara, and Panchakarma cleanses delivered at home and in our 9 retreats.
                 </p>
               </div>
 
-              {/* Therapy Highlights */}
-              <div className="space-y-2 text-xs font-body pt-1 border-t border-white/15">
+              {/* Treatment Features */}
+              <div className="space-y-1.5 sm:space-y-2 text-xs font-body pt-1 border-t border-white/15">
                 <div className="flex items-center gap-2">
-                  <span className="text-brand-gold-400 font-bold">•</span>
-                  <span className="text-gray-200">Abhyanga Full-Body Herbal Massage</span>
+                  <span className="text-brand-gold-400 font-bold">✓</span>
+                  <span className="text-gray-200">Shirodhara, Abhyanga & Kizhi Therapies</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-brand-gold-400 font-bold">•</span>
-                  <span className="text-gray-200">Swedana Herbal Steam Therapy</span>
+                  <span className="text-brand-gold-400 font-bold">✓</span>
+                  <span className="text-gray-200">BAMS Ayurvedic Doctor Consultations</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-brand-gold-400 font-bold">•</span>
-                  <span className="text-gray-200">Shirodhara Nervous System Pour</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-brand-gold-400 font-bold">•</span>
-                  <span className="text-gray-200">Kati & Janu Basti Spine/Knee Care</span>
+                  <span className="text-brand-gold-400 font-bold">✓</span>
+                  <span className="text-gray-200">Complete 7 to 21-Day Detox Programs</span>
                 </div>
               </div>
 
               {/* CTA Button */}
-              <div className="pt-2">
+              <div className="pt-1.5 sm:pt-2">
                 <Link
-                  href="/services/panchkarma"
-                  className="w-full py-3.5 bg-brand-gold-500 hover:bg-brand-gold-600 text-white text-center font-body text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group/btn"
+                  href="/services/ayurveda-panchkarma"
+                  className="w-full py-3.5 bg-brand-gold-500 hover:bg-brand-gold-600 text-white text-center font-body text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group/btn active:scale-[0.98]"
                 >
                   <span>Explore Panchkarma Therapies</span>
                   <FaArrowRight className="w-3 h-3 text-white group-hover/btn:translate-x-1 transition-transform" />

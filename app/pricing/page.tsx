@@ -35,30 +35,30 @@ export default function PricingPage() {
   ];
 
   return (
-    <div className="space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
+    <div className="space-y-12 sm:space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
       {/* Hero Photographic Banner */}
-      <section className="relative bg-[#16302B] text-white pt-16 pb-24 overflow-hidden border-b border-brand-gold-500/20">
+      <section className="relative bg-[#16302B] text-white pt-10 sm:pt-16 pb-14 sm:pb-24 overflow-hidden border-b border-brand-gold-500/20">
         <div className="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style={{ backgroundImage: "url('/images/logo.webp')" }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#16302B] via-[#16302B]/90 to-[#1F4A3C]/70 z-10"></div>
 
-        <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-brand-gold-500/20 border border-brand-gold-500/40 px-4 py-1.5 rounded-full text-xs font-body font-semibold text-brand-gold-500 tracking-widest uppercase">
-            <KayaLeafMotif size={14} color="#C08A3E" />
+        <div className="relative z-20 w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-12 text-center space-y-4 sm:space-y-6">
+          <div className="inline-flex items-center gap-2 bg-brand-gold-500/20 border border-brand-gold-500/40 px-3.5 py-1 rounded-full text-[11px] font-body font-semibold text-brand-gold-500 tracking-widest uppercase">
+            <KayaLeafMotif size={12} color="#C08A3E" />
             <span>100% Published Rates • Zero Hidden Charges</span>
           </div>
 
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto">
-            Transparent Home Yoga Pricing: Platinum, Gold & Silver Plans
+          <h1 className="font-heading text-2.5xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto">
+            Transparent Monthly Pricing Matrix
           </h1>
 
-          <p className="font-body text-base sm:text-lg text-brand-green-50/90 max-w-3xl mx-auto leading-relaxed">
-            KayaSadhak maintains complete pricing transparency across Delhi NCR and Chandigarh Tricity. Prices are determined strictly by instructor tier and monthly session frequency.
+          <p className="font-body text-xs sm:text-lg text-brand-green-50/90 max-w-3xl mx-auto leading-relaxed">
+            Our pricing is straightforward with no hidden costs. Select your tier based on instructor credential depth and choose your preferred weekly cadence.
           </p>
         </div>
       </section>
 
       {/* Main Pricing Table Component */}
-      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 space-y-6">
+      <section className="w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-12 space-y-6">
         <PricingTable />
       </section>
 
