@@ -133,7 +133,7 @@ export const OmniSanctuary: React.FC = () => {
 
             {/* The Masterpiece Yogi & Luminous Lotus Bloom Artwork (Matches Screenshot 1:1) */}
             <img
-              src="/images/sanctuary_yogi_lotus.png"
+              src="/images/sanctuary_yogi_lotus.webp"
               alt="KayaSadhak Sacred Yogi Lotus Mandala"
               className="relative z-10 w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] lg:w-[410px] lg:h-[410px] object-contain drop-shadow-[0_0_40px_rgba(192,138,62,0.75)] rounded-full transition-transform duration-500 hover:scale-105"
             />

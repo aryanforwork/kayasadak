@@ -11,9 +11,11 @@ export const TrustStatsSection: React.FC = () => {
         
         {/* Spiritual Yoga & Sacred Geometry Sketch Background Image (High Visibility & Clear View) */}
         <img
-          src="/images/spiritual_yoga_sketch_bg.jpg"
+          src="/images/spiritual_yoga_sketch_bg.webp"
           alt="Spiritual Yoga Mandala Sketch Background"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.40] pointer-events-none mix-blend-multiply z-0"
+          loading="lazy"
+          decoding="async"
         />
 
         {/* Soft Radial Gradient for Text Contrast */}

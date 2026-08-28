@@ -37,7 +37,7 @@ export default function HomeYogaServicePage() {
     <div className="space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
       {/* Hero Photographic Banner */}
       <section className="relative bg-[#16302B] text-white pt-16 pb-24 overflow-hidden border-b border-brand-gold-500/20">
-        <div className="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style={{ backgroundImage: "url('/images/logo.png')" }}></div>
+        <div className="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style={{ backgroundImage: "url('/images/logo.webp')" }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#16302B] via-[#16302B]/90 to-[#1F4A3C]/70 z-10"></div>
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 text-center space-y-6">
@@ -95,7 +95,7 @@ export default function HomeYogaServicePage() {
           {/* Card 1: Platinum */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#1F4A3C]/15 bg-[#16302B] text-white flex flex-col justify-between min-h-[480px] p-8 group">
             <div className="absolute inset-0 bg-gradient-to-t from-[#16302B] via-[#16302B]/85 to-transparent z-10"></div>
-            <img src="/images/logo.png" alt="Platinum Yoga" className="absolute inset-0 w-full h-full object-contain p-8 opacity-20 group-hover:scale-105 transition-transform z-0" />
+            <img src="/images/logo.webp" alt="Platinum Yoga" className="absolute inset-0 w-full h-full object-contain p-8 opacity-20 group-hover:scale-105 transition-transform z-0" />
             
             <div className="relative z-20 space-y-4">
               <div className="flex items-center justify-between">
@@ -132,7 +132,7 @@ export default function HomeYogaServicePage() {
           {/* Card 2: Gold */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#1F4A3C]/15 bg-[#1F4A3C] text-white flex flex-col justify-between min-h-[480px] p-8 group">
             <div className="absolute inset-0 bg-gradient-to-t from-[#1F4A3C] via-[#1F4A3C]/85 to-transparent z-10"></div>
-            <img src="/images/logo.png" alt="Gold Yoga" className="absolute inset-0 w-full h-full object-contain p-8 opacity-20 group-hover:scale-105 transition-transform z-0" />
+            <img src="/images/logo.webp" alt="Gold Yoga" className="absolute inset-0 w-full h-full object-contain p-8 opacity-20 group-hover:scale-105 transition-transform z-0" />
             
             <div className="relative z-20 space-y-4">
               <div className="flex items-center justify-between">
@@ -169,7 +169,7 @@ export default function HomeYogaServicePage() {
           {/* Card 3: Silver */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#1F4A3C]/15 bg-[#2E5E4E] text-white flex flex-col justify-between min-h-[480px] p-8 group">
             <div className="absolute inset-0 bg-gradient-to-t from-[#2E5E4E] via-[#2E5E4E]/85 to-transparent z-10"></div>
-            <img src="/images/logo.png" alt="Silver Yoga" className="absolute inset-0 w-full h-full object-contain p-8 opacity-20 group-hover:scale-105 transition-transform z-0" />
+            <img src="/images/logo.webp" alt="Silver Yoga" className="absolute inset-0 w-full h-full object-contain p-8 opacity-20 group-hover:scale-105 transition-transform z-0" />
             
             <div className="relative z-20 space-y-4">
               <div className="flex items-center justify-between">

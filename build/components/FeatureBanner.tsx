@@ -12,9 +12,11 @@ export const FeatureBanner: React.FC = () => {
       <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl min-h-[400px] sm:min-h-[460px] lg:min-h-[500px] flex items-center">
         {/* Sanctuary Studio Background Image */}
         <img
-          src="/images/feature_banner_sanctuary.jpg"
+          src="/images/feature_banner_sanctuary.webp"
           alt="KayaSadhak Sanctuary Studio"
           className="absolute inset-0 w-full h-full object-cover object-center scale-105 transition-transform duration-[10000ms] ease-out"
+          loading="lazy"
+          decoding="async"
         />
 
         {/* Gradient Contrast Overlay */}

@@ -32,7 +32,7 @@ export const SLIDES: SlideData[] = [
     ctaLink: 'https://wa.me/918273264561?text=Hi%20KayaSadhak!%20I%20want%20to%20book%20a%20free%20home%20yoga%20trial.',
     isExternal: true,
     locationLabel: 'Delhi NCR & Tricity Luxury Residences',
-    image: '/images/hero_home_yoga_ncr.jpg',
+    image: '/images/hero_home_yoga_ncr.webp',
   },
   {
     id: 'rishikesh-ytt',
@@ -45,7 +45,7 @@ export const SLIDES: SlideData[] = [
     ctaText: 'Explore YTT Courses',
     ctaLink: '/yoga-teacher-training/200-hour-ttc',
     locationLabel: '9 Premier YTT Institute Centers',
-    image: '/images/hero_rishikesh_ganga.jpg',
+    image: '/images/hero_rishikesh_ganga.webp',
   },
   {
     id: 'dharamshala-himalayas',
@@ -58,7 +58,7 @@ export const SLIDES: SlideData[] = [
     ctaText: 'View Therapeutic Programs',
     ctaLink: '/yoga-for-conditions/back-pain',
     locationLabel: 'Dharamshala Himalayan Yoga Retreat',
-    image: '/images/hero_dharamshala_himalayas.jpg',
+    image: '/images/hero_dharamshala_himalayas.webp',
   },
   {
     id: 'kerala-panchkarma',
@@ -71,7 +71,7 @@ export const SLIDES: SlideData[] = [
     ctaText: 'Book Home Panchkarma Care',
     ctaLink: '/services/panchkarma',
     locationLabel: 'Ayurvedic Home Detox Sanctuary',
-    image: '/images/hero_panchkarma_kerala.jpg',
+    image: '/images/hero_panchkarma_kerala.webp',
   },
 ];
 
@@ -116,6 +116,9 @@ export const HeroSlider: React.FC = () => {
               src={slide.image}
               alt={slide.locationLabel}
               className="w-full h-full object-cover object-center scale-105 transition-transform duration-[8000ms] ease-out"
+              fetchPriority={index === 0 ? 'high' : 'low'}
+              decoding={index === 0 ? 'sync' : 'async'}
+              loading={index === 0 ? 'eager' : 'lazy'}
             />
 
             {/* Gradient Overlays for Contrast */}

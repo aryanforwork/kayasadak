@@ -249,7 +249,7 @@ export const Navbar: React.FC = () => {
           <Link href="/" className="flex items-center gap-4 group">
             <div className="relative h-14 w-12 sm:h-16 sm:w-14 flex-shrink-0">
               <img
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="KayaSadhak Logo"
                 className="h-full w-full object-contain group-hover:scale-105 transition-transform"
               />

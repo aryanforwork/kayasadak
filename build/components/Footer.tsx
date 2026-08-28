@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
       <div className="relative w-full py-20 px-4 sm:px-8 lg:px-12 text-center flex flex-col items-center justify-center overflow-hidden">
         {/* Background Image */}
         <img
-          src="/images/footer_himalayan_hero.jpg"
+          src="/images/footer_himalayan_hero.webp"
           alt="Himalayan Sunrise Yoga Meditation"
           className="absolute inset-0 w-full h-full object-cover object-center scale-100 opacity-100 transition-transform duration-1000 ease-out"
         />
@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
             {/* High-Visibility Logo Box */}
             <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/10 border-2 border-[#C08A3E]/60 p-2.5 shadow-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-white/15 group-hover:border-[#C08A3E] transition-all duration-300">
               <img
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="KayaSadhak Logo"
                 className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
               />
@@ -366,7 +366,7 @@ export const Footer: React.FC = () => {
               {/* Full Artwork Image */}
               <div className="relative w-full h-full rounded-xl overflow-hidden min-h-[340px]">
                 <img
-                  src="/images/footer_yogi_sunset.jpg"
+                  src="/images/footer_yogi_sunset.webp"
                   alt="Yogi Meditating Sunset - KayaSadhak"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
@@ -410,12 +410,12 @@ export const Footer: React.FC = () => {
         
         {/* Left & Right Watermark Sketch Motifs */}
         <img
-          src="/images/spiritual_yoga_sketch_bg.jpg"
+          src="/images/spiritual_yoga_sketch_bg.webp"
           alt="Sacred Mandala Watermark"
           className="absolute top-0 left-0 w-80 h-full object-cover opacity-10 pointer-events-none mix-blend-screen"
         />
         <img
-          src="/images/spiritual_yoga_sketch_bg.jpg"
+          src="/images/spiritual_yoga_sketch_bg.webp"
           alt="Sacred Mandala Watermark Right"
           className="absolute top-0 right-0 w-80 h-full object-cover opacity-10 pointer-events-none mix-blend-screen -scale-x-100"
         />

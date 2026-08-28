@@ -79,6 +79,21 @@ export default function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        <link
+          rel="preload"
+          as="image"
+          type="image/webp"
+          href="/images/hero_home_yoga_ncr.webp"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://cdnjs.cloudflare.com"
+        />
+        <link
+          rel="preconnect"
+          href="https://cdnjs.cloudflare.com"
+          crossOrigin="anonymous"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

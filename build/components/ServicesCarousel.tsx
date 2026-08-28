@@ -24,7 +24,7 @@ export const SERVICE_CARDS: ServiceCardData[] = [
       'Choose 1-on-1 private home sessions tailored to your comfort and health goals with verified Silver, Gold & Platinum teachers.',
     btnText: 'EXPLORE HOME YOGA',
     btnLink: '/services/yoga-at-home',
-    image: '/images/card_home_yoga.jpg',
+    image: '/images/card_home_yoga.webp',
   },
   {
     id: 'ytt-certification',
@@ -34,7 +34,7 @@ export const SERVICE_CARDS: ServiceCardData[] = [
       'Master traditional Hatha, Ashtanga & Vinyasa with 200/300/500-Hour TTC certifications available across 9 premier ashram & institute locations.',
     btnText: 'YTT CERTIFICATIONS',
     btnLink: '/yoga-teacher-training/200-hour-ttc',
-    image: '/images/card_ytt_rishikesh.jpg',
+    image: '/images/card_ytt_rishikesh.webp',
   },
   {
     id: 'himalayan-therapy',
@@ -44,7 +44,7 @@ export const SERVICE_CARDS: ServiceCardData[] = [
       'Deepen posture alignment & spinal decompression facing snow-capped Dharamshala peaks for Back Pain, Sciatica & Thyroid care.',
     btnText: 'THERAPEUTIC CARE',
     btnLink: '/yoga-for-conditions/back-pain',
-    image: '/images/card_himalaya_therapy.jpg',
+    image: '/images/card_himalaya_therapy.webp',
   },
   {
     id: 'panchkarma-detox',
@@ -54,7 +54,7 @@ export const SERVICE_CARDS: ServiceCardData[] = [
       'Experience clinical Ayurvedic detoxification: Abhyanga, Swedana, Shirodhara & Basti delivered to your home with full equipment.',
     btnText: 'PANCHKARMA DETOX',
     btnLink: '/services/panchkarma',
-    image: '/images/card_panchkarma_detox.jpg',
+    image: '/images/card_panchkarma_detox.webp',
   },
   {
     id: 'senior-yoga',
@@ -64,7 +64,7 @@ export const SERVICE_CARDS: ServiceCardData[] = [
       'Gentle joint mobility, posture correction & fall prevention care tailored specially for seniors in private home comfort.',
     btnText: 'SENIOR YOGA CARE',
     btnLink: '/services/senior-citizen-yoga',
-    image: '/images/card_senior_yoga.jpg',
+    image: '/images/card_senior_yoga.webp',
   },
   {
     id: 'corporate-wellness',
@@ -74,7 +74,7 @@ export const SERVICE_CARDS: ServiceCardData[] = [
       'On-site & virtual desk ergonomics, stress relief, postural correction, and executive mindfulness for corporate teams.',
     btnText: 'CORPORATE WELLNESS',
     btnLink: '/services/corporate-yoga',
-    image: '/images/card_corporate_wellness.jpg',
+    image: '/images/card_corporate_wellness.webp',
   },
   {
     id: 'abhyanga-therapy',
@@ -84,7 +84,7 @@ export const SERVICE_CARDS: ServiceCardData[] = [
       'Warm medicated herbal oil full-body massage delivered to your home for deep tissue rejuvenation and lymphatic detox.',
     btnText: 'ABHYANGA THERAPY',
     btnLink: '/services/panchkarma',
-    image: '/images/card_abhyanga_massage.jpg',
+    image: '/images/card_abhyanga_massage.webp',
   },
   {
     id: 'shirodhara-care',
@@ -94,7 +94,7 @@ export const SERVICE_CARDS: ServiceCardData[] = [
       'Continuous third-eye herbal oil stream treatment at home for anxiety, insomnia, chronic headache, and mental stress relief.',
     btnText: 'SHIRODHARA CARE',
     btnLink: '/services/panchkarma',
-    image: '/images/card_panchkarma_detox.jpg',
+    image: '/images/card_panchkarma_detox.webp',
   },
 ];
 
@@ -185,6 +185,8 @@ export const ServicesCarousel: React.FC = () => {
               src={card.image}
               alt={card.title}
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+              decoding="async"
             />
 
             {/* Dark Gradient Overlay */}

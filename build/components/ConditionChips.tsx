@@ -65,9 +65,11 @@ export const ConditionChips: React.FC = () => {
         
         {/* Background Spiritual Sketch Overlay */}
         <img
-          src="/images/spiritual_yoga_sketch_bg.jpg"
+          src="/images/spiritual_yoga_sketch_bg.webp"
           alt="Spiritual Background Sketch"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.25] pointer-events-none mix-blend-multiply"
+          loading="lazy"
+          decoding="async"
         />
 
         {/* Soft Radial Cream Overlay for Contrast */}

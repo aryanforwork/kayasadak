@@ -73,9 +73,11 @@ export default function HomePage() {
           <div className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group border border-[#1F4A3C]/20 flex flex-col justify-between min-h-[580px]">
             {/* Background Image & Gradient Overlay */}
             <img
-              src="/images/pillar_home_yoga.jpg"
+              src="/images/pillar_home_yoga.webp"
               alt="Personal Home Yoga"
               className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/30 group-hover:from-black/95" />
 
@@ -139,9 +141,11 @@ export default function HomePage() {
           <div className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group border border-[#1F4A3C]/20 flex flex-col justify-between min-h-[580px]">
             {/* Background Image & Gradient Overlay */}
             <img
-              src="/images/pillar_ytt_training.jpg"
+              src="/images/pillar_ytt_training.webp"
               alt="Yoga Teacher Training"
               className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/30 group-hover:from-black/95" />
 
@@ -203,9 +207,11 @@ export default function HomePage() {
           <div className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group border border-[#1F4A3C]/20 flex flex-col justify-between min-h-[580px]">
             {/* Background Image & Gradient Overlay */}
             <img
-              src="/images/pillar_panchkarma.jpg"
+              src="/images/pillar_panchkarma.webp"
               alt="Authentic Home Panchkarma"
               className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/30 group-hover:from-black/95" />
 
@@ -301,7 +307,7 @@ export default function HomePage() {
           {/* Lotus & Incense Sanctuary Background Artwork (High Visibility & Rich Colors) */}
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img
-              src="/images/assessment_incense_lotus.jpg"
+              src="/images/assessment_incense_lotus.webp"
               alt="Lotus Incense Sanctuary"
               className="w-full h-full object-cover object-left opacity-65 mix-blend-multiply"
             />
@@ -403,7 +409,7 @@ export default function HomePage() {
               <div className="pt-2">
                 <div className="w-full h-48 sm:h-56 rounded-2xl overflow-hidden border-2 border-[#E2D8C5] shadow-lg relative group">
                   <img
-                    src="/images/assessment_incense_lotus.jpg"
+                    src="/images/assessment_incense_lotus.webp"
                     alt="Lotus Flower Candle Incense Sanctuary"
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
