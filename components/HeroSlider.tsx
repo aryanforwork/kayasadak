@@ -211,11 +211,11 @@ export const HeroSlider: React.FC = () => {
         </div>
       </div>
 
-      {/* Side Arrow Navigation */}
+      {/* Side Arrow Navigation — hidden on mobile, visible sm+ */}
       <button
         onClick={prevSlide}
         aria-label="Previous Slide"
-        className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/40 hover:bg-brand-green-900/80 border border-white/20 text-white flex items-center justify-center backdrop-blur-md transition-all shadow-lg hover:scale-110"
+        className="hidden sm:flex absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/40 hover:bg-brand-green-900/80 border border-white/20 text-white items-center justify-center backdrop-blur-md transition-all shadow-lg hover:scale-110"
       >
         <FaChevronLeft className="w-4 h-4 text-white" />
       </button>
@@ -223,13 +223,23 @@ export const HeroSlider: React.FC = () => {
       <button
         onClick={nextSlide}
         aria-label="Next Slide"
-        className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/40 hover:bg-brand-green-900/80 border border-white/20 text-white flex items-center justify-center backdrop-blur-md transition-all shadow-lg hover:scale-110"
+        className="hidden sm:flex absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/40 hover:bg-brand-green-900/80 border border-white/20 text-white items-center justify-center backdrop-blur-md transition-all shadow-lg hover:scale-110"
       >
         <FaChevronRight className="w-4 h-4 text-white" />
       </button>
 
-      {/* Bottom Center Circular Thumbnail Preview Controls */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4 bg-black/40 backdrop-blur-md p-2.5 rounded-full border border-white/15 shadow-2xl">
+      {/* Bottom Controls: prev arrow + thumbnail dots + next arrow */}
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 sm:gap-4 bg-black/40 backdrop-blur-md px-2 py-2 rounded-full border border-white/15 shadow-2xl">
+        {/* Prev Arrow — visible on mobile only */}
+        <button
+          onClick={prevSlide}
+          aria-label="Previous Slide"
+          className="sm:hidden w-9 h-9 rounded-full bg-white/15 hover:bg-white/30 border border-white/20 text-white flex items-center justify-center transition-all active:scale-90"
+        >
+          <FaChevronLeft className="w-3 h-3 text-white" />
+        </button>
+
+        {/* Thumbnail Dots */}
         {SLIDES.map((slide, idx) => {
           const isActive = idx === currentIndex;
           return (
@@ -239,8 +249,8 @@ export const HeroSlider: React.FC = () => {
               title={slide.locationLabel}
               className={`relative rounded-full transition-all duration-300 group ${
                 isActive
-                  ? 'w-14 h-14 sm:w-16 sm:h-16 ring-4 ring-[#1F4A3C] border-2 border-white scale-110 opacity-100'
-                  : 'w-11 h-11 sm:w-12 sm:h-12 border-2 border-white/40 opacity-70 hover:opacity-100 hover:scale-105'
+                  ? 'w-12 h-12 sm:w-16 sm:h-16 ring-4 ring-[#1F4A3C] border-2 border-white scale-110 opacity-100'
+                  : 'w-9 h-9 sm:w-12 sm:h-12 border-2 border-white/40 opacity-70 hover:opacity-100 hover:scale-105'
               }`}
             >
               <img
@@ -249,11 +259,20 @@ export const HeroSlider: React.FC = () => {
                 className="w-full h-full object-cover rounded-full"
               />
               {isActive && (
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-brand-green-900 border-2 border-white rounded-full" />
+                <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-brand-green-900 border-2 border-white rounded-full" />
               )}
             </button>
           );
         })}
+
+        {/* Next Arrow — visible on mobile only */}
+        <button
+          onClick={nextSlide}
+          aria-label="Next Slide"
+          className="sm:hidden w-9 h-9 rounded-full bg-white/15 hover:bg-white/30 border border-white/20 text-white flex items-center justify-center transition-all active:scale-90"
+        >
+          <FaChevronRight className="w-3 h-3 text-white" />
+        </button>
       </div>
     </section>
   );

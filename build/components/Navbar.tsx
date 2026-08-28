@@ -13,6 +13,13 @@ import {
   FaYoutube,
   FaWhatsapp,
   FaChevronDown,
+  FaHome,
+  FaSpa,
+  FaLayerGroup,
+  FaGraduationCap,
+  FaLeaf,
+  FaHeartbeat,
+  FaUserTie,
 } from 'react-icons/fa';
 
 export const Navbar: React.FC = () => {
@@ -170,8 +177,8 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 transition-all font-body">
-      {/* 1. Top Header Bar (Brand Green #1F4A3C with Increased Readable Typography) */}
-      <div className="bg-[#1F4A3C] text-white py-2.5 px-4 sm:px-8 lg:px-12 border-b border-emerald-900/40">
+      {/* 1. Top Header Bar — Desktop only, hidden on mobile */}
+      <div className="hidden md:block bg-[#1F4A3C] text-white py-2.5 px-4 sm:px-8 lg:px-12 border-b border-emerald-900/40">
         <div className="w-full max-w-[1600px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5">
           {/* Left: Contact Info & Location (Increased font size & font-medium) */}
           <div className="flex items-center gap-5 sm:gap-7 flex-wrap justify-center sm:justify-start text-xs sm:text-sm lg:text-[14px]">
@@ -542,119 +549,141 @@ export const Navbar: React.FC = () => {
                 <div className="p-4 space-y-1 font-body text-sm divide-y divide-gray-100">
                   
                   {/* Link: Home */}
-                  <div className="py-2">
+                  <div className="py-1.5">
                     <Link
                       href="/"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center justify-between py-2 text-[#16302B] font-bold text-base hover:text-brand-gold-600 transition-colors"
+                      className="flex items-center gap-3 py-2.5 px-3 rounded-xl text-[#16302B] font-bold text-sm hover:bg-[#F3EEE2] transition-colors active:scale-[0.98]"
                     >
-                      <span>🏠 Home Overview</span>
+                      <span className="w-8 h-8 rounded-lg bg-[#16302B]/10 flex items-center justify-center flex-shrink-0">
+                        <FaHome className="w-3.5 h-3.5 text-[#16302B]" />
+                      </span>
+                      <span>Home Overview</span>
                     </Link>
                   </div>
 
                   {/* Section 1: Yoga at Home */}
-                  <div className="py-2 space-y-1">
-                    <div className="flex items-center justify-between py-1.5 text-[#16302B] font-bold text-sm">
-                      <Link href="/services/yoga-at-home" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#B37B2E]">
-                        🧘 Personal Yoga at Home
+                  <div className="py-1.5 space-y-1">
+                    <Link href="/services/yoga-at-home" onClick={() => setMobileMenuOpen(false)}
+                      className="flex items-center gap-3 py-2.5 px-3 rounded-xl text-[#16302B] font-bold text-sm hover:bg-[#F3EEE2] transition-colors">
+                      <span className="w-8 h-8 rounded-lg bg-[#C08A3E]/15 flex items-center justify-center flex-shrink-0">
+                        <FaSpa className="w-3.5 h-3.5 text-[#C08A3E]" />
+                      </span>
+                      <span>Personal Yoga at Home</span>
+                    </Link>
+                    <div className="ml-11 border-l-2 border-[#C08A3E]/25 pl-3 space-y-0.5">
+                      <Link href="/services/yoga-at-home" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        1-on-1 Personal Home Yoga
                       </Link>
-                    </div>
-                    <div className="pl-3 space-y-1 text-xs text-[#5A574F]">
-                      <Link href="/services/yoga-at-home" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 hover:text-[#16302B]">
-                        • 1-on-1 Personal Home Yoga
+                      <Link href="/services/senior-citizen-yoga" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        Senior Citizen Home Yoga
                       </Link>
-                      <Link href="/services/senior-citizen-yoga" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 hover:text-[#16302B]">
-                        • Senior Citizen Home Yoga
-                      </Link>
-                      <Link href="/services/corporate-yoga" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 hover:text-[#16302B]">
-                        • Corporate Desk Wellness
+                      <Link href="/services/corporate-yoga" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        Corporate Desk Wellness
                       </Link>
                     </div>
                   </div>
 
                   {/* Section 2: Pricing Matrix */}
-                  <div className="py-2 space-y-1">
-                    <div className="flex items-center justify-between py-1.5 text-[#16302B] font-bold text-sm">
-                      <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#B37B2E] flex items-center gap-2">
-                        <span>💎 Transparent Pricing Matrix</span>
+                  <div className="py-1.5 space-y-1">
+                    <div className="flex items-center justify-between px-3">
+                      <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center gap-3 py-2.5 text-[#16302B] font-bold text-sm hover:text-[#B37B2E] transition-colors flex-1">
+                        <span className="w-8 h-8 rounded-lg bg-[#16302B]/10 flex items-center justify-center flex-shrink-0">
+                          <FaLayerGroup className="w-3.5 h-3.5 text-[#16302B]" />
+                        </span>
+                        <span>Transparent Pricing Matrix</span>
                       </Link>
-                      <span className="bg-[#16302B] text-[#E5C384] text-[10px] font-bold px-2 py-0.5 rounded-full font-display">
+                      <span className="bg-[#16302B] text-[#E5C384] text-[10px] font-bold px-2 py-0.5 rounded-full font-display ml-2">
                         ₹500+
                       </span>
                     </div>
-                    <div className="pl-3 space-y-1 text-xs text-[#5A574F]">
-                      <Link href="/pricing#platinum" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 hover:text-[#16302B]">
-                        • Platinum Tier (₹1,000 / sess) — Masters Degree
+                    <div className="ml-11 border-l-2 border-[#C08A3E]/25 pl-3 space-y-0.5">
+                      <Link href="/pricing#platinum" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        Platinum Tier (₹1,000 / sess) — Masters Degree
                       </Link>
-                      <Link href="/pricing#gold" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 hover:text-[#16302B]">
-                        • Gold Tier (₹750 / sess) — Graduation in Yoga
+                      <Link href="/pricing#gold" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        Gold Tier (₹750 / sess) — Graduation in Yoga
                       </Link>
-                      <Link href="/pricing#silver" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 hover:text-[#16302B]">
-                        • Silver Tier (₹500 / sess) — Diploma in Yoga
+                      <Link href="/pricing#silver" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        Silver Tier (₹500 / sess) — Diploma in Yoga
                       </Link>
                     </div>
                   </div>
 
                   {/* Section 3: YTT Courses */}
-                  <div className="py-2 space-y-1">
-                    <div className="flex items-center justify-between py-1.5 text-[#16302B] font-bold text-sm">
-                      <Link href="/yoga-teacher-training/200-hour-ttc" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#B37B2E]">
-                        🎓 Yoga Teacher Training (YTT)
+                  <div className="py-1.5 space-y-1">
+                    <Link href="/yoga-teacher-training/200-hour-ttc" onClick={() => setMobileMenuOpen(false)}
+                      className="flex items-center gap-3 py-2.5 px-3 rounded-xl text-[#16302B] font-bold text-sm hover:bg-[#F3EEE2] transition-colors">
+                      <span className="w-8 h-8 rounded-lg bg-[#16302B]/10 flex items-center justify-center flex-shrink-0">
+                        <FaGraduationCap className="w-3.5 h-3.5 text-[#16302B]" />
+                      </span>
+                      <span>Yoga Teacher Training (YTT)</span>
+                    </Link>
+                    <div className="ml-11 border-l-2 border-[#C08A3E]/25 pl-3 space-y-0.5">
+                      <Link href="/yoga-teacher-training/200-hour-ttc" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        200-Hour Foundation TTC
                       </Link>
-                    </div>
-                    <div className="pl-3 space-y-1 text-xs text-[#5A574F]">
-                      <Link href="/yoga-teacher-training/200-hour-ttc" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 hover:text-[#16302B]">
-                        • 200-Hour Foundation TTC
+                      <Link href="/yoga-teacher-training/200-hour-ttc" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        300 / 500-Hour Advanced TTC
                       </Link>
-                      <Link href="/yoga-teacher-training/200-hour-ttc" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 hover:text-[#16302B]">
-                        • 300 / 500-Hour Advanced TTC
-                      </Link>
-                      <Link href="/yoga-teacher-training/locations/rishikesh" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 hover:text-[#16302B]">
-                        • 9 Locations (Rishikesh, Delhi NCR)
+                      <Link href="/yoga-teacher-training/locations/rishikesh" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        9 Locations (Rishikesh, Delhi NCR)
                       </Link>
                     </div>
                   </div>
 
                   {/* Section 4: Panchkarma */}
-                  <div className="py-2 space-y-1">
-                    <div className="flex items-center justify-between py-1.5 text-[#16302B] font-bold text-sm">
-                      <Link href="/services/panchkarma" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#B37B2E]">
-                        🌿 Authentic Home Panchkarma
-                      </Link>
-                    </div>
-                    <div className="pl-3 space-y-1 text-xs text-[#5A574F]">
-                      <Link href="/services/panchkarma" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 hover:text-[#16302B]">
-                        • Abhyanga, Swedana & Shirodhara
+                  <div className="py-1.5 space-y-1">
+                    <Link href="/services/panchkarma" onClick={() => setMobileMenuOpen(false)}
+                      className="flex items-center gap-3 py-2.5 px-3 rounded-xl text-[#16302B] font-bold text-sm hover:bg-[#F3EEE2] transition-colors">
+                      <span className="w-8 h-8 rounded-lg bg-[#1F4A3C]/10 flex items-center justify-center flex-shrink-0">
+                        <FaLeaf className="w-3.5 h-3.5 text-[#1F4A3C]" />
+                      </span>
+                      <span>Authentic Home Panchkarma</span>
+                    </Link>
+                    <div className="ml-11 border-l-2 border-[#C08A3E]/25 pl-3 space-y-0.5">
+                      <Link href="/services/panchkarma" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        Abhyanga, Swedana &amp; Shirodhara
                       </Link>
                     </div>
                   </div>
 
                   {/* Section 5: Clinical Therapy */}
-                  <div className="py-2">
+                  <div className="py-1.5">
                     <Link
                       href="/yoga-for-conditions/back-pain"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block py-1.5 text-[#16302B] font-bold text-sm hover:text-[#B37B2E]"
+                      className="flex items-center gap-3 py-2.5 px-3 rounded-xl text-[#16302B] font-bold text-sm hover:bg-[#F3EEE2] transition-colors"
                     >
-                      🩺 Therapeutic Care (Back Pain, Sciatica, PCOD)
+                      <span className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
+                        <FaHeartbeat className="w-3.5 h-3.5 text-red-400" />
+                      </span>
+                      <span>Therapeutic Care (Back Pain, PCOD)</span>
                     </Link>
                   </div>
 
                   {/* Links: About & Contact */}
-                  <div className="py-2 space-y-2">
+                  <div className="py-1.5 space-y-1 border-t border-[#E5DEC9] pt-3 mt-1">
                     <Link
                       href="/about-us"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block py-1 text-[#16302B] font-medium text-sm hover:text-[#B37B2E]"
+                      className="flex items-center gap-3 py-2.5 px-3 rounded-xl text-[#16302B] font-medium text-sm hover:bg-[#F3EEE2] transition-colors"
                     >
-                      ℹ️ About Founder Nivil Chaudhary
+                      <span className="w-8 h-8 rounded-lg bg-[#16302B]/10 flex items-center justify-center flex-shrink-0">
+                        <FaUserTie className="w-3.5 h-3.5 text-[#16302B]" />
+                      </span>
+                      <span>About Founder Nivil Chaudhary</span>
                     </Link>
                     <Link
                       href="/contact-us"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block py-1 text-[#16302B] font-medium text-sm hover:text-[#B37B2E]"
+                      className="flex items-center gap-3 py-2.5 px-3 rounded-xl text-[#16302B] font-medium text-sm hover:bg-[#F3EEE2] transition-colors"
                     >
-                      📍 Contact & 20 Delhi NCR Hubs
+                      <span className="w-8 h-8 rounded-lg bg-[#16302B]/10 flex items-center justify-center flex-shrink-0">
+                        <FaMapMarkerAlt className="w-3.5 h-3.5 text-[#C08A3E]" />
+                      </span>
+                      <span>Contact &amp; 20 Delhi NCR Hubs</span>
                     </Link>
                   </div>
 

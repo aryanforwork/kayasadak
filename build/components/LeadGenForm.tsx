@@ -60,8 +60,8 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
   return (
     <div className={`bg-[#FAF6F0] rounded-[32px] border-4 border-[#16302B]/10 shadow-[0_25px_60px_rgba(0,0,0,0.12)] overflow-hidden relative w-full ${className}`}>
       
-      {/* Top Dark Green Header Bar (Matching Reference Image) */}
-      <div className="bg-[#16302B] text-white py-4 px-6 flex items-center justify-center gap-2.5 font-display text-xs font-bold uppercase tracking-[0.18em] text-[#E5C384] border-b border-[#C08A3E]/30">
+      {/* Top Dark Green Header Bar */}
+      <div className="bg-[#16302B] text-white py-3 px-4 flex items-center justify-center gap-2 font-display text-xs font-bold uppercase tracking-[0.18em] text-[#E5C384] border-b border-[#C08A3E]/30">
         <div className="w-6 h-6 rounded-full bg-[#C08A3E]/20 border border-[#C08A3E]/40 flex items-center justify-center flex-shrink-0">
           <FaWhatsapp className="w-3.5 h-3.5 text-[#E5C384]" />
         </div>
@@ -69,7 +69,7 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
       </div>
 
       {/* Form Body Container */}
-      <div className="p-4 sm:p-8 md:p-10 space-y-5 sm:space-y-6 text-left font-body">
+      <div className="p-3 sm:p-7 md:p-10 space-y-4 sm:space-y-5 text-left font-body">
         
         {/* Title & Subtitle */}
         <div className="text-center space-y-1.5">
@@ -89,7 +89,7 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
               FULL NAME <span className="text-[#C08A3E]">*</span>
             </label>
             <div className="relative flex items-center">
-              <div className="absolute left-3 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
+              <div className="absolute left-2.5 w-7 h-7 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
                 <FaUser className="w-3.5 h-3.5 text-[#C08A3E]" />
               </div>
               <input
@@ -98,7 +98,7 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g. Priya Sharma"
-                className="w-full pl-13 pr-4 py-3 sm:py-3.5 rounded-xl border border-[#DCD3C0] text-base focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
+                className="w-full pl-10 pr-4 py-3 sm:py-3.5 rounded-xl border border-[#DCD3C0] text-base focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
               />
             </div>
           </div>
@@ -119,7 +119,7 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
                 value={phone}
                 onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
                 placeholder="10-digit mobile number"
-                className="w-full pl-13 pr-4 py-3 sm:py-3.5 rounded-xl border border-[#DCD3C0] text-base focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
+                className="w-full pl-10 pr-4 py-3 sm:py-3.5 rounded-xl border border-[#DCD3C0] text-base focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
               />
             </div>
           </div>
@@ -133,13 +133,13 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
                 SERVICE INTEREST <span className="text-[#C08A3E]">*</span>
               </label>
               <div className="relative flex items-center">
-                <div className="absolute left-3 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
+                <div className="absolute left-2.5 w-7 h-7 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
                   <FaSpa className="w-3.5 h-3.5 text-[#C08A3E]" />
                 </div>
                 <select
                   value={service}
                   onChange={(e) => setService(e.target.value)}
-                  className="w-full pl-13 pr-8 py-3 sm:py-3.5 rounded-xl border border-[#DCD3C0] text-base font-semibold focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] appearance-none shadow-inner"
+                  className="w-full pl-10 pr-8 py-3 sm:py-3.5 rounded-xl border border-[#DCD3C0] text-base font-semibold focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] appearance-none shadow-inner"
                 >
                   {SERVICE_LINES.map((s) => (
                     <option key={s.id} value={s.name}>
@@ -158,7 +158,7 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
                 LOCALITY <span className="text-[#5A574F] font-normal lowercase">(optional)</span>
               </label>
               <div className="relative flex items-center">
-                <div className="absolute left-3 w-8 h-8 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
+                <div className="absolute left-2.5 w-7 h-7 rounded-lg bg-[#EFE8DC] border border-[#E0D7C4] text-[#16302B] flex items-center justify-center pointer-events-none">
                   <FaMapMarkerAlt className="w-3.5 h-3.5 text-[#C08A3E]" />
                 </div>
                 <input
@@ -166,18 +166,18 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
                   value={locality}
                   onChange={(e) => setLocality(e.target.value)}
                   placeholder="e.g. South Extension / Sector 54"
-                  className="w-full pl-13 pr-4 py-3 sm:py-3.5 rounded-xl border border-[#DCD3C0] text-base focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
+                  className="w-full pl-10 pr-4 py-3 sm:py-3.5 rounded-xl border border-[#DCD3C0] text-base focus:outline-none focus:ring-2 focus:ring-[#16302B] bg-white text-[#16302B] placeholder:text-gray-400 shadow-inner"
                 />
               </div>
             </div>
           </div>
 
           {/* 4-Feature Micro Grid Strip Inside Form */}
-          <div className="bg-[#EFE8DC] border border-[#E0D7C4] rounded-2xl p-4 grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center my-3">
+          <div className="bg-[#EFE8DC] border border-[#E0D7C4] rounded-2xl p-3 grid grid-cols-2 sm:grid-cols-4 gap-2 text-center my-2">
             
             {/* Feature 1 */}
             <div className="flex flex-col items-center justify-center space-y-1 p-1">
-              <div className="w-7 h-7 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
+              <div className="w-8 h-8 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
                 <FaShieldAlt className="w-3.5 h-3.5" />
               </div>
               <span className="text-[10px] font-bold text-[#16302B] leading-tight">
@@ -187,7 +187,7 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
 
             {/* Feature 2 */}
             <div className="flex flex-col items-center justify-center space-y-1 p-1">
-              <div className="w-7 h-7 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
+              <div className="w-8 h-8 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
                 <FaSpa className="w-3.5 h-3.5" />
               </div>
               <span className="text-[10px] font-bold text-[#16302B] leading-tight">
@@ -197,7 +197,7 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
 
             {/* Feature 3 */}
             <div className="flex flex-col items-center justify-center space-y-1 p-1">
-              <div className="w-7 h-7 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
+              <div className="w-8 h-8 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
                 <FaClock className="w-3.5 h-3.5" />
               </div>
               <span className="text-[10px] font-bold text-[#16302B] leading-tight">
@@ -207,7 +207,7 @@ export const LeadGenForm: React.FC<LeadGenFormProps> = ({
 
             {/* Feature 4 */}
             <div className="flex flex-col items-center justify-center space-y-1 p-1">
-              <div className="w-7 h-7 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
+              <div className="w-8 h-8 rounded-full bg-white border border-[#D8CEB8] text-[#C08A3E] flex items-center justify-center shadow-sm">
                 <FaLock className="w-3.5 h-3.5" />
               </div>
               <span className="text-[10px] font-bold text-[#16302B] leading-tight">
