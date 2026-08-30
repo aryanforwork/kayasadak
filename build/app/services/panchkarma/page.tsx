@@ -1,232 +1,264 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { LeadGenForm } from '@/components/LeadGenForm';
 import { FaqAccordion } from '@/components/FaqAccordion';
 import { KayaLeafMotif } from '@/components/KayaLeafMotif';
 import { CONTACT_INFO } from '@/config/pricing';
+import { FaWhatsapp, FaPhoneAlt, FaSpa, FaShieldAlt, FaLeaf, FaUserMd } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Authentic Home Panchkarma Therapy Delhi NCR | KayaSadhak',
+  title: 'Authentic Home Panchkarma & Ayurvedic Care Delhi | KayaSadhak',
   description:
-    'Experience authentic Ayurvedic Panchkarma detox and Abhyanga massage at home in Delhi NCR. Delivered by trained Ayurvedic therapists. Enquire via WhatsApp.',
+    'Doctor-guided Panchkarma at home in Delhi NCR — Abhyanga, Shirodhara, Swedana & Basti with authentic medicated oils. Free consultation on WhatsApp.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/services/panchkarma',
   },
+  openGraph: {
+    title: 'Authentic Home Panchkarma & Ayurvedic Care Delhi | KayaSadhak',
+    description:
+      'Doctor-guided Panchkarma at home in Delhi NCR — Abhyanga, Shirodhara, Swedana & Basti with authentic medicated oils. Free consultation on WhatsApp.',
+    url: 'https://www.kayasadhak.com/services/panchkarma',
+    siteName: 'KayaSadhak',
+    type: 'website',
+  },
 };
 
-export default function PanchkarmaServicePage() {
+export default function PanchkarmaPage() {
   const faqs = [
     {
-      question: 'Is home Panchkarma messy or difficult to manage?',
+      question: 'Is Panchkarma safe to do at home rather than at a clinic?',
       answer:
-        'No. Our team supplies complete protective floor coverings, portable massage tables, and disposal materials to leave your home completely clean.',
+        'Yes, when delivered by qualified Ayurvedic therapists with portable tables, sterilization, and authentic medicated oils as KayaSadhak provides. If your condition requires continuous medical monitoring, our Vaidya will honestly advise a clinic-based stay.',
     },
     {
-      question: 'Who supervises the Panchkarma treatments?',
+      question: 'What is Panchkarma actually supposed to help with?',
       answer:
-        'All home Panchkarma protocols are designed and supervised by trained Ayurvedic Vaidyas and executed by certified therapists.',
+        'Traditionally, it supports deep cellular detoxification, eases accumulated fatigue, and addresses poor digestion, joint stiffness, and chronic insomnia. It is a traditional wellness system that complements regular medical care.',
     },
     {
-      question: 'What therapies are included in a full detox package?',
+      question: 'How many sessions do I need for a complete cleanse?',
       answer:
-        'Packages combine Abhyanga (herbal oil massage), Swedana (herbal steam), Shirodhara (warm forehead pour), and Kati/Janu Basti (localized oil pooling).',
+        'This depends on your Prakriti/Vikriti (constitution) assessed during consultation. Single Shirodhara sessions provide immediate relaxation, while multi-day cleanses (3, 5, or 7 days) produce deep systemic resets.',
+    },
+    {
+      question: 'Can I do Panchkarma if I am on regular medication?',
+      answer:
+        'Please inform us about all ongoing medications and medical history during booking. Our Vaidya reviews your profile to ensure therapies are completely compatible.',
+    },
+    {
+      question: 'What is the difference between Abhyanga and Shirodhara?',
+      answer:
+        'Abhyanga is a synchronized full-body herbal massage using warm dosha-specific medicated oils to relieve muscular tension. Shirodhara is a rhythmic stream of warm herbal oil over the forehead to soothe the central nervous system.',
+    },
+    {
+      question: 'Is this the same as a commercial spa massage?',
+      answer:
+        'No — we use authentic classical Ayurvedic tailas (medicated herbal oils) prepared with botanical decoctions under Vaidya supervision, not perfumed mineral oils common in commercial spas.',
+    },
+    {
+      question: 'Can Panchkarma help with PCOD, thyroid, or back pain?',
+      answer:
+        'Yes, specialized therapies like Kati Basti (lower back), Janu Basti (knees), and detoxifying Abhyanga directly support metabolic balance and joint decompression alongside therapeutic yoga.',
     },
   ];
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Home Panchkarma & Ayurvedic Detox Care',
+    provider: {
+      '@type': 'Organization',
+      name: 'KayaSadhak',
+      url: 'https://www.kayasadhak.com',
+    },
+    description:
+      'Doctor-guided Panchkarma at home in Delhi NCR — Abhyanga, Shirodhara, Swedana & Basti with authentic medicated oils.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
-      {/* Hero Photographic Banner */}
-      <section className="relative bg-[#16302B] text-white pt-16 pb-24 overflow-hidden border-b border-brand-gold-500/20">
-        <div className="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style={{ backgroundImage: "url('/images/logo.webp')" }}></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#16302B] via-[#16302B]/90 to-[#1F4A3C]/70 z-10"></div>
+    <div className="space-y-16 sm:space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
-        <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-brand-gold-500/20 border border-brand-gold-500/40 px-4 py-1.5 rounded-full text-xs font-body font-semibold text-brand-gold-500 tracking-widest uppercase">
-            <KayaLeafMotif size={14} color="#C08A3E" />
-            <span>Ayurvedic Home Care • Vaidya Supervised</span>
-          </div>
+      {/* 1. Hero Photographic Header */}
+      <section className="relative min-h-[520px] sm:min-h-[580px] bg-black flex items-center overflow-hidden">
+        <img
+          src="/images/hero_panchkarma_kerala.webp"
+          alt="Home Panchkarma & Ayurvedic Detox Care"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
 
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto">
-            Authentic Home Panchkarma Detox Therapies
-          </h1>
-
-          <p className="font-body text-base sm:text-lg text-brand-green-50/90 max-w-3xl mx-auto leading-relaxed">
-            Beyond asanas — embrace clinical Ayurvedic detoxification: Abhyanga, Swedana, Shirodhara & Basti treatments delivered directly to your home with full portable equipment and medicated herbal oils.
-          </p>
-
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(
-                'Hi KayaSadhak! I am interested in Home Panchkarma care.'
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 bg-brand-gold-500 hover:bg-brand-gold-600 text-white font-body font-semibold text-sm rounded-xl shadow-lg transition-all flex items-center justify-center gap-2"
-            >
-              <span>Book Home Panchkarma Care ➔</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* 4 Feature Image Cards */}
-      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 space-y-10">
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 text-brand-gold-600 font-body text-xs font-semibold uppercase tracking-wider">
-            <KayaLeafMotif size={14} color="#C08A3E" />
-            <span>Ayurvedic Therapies at Home</span>
-          </div>
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-green-900">
-            Our Core Panchkarma Treatments
-          </h2>
-          <p className="font-body text-sm text-neutral-grey">
-            Delivered directly to your residence with full portable steam units and medicated herbal oils.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Therapy 1 */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#1F4A3C]/15 bg-[#16302B] text-white flex flex-col justify-between min-h-[420px] p-6 group">
-            <div className="absolute inset-0 bg-gradient-to-t from-[#16302B] via-[#16302B]/85 to-transparent z-10"></div>
-            <img src="/images/logo.webp" alt="Abhyanga" className="absolute inset-0 w-full h-full object-contain p-8 opacity-20 group-hover:scale-105 transition-transform z-0" />
-            
-            <div className="relative z-20 space-y-3">
-              <span className="px-3 py-1 bg-brand-gold-500/20 text-brand-gold-500 font-body text-[10px] font-bold uppercase rounded-full border border-brand-gold-500/40">
-                Therapy 01
+        <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
+          <div className="max-w-3xl space-y-4 sm:space-y-6">
+            <div className="inline-flex items-center gap-2 bg-black/25 backdrop-blur-xs border border-white/20 px-3.5 py-1.5 rounded-full shadow-sm">
+              <KayaLeafMotif size={13} color="#E5C384" />
+              <span className="font-display font-semibold text-[10px] sm:text-xs text-[#E5C384] tracking-[0.14em] uppercase">
+                Vaidya-Supervised In-Home Ayurvedic Therapies
               </span>
-              <h3 className="font-heading font-bold text-2xl text-white">Abhyanga Massage</h3>
-              <p className="font-body text-xs text-brand-green-50/80 leading-relaxed">
-                Full-body therapeutic herbal oil massage for joint lubrication, lymphatic drainage, and circulation.
-              </p>
             </div>
 
-            <div className="relative z-20 pt-4">
+            <h1 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-white tracking-tight">
+              Authentic Home Panchkarma & Ayurvedic Detox Care in Delhi NCR
+            </h1>
+
+            <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200/95 leading-relaxed max-w-2xl">
+              KayaSadhak brings genuine Ayurvedic therapies to your residence — Abhyanga warm herbal massage, Shirodhara nervous system pour, Swedana herbal steam, and Kati Basti delivered under Vaidya supervision with authentic medicated oils.
+            </p>
+
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <a
                 href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(
-                  'Hi KayaSadhak! I want to book Abhyanga Massage at home.'
+                  'Hi KayaSadhak! I would like to book a free Panchkarma consultation.'
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full py-3 bg-brand-gold-500 text-white text-center font-body text-xs font-semibold rounded-xl hover:bg-brand-gold-600 transition-colors"
+                className="px-6 sm:px-8 py-3.5 sm:py-4 bg-[#16302B] hover:bg-[#0E211D] text-white font-bold text-xs sm:text-sm rounded-xl transition-all shadow-xl flex items-center justify-center gap-2.5 border border-[#C08A3E]/40 active:scale-[0.98]"
               >
-                Enquire Abhyanga ➔
+                <FaWhatsapp className="w-4 h-4 text-[#25D366]" />
+                <span className="uppercase tracking-wider">Book Consultation on WhatsApp</span>
               </a>
-            </div>
-          </div>
-
-          {/* Therapy 2 */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#1F4A3C]/15 bg-[#1F4A3C] text-white flex flex-col justify-between min-h-[420px] p-6 group">
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1F4A3C] via-[#1F4A3C]/85 to-transparent z-10"></div>
-            <img src="/images/logo.webp" alt="Swedana" className="absolute inset-0 w-full h-full object-contain p-8 opacity-20 group-hover:scale-105 transition-transform z-0" />
-            
-            <div className="relative z-20 space-y-3">
-              <span className="px-3 py-1 bg-brand-gold-500/20 text-brand-gold-500 font-body text-[10px] font-bold uppercase rounded-full border border-brand-gold-500/40">
-                Therapy 02
-              </span>
-              <h3 className="font-heading font-bold text-2xl text-white">Swedana Herbal Steam</h3>
-              <p className="font-body text-xs text-brand-green-50/80 leading-relaxed">
-                Herbal steam treatment following Abhyanga for deep cellular toxin release and skin rejuvenation.
-              </p>
-            </div>
-
-            <div className="relative z-20 pt-4">
               <a
-                href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(
-                  'Hi KayaSadhak! I want to book Swedana Herbal Steam at home.'
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full py-3 bg-brand-gold-500 text-white text-center font-body text-xs font-semibold rounded-xl hover:bg-brand-gold-600 transition-colors"
+                href={`tel:${CONTACT_INFO.phoneClean}`}
+                className="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 backdrop-blur-sm transition-all"
               >
-                Enquire Swedana ➔
-              </a>
-            </div>
-          </div>
-
-          {/* Therapy 3 */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#1F4A3C]/15 bg-[#2E5E4E] text-white flex flex-col justify-between min-h-[420px] p-6 group">
-            <div className="absolute inset-0 bg-gradient-to-t from-[#2E5E4E] via-[#2E5E4E]/85 to-transparent z-10"></div>
-            <img src="/images/logo.webp" alt="Shirodhara" className="absolute inset-0 w-full h-full object-contain p-8 opacity-20 group-hover:scale-105 transition-transform z-0" />
-            
-            <div className="relative z-20 space-y-3">
-              <span className="px-3 py-1 bg-brand-gold-500/20 text-brand-gold-500 font-body text-[10px] font-bold uppercase rounded-full border border-brand-gold-500/40">
-                Therapy 03
-              </span>
-              <h3 className="font-heading font-bold text-2xl text-white">Shirodhara Pour</h3>
-              <p className="font-body text-xs text-brand-green-50/80 leading-relaxed">
-                Continuous forehead pour of warm medicated herbal oil for deep nervous system calming & insomnia relief.
-              </p>
-            </div>
-
-            <div className="relative z-20 pt-4">
-              <a
-                href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(
-                  'Hi KayaSadhak! I want to book Shirodhara Therapy at home.'
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full py-3 bg-brand-gold-500 text-white text-center font-body text-xs font-semibold rounded-xl hover:bg-brand-gold-600 transition-colors"
-              >
-                Enquire Shirodhara ➔
-              </a>
-            </div>
-          </div>
-
-          {/* Therapy 4 */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#1F4A3C]/15 bg-[#16302B] text-white flex flex-col justify-between min-h-[420px] p-6 group">
-            <div className="absolute inset-0 bg-gradient-to-t from-[#16302B] via-[#16302B]/85 to-transparent z-10"></div>
-            <img src="/images/logo.webp" alt="Kati Basti" className="absolute inset-0 w-full h-full object-contain p-8 opacity-20 group-hover:scale-105 transition-transform z-0" />
-            
-            <div className="relative z-20 space-y-3">
-              <span className="px-3 py-1 bg-brand-gold-500/20 text-brand-gold-500 font-body text-[10px] font-bold uppercase rounded-full border border-brand-gold-500/40">
-                Therapy 04
-              </span>
-              <h3 className="font-heading font-bold text-2xl text-white">Kati & Janu Basti</h3>
-              <p className="font-body text-xs text-brand-green-50/80 leading-relaxed">
-                Specialized herbal oil pooling for localized lumbar spine, lower back, or knee joint rehabilitation.
-              </p>
-            </div>
-
-            <div className="relative z-20 pt-4">
-              <a
-                href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(
-                  'Hi KayaSadhak! I want to book Kati/Janu Basti at home.'
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full py-3 bg-brand-gold-500 text-white text-center font-body text-xs font-semibold rounded-xl hover:bg-brand-gold-600 transition-colors"
-              >
-                Enquire Kati Basti ➔
+                <FaPhoneAlt className="w-3.5 h-3.5 text-[#E5C384]" />
+                <span>Call {CONTACT_INFO.phone}</span>
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Lead Generation Form Section */}
+      {/* 2. Core Therapies Grid */}
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-white p-8 md:p-12 rounded-3xl border border-[#1F4A3C]/15 shadow-xl">
-          <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 bg-brand-gold-500/15 border border-brand-gold-500/30 px-3 py-1.5 rounded-full text-xs text-brand-gold-600 font-bold uppercase">
-              <KayaLeafMotif size={14} color="#C08A3E" />
-              <span>Ayurvedic Home Consultation</span>
+        <div className="text-center max-w-2xl mx-auto space-y-2 mb-8">
+          <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/80 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
+            <KayaLeafMotif size={12} color="#C08A3E" />
+            <span>Classical Ayurvedic Therapies</span>
+          </div>
+          <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-[#16302B]">
+            Therapies Delivered at Your Home
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+          <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center">
+              <FaSpa className="w-5 h-5" />
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-green-900 leading-tight">
-              Request Your Home Panchkarma Assessment
-            </h2>
-            <p className="font-body text-sm sm:text-base text-neutral-charcoal/90 leading-relaxed">
-              Connect directly with our Vaidya team to customize your Ayurvedic home detoxification protocol in Delhi NCR or Chandigarh Tricity.
+            <h3 className="font-heading font-bold text-lg text-[#16302B]">Abhyanga Massage</h3>
+            <p className="text-xs text-[#5A574F] leading-relaxed">
+              Synchronized warm herbal oil massage customized to your Vata/Pitta/Kapha dosha for joint lubrication and toxin mobilization.
             </p>
           </div>
-          <div className="lg:col-span-6">
-            <LeadGenForm defaultService="Home Panchkarma & Ayurveda" title="Enquire for Home Panchkarma" />
+
+          <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center">
+              <FaLeaf className="w-5 h-5" />
+            </div>
+            <h3 className="font-heading font-bold text-lg text-[#16302B]">Shirodhara Pour</h3>
+            <p className="text-xs text-[#5A574F] leading-relaxed">
+              A continuous, rhythmic stream of warm medicated oil across the forehead to soothe anxiety, insomnia, and nervous exhaustion.
+            </p>
+          </div>
+
+          <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center">
+              <FaSpa className="w-5 h-5" />
+            </div>
+            <h3 className="font-heading font-bold text-lg text-[#16302B]">Swedana Herbal Steam</h3>
+            <p className="text-xs text-[#5A574F] leading-relaxed">
+              Portable herbal steam therapy following massage to open cellular channels and eliminate mobilized deep-tissue toxins.
+            </p>
+          </div>
+
+          <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center">
+              <FaUserMd className="w-5 h-5" />
+            </div>
+            <h3 className="font-heading font-bold text-lg text-[#16302B]">Kati & Janu Basti</h3>
+            <p className="text-xs text-[#5A574F] leading-relaxed">
+              Medicated herbal oil retained over the lower lumbar spine or knee joint in a dough dam for targeted chronic pain relief.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* 3. Safety Notice */}
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
-        <FaqAccordion items={faqs} title="Panchkarma FAQs" />
+        <div className="bg-[#EFE8DC] border border-[#DCD3C0] rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-5 text-left">
+          <div className="w-12 h-12 rounded-2xl bg-[#16302B] text-[#E5C384] flex items-center justify-center flex-shrink-0">
+            <FaShieldAlt className="w-6 h-6" />
+          </div>
+          <div className="space-y-1">
+            <h3 className="font-heading font-bold text-lg text-[#16302B]">Vaidya Consultation & Safety Protocol</h3>
+            <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed">
+              Panchkarma is a classical Ayurvedic wellness discipline. Every package begins with a constitution assessment. If you are pregnant or on regular medication, our Vaidya will advise on safe modifications.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. LeadGen Form */}
+      <section className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-[#F7F3EA] border border-[#E5DEC9] rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4 text-left">
+              <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/90 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
+                <KayaLeafMotif size={12} color="#C08A3E" />
+                <span>BOOK PANCHKARMA CONSULT</span>
+              </div>
+              <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-[#16302B]">
+                Book Your Home Panchkarma Consultation
+              </h2>
+              <p className="text-sm text-[#4A4842] leading-relaxed">
+                Connect directly with our Ayurvedic faculty on WhatsApp. Share your health concerns, preferred treatment dates, and locality across Delhi NCR or Chandigarh.
+              </p>
+              <div className="pt-2 space-y-2 text-xs text-[#16302B] font-medium">
+                <div className="flex items-center gap-2">
+                  <span className="text-[#B37B2E] font-bold">✓</span> Authentic Kerala Herbal Medicated Oils
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#B37B2E] font-bold">✓</span> Full Portable Massage Table & Steam Setup
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#B37B2E] font-bold">✓</span> Supervised by Certified Ayurvedic Vaidyas
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <LeadGenForm defaultService="Home Panchkarma & Ayurvedic Care" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. FAQs */}
+      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+        <FaqAccordion items={faqs} title="Frequently Asked Questions on Home Panchkarma" />
       </section>
     </div>
   );
