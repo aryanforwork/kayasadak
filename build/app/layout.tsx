@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { TopUtilityBar } from '@/components/TopUtilityBar';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { MobileBottomDock } from '@/components/MobileBottomDock';
@@ -101,7 +100,6 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-[#F3EEE2] text-[#26241F] antialiased">
-        <TopUtilityBar />
         <Navbar />
         <main className="flex-grow pb-20 md:pb-0">{children}</main>
         <Footer />

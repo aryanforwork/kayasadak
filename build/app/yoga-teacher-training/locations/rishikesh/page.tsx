@@ -85,7 +85,7 @@ export default function RishikeshYTTPage() {
   };
 
   return (
-    <div className="space-y-16 sm:space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+    <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
@@ -145,6 +145,8 @@ export default function RishikeshYTTPage() {
           </div>
         </div>
       </section>
+
+      <div className="space-y-16 sm:space-y-20 mt-16 sm:mt-20">
 
       {/* 2. Why Rishikesh */}
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
@@ -237,6 +239,7 @@ export default function RishikeshYTTPage() {
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <FaqAccordion items={faqs} title="Frequently Asked Questions on Rishikesh YTT" />
       </section>
+      </div>
     </div>
   );
 }
