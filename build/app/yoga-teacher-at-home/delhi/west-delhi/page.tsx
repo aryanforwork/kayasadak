@@ -9,74 +9,74 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaMapMarkerAlt, FaCheckCircle, FaUserCheck, FaClock } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Personal Yoga Teacher at Home in South Delhi | KayaSadhak',
+  title: 'Personal Yoga Teacher in West Delhi & Dwarka | KayaSadhak',
   description:
-    'Certified yoga teacher at home in South Delhi — GK, Hauz Khas, Saket, Vasant Kunj, Defence Colony, South Ex & CR Park. From ₹500/session. Free trial.',
+    'Certified yoga teacher at home in West Delhi — Dwarka (all sectors), Janakpuri, Rajouri Garden, Paschim Vihar, Punjabi Bagh. From ₹500/session. Free trial.',
   alternates: {
-    canonical: 'https://www.kayasadhak.com/yoga-teacher-at-home/delhi/south-delhi',
+    canonical: 'https://www.kayasadhak.com/yoga-teacher-at-home/delhi/west-delhi',
   },
   openGraph: {
-    title: 'Personal Yoga Teacher at Home in South Delhi | KayaSadhak',
+    title: 'Personal Yoga Teacher in West Delhi & Dwarka | KayaSadhak',
     description:
-      'Certified yoga teacher at home in South Delhi — GK, Hauz Khas, Saket, Vasant Kunj, Defence Colony, South Ex & CR Park. From ₹500/session. Free trial.',
-    url: 'https://www.kayasadhak.com/yoga-teacher-at-home/delhi/south-delhi',
+      'Certified yoga teacher at home in West Delhi — Dwarka (all sectors), Janakpuri, Rajouri Garden, Paschim Vihar, Punjabi Bagh. From ₹500/session. Free trial.',
+    url: 'https://www.kayasadhak.com/yoga-teacher-at-home/delhi/west-delhi',
     siteName: 'KayaSadhak',
     type: 'website',
   },
 };
 
-export default function SouthDelhiLocalityPage() {
+export default function WestDelhiLocalityPage() {
   const faqs = [
     {
-      question: 'Do you cover Chattarpur and the southern farmhouse areas, or just the main South Delhi colonies?',
+      question: 'Do you cover all Dwarka sectors, or only some?',
       answer:
-        'Yes, we cover Chattarpur, Mehrauli, DLF Farms, and southern farmhouse belts alongside main colonies. Message us on WhatsApp with your exact pin code to confirm teacher schedules.',
+        'All Dwarka sectors (1 through 29) are covered daily by our mobile teacher network. Message us on WhatsApp with your exact sector and apartment society.',
     },
     {
-      question: 'Can I get a certified female yoga teacher for a South Delhi booking?',
+      question: 'I work shift hours near IGI Airport — can I book early morning or late evening slots?',
       answer:
-        'Yes — female instructors across all qualification tiers (Silver, Gold, Platinum) are available throughout South Delhi.',
+        'Yes — early morning slots (from 6:00 AM) and evening slots (up to 8:30 PM) are available to accommodate airline crew and corporate shift schedules.',
     },
     {
-      question: 'How quickly can a personal teacher start after booking?',
+      question: 'Is there a difference in service between Dwarka and the rest of West Delhi?',
       answer:
-        'Typically within 24 to 48 hours of your assessment booking, matching your preferred morning or evening home slot.',
+        'No — the same three teacher tiers (Silver, Gold, Platinum), identical monthly pricing, and verified quality standards apply across all West Delhi locations.',
     },
     {
-      question: 'Is pricing different in South Delhi compared to other parts of Delhi NCR?',
+      question: 'Can I book kids yoga and my own session together in Dwarka?',
       answer:
-        'No — our Platinum (₹1,000), Gold (₹750), and Silver (₹500) per-session rates and monthly packages are completely uniform with zero travel surcharges.',
+        'Yes — many families in Dwarka apartment societies book consecutive back-to-back sessions or train together at no additional registration fee.',
     },
     {
-      question: 'Can I book a corporate session for my South Delhi office instead of home?',
+      question: 'Do you serve Uttam Nagar, Vikaspuri, and Tilak Nagar?',
       answer:
-        'Yes — we provide on-site desk wellness and boardroom sessions for offices in Nehru Place, Okhla, Saket District Centre, and Bhikaji Cama Place.',
+        'Yes, all residential sectors of Vikaspuri, Tilak Nagar, Uttam Nagar, Janakpuri, and Paschim Vihar are in our daily service perimeter.',
     },
     {
-      question: 'Do you serve Nehru Place, Kalkaji, and Alaknanda specifically?',
+      question: 'Can I request a female yoga instructor in Janakpuri or Punjabi Bagh?',
       answer:
-        'Yes, all residential pockets surrounding Nehru Place, Kalkaji, CR Park, and Alaknanda are within our active South Delhi daily route.',
+        'Yes — certified female instructors are available for all morning and evening residential slots across West Delhi.',
     },
   ];
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'KayaSadhak Home Yoga - South Delhi',
+    name: 'KayaSadhak Home Yoga - West Delhi & Dwarka',
     image: 'https://www.kayasadhak.com/images/hero_home_yoga_ncr.webp',
     telephone: '+91-8273264561',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'South Delhi',
+      addressLocality: 'West Delhi & Dwarka',
       addressRegion: 'Delhi',
       addressCountry: 'IN',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 28.5494,
-      longitude: 77.2001,
+      latitude: 28.5921,
+      longitude: 77.0460,
     },
-    url: 'https://www.kayasadhak.com/yoga-teacher-at-home/delhi/south-delhi',
+    url: 'https://www.kayasadhak.com/yoga-teacher-at-home/delhi/west-delhi',
     priceRange: '₹500 - ₹1000',
   };
 
@@ -108,7 +108,7 @@ export default function SouthDelhiLocalityPage() {
       <section className="relative min-h-[520px] sm:min-h-[580px] bg-black flex items-center overflow-hidden">
         <img
           src="/images/hero_home_yoga_ncr.webp"
-          alt="Personal Yoga Teacher at Home in South Delhi"
+          alt="Personal Yoga Teacher at Home in West Delhi & Dwarka"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
@@ -119,29 +119,29 @@ export default function SouthDelhiLocalityPage() {
             <div className="inline-flex items-center gap-2 bg-black/25 backdrop-blur-xs border border-white/20 px-3.5 py-1.5 rounded-full shadow-sm">
               <KayaLeafMotif size={13} color="#E5C384" />
               <span className="font-display font-semibold text-[10px] sm:text-xs text-[#E5C384] tracking-[0.14em] uppercase">
-                South Delhi Locality Hub • 1-on-1 In-Home Sessions
+                West Delhi & Dwarka Hub • Sectors 1-29 Coverage
               </span>
             </div>
 
             <h1 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-white tracking-tight">
-              Personal Yoga Teacher at Home in South Delhi
+              Personal Yoga Teacher at Home in West Delhi & Dwarka
             </h1>
 
             <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200/95 leading-relaxed max-w-2xl">
-              KayaSadhak sends verified yoga teachers to homes across Greater Kailash (GK 1 & 2), Hauz Khas, Saket, Vasant Kunj, Defence Colony, South Extension, and CR Park for private sessions on your schedule.
+              KayaSadhak sends verified yoga teachers to homes right across West Delhi — all Dwarka sectors, Janakpuri, Rajouri Garden, Paschim Vihar, and Punjabi Bagh for private 1-on-1 sessions.
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <a
                 href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(
-                  'Hi KayaSadhak! I want to book a free trial home yoga session in South Delhi.'
+                  'Hi KayaSadhak! I want to book a free trial home yoga session in West Delhi / Dwarka.'
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 sm:px-8 py-3.5 sm:py-4 bg-[#16302B] hover:bg-[#0E211D] text-white font-bold text-xs sm:text-sm rounded-xl transition-all shadow-xl flex items-center justify-center gap-2.5 border border-[#C08A3E]/40 active:scale-[0.98]"
               >
                 <FaWhatsapp className="w-4 h-4 text-[#25D366]" />
-                <span className="uppercase tracking-wider">Book Free Trial in South Delhi</span>
+                <span className="uppercase tracking-wider">Book Free Trial in West Delhi</span>
               </a>
               <a
                 href={`tel:${CONTACT_INFO.phoneClean}`}
@@ -163,37 +163,37 @@ export default function SouthDelhiLocalityPage() {
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/80 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
               <FaMapMarkerAlt className="w-3.5 h-3.5 text-[#C08A3E]" />
-              <span>Full South Delhi Footprint</span>
+              <span>West Delhi & Dwarka Perimeters</span>
             </div>
             <h2 className="font-heading font-bold text-2xl sm:text-3xl text-[#16302B]">
-              Colonies & Neighborhoods We Serve Daily
+              Colonies & Dwarka Sectors We Serve Daily
             </h2>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-xs sm:text-sm text-[#16302B] font-medium">
             <div className="bg-white p-3 rounded-xl border border-[#16302B]/10 flex items-center gap-2">
-              <span className="text-[#B37B2E]">✓</span> Greater Kailash (GK 1 & 2)
+              <span className="text-[#B37B2E]">✓</span> Dwarka Sectors (1 to 29)
             </div>
             <div className="bg-white p-3 rounded-xl border border-[#16302B]/10 flex items-center gap-2">
-              <span className="text-[#B37B2E]">✓</span> Hauz Khas & Green Park
+              <span className="text-[#B37B2E]">✓</span> Janakpuri (All Blocks)
             </div>
             <div className="bg-white p-3 rounded-xl border border-[#16302B]/10 flex items-center gap-2">
-              <span className="text-[#B37B2E]">✓</span> Saket & Malviya Nagar
+              <span className="text-[#B37B2E]">✓</span> Rajouri Garden & Mansarovar
             </div>
             <div className="bg-white p-3 rounded-xl border border-[#16302B]/10 flex items-center gap-2">
-              <span className="text-[#B37B2E]">✓</span> Vasant Kunj & Vasant Vihar
+              <span className="text-[#B37B2E]">✓</span> Paschim Vihar & Punjabi Bagh
             </div>
             <div className="bg-white p-3 rounded-xl border border-[#16302B]/10 flex items-center gap-2">
-              <span className="text-[#B37B2E]">✓</span> Defence Colony & South Ex
+              <span className="text-[#B37B2E]">✓</span> Vikaspuri & Tilak Nagar
             </div>
             <div className="bg-white p-3 rounded-xl border border-[#16302B]/10 flex items-center gap-2">
-              <span className="text-[#B37B2E]">✓</span> CR Park & Alaknanda
+              <span className="text-[#B37B2E]">✓</span> Uttam Nagar & Mohan Garden
             </div>
             <div className="bg-white p-3 rounded-xl border border-[#16302B]/10 flex items-center gap-2">
-              <span className="text-[#B37B2E]">✓</span> Panchsheel & Gulmohar Park
+              <span className="text-[#B37B2E]">✓</span> Palam Colony & Dashrath Puri
             </div>
             <div className="bg-white p-3 rounded-xl border border-[#16302B]/10 flex items-center gap-2">
-              <span className="text-[#B37B2E]">✓</span> Chattarpur & Mehrauli
+              <span className="text-[#B37B2E]">✓</span> Moti Nagar & Kirti Nagar
             </div>
           </div>
         </div>
@@ -204,13 +204,13 @@ export default function SouthDelhiLocalityPage() {
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/70 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.15em] text-[#B37B2E]">
             <KayaLeafMotif size={14} color="#C08A3E" />
-            <span>SOUTH DELHI PRICING</span>
+            <span>WEST DELHI PRICING</span>
           </div>
           <h2 className="font-heading font-bold text-2xl sm:text-4xl text-[#16302B]">
             Transparent 3×3 Pricing Plans
           </h2>
           <p className="font-body text-xs sm:text-base text-[#5A574F]">
-            From ₹500/session with zero traveling or hidden charges across South Delhi:
+            From ₹500/session with zero traveling charges across West Delhi & Dwarka:
           </p>
         </div>
 
@@ -224,23 +224,23 @@ export default function SouthDelhiLocalityPage() {
             <div className="space-y-4 text-left">
               <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/90 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
                 <KayaLeafMotif size={12} color="#C08A3E" />
-                <span>SOUTH DELHI BOOKING</span>
+                <span>WEST DELHI BOOKING</span>
               </div>
               <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-[#16302B]">
-                Book Your Free South Delhi Trial Session
+                Book Your Free West Delhi / Dwarka Trial
               </h2>
               <p className="text-sm text-[#4A4842] leading-relaxed">
-                Connect directly with our South Delhi dispatch coordinator on WhatsApp. Share your colony, preferred timing, and teacher qualification tier.
+                Connect directly with our West Delhi coordinator on WhatsApp. Share your sector or colony, timing preference, and teacher tier.
               </p>
               <div className="pt-2 space-y-2 text-xs text-[#16302B] font-medium">
                 <div className="flex items-center gap-2">
-                  <span className="text-[#B37B2E] font-bold">✓</span> Free 60-Minute Posture Assessment
+                  <span className="text-[#B37B2E] font-bold">✓</span> Free Assessment for Full Household
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#B37B2E] font-bold">✓</span> Verified Female & Male Instructors
+                  <span className="text-[#B37B2E] font-bold">✓</span> Female & Male Verified Faculty
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#B37B2E] font-bold">✓</span> Up to 2 Family Members at 0 Extra Cost
+                  <span className="text-[#B37B2E] font-bold">✓</span> Shift-Friendly Morning & Evening Timings
                 </div>
               </div>
             </div>
@@ -254,7 +254,7 @@ export default function SouthDelhiLocalityPage() {
 
       {/* 5. FAQs */}
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
-        <FaqAccordion items={faqs} title="Frequently Asked Questions on South Delhi Home Yoga" />
+        <FaqAccordion items={faqs} title="Frequently Asked Questions on West Delhi & Dwarka Yoga" />
       </section>
       </div>
     </div>
