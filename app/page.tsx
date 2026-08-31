@@ -189,7 +189,7 @@ export default function HomePage() {
               {/* CTA Button */}
               <div className="pt-1.5 sm:pt-2">
                 <Link
-                  href="/yoga-teacher-training"
+                  href="/yoga-teacher-training/200-hour-ttc"
                   className="w-full py-3.5 bg-brand-gold-500 hover:bg-brand-gold-600 text-white text-center font-body text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group/btn active:scale-[0.98]"
                 >
                   <span>Explore YTT Certifications</span>
@@ -251,7 +251,7 @@ export default function HomePage() {
               {/* CTA Button */}
               <div className="pt-1.5 sm:pt-2">
                 <Link
-                  href="/services/ayurveda-panchkarma"
+                  href="/services/panchkarma"
                   className="w-full py-3.5 bg-brand-gold-500 hover:bg-brand-gold-600 text-white text-center font-body text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group/btn active:scale-[0.98]"
                 >
                   <span>Explore Panchkarma Therapies</span>
