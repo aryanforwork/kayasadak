@@ -103,12 +103,12 @@ export default function CorporateYogaPage() {
       {/* 1. Hero Photographic Header */}
       <section className="relative min-h-[520px] sm:min-h-[580px] bg-black flex items-center overflow-hidden">
         <img
-          src="/images/hero_home_yoga_ncr.webp"
-          alt="Corporate Yoga & Wellness Programs"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-75 scale-105 transition-opacity duration-500"
+          src="/images/card_corporate_wellness.webp"
+          alt="Corporate Yoga & Workplace Wellness"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

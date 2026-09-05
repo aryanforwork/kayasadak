@@ -44,7 +44,7 @@ export const FounderNote: React.FC = () => {
 
                 {/* Founder Photorealistic Portrait */}
                 <img
-                  src="/images/founder_nivil_chaudhary.webp"
+                  src="/images/kayasadak-founder.png"
                   alt="Nivil Chaudhary - Founder & Lead Sadhak"
                   className="w-full h-full object-cover object-top filter brightness-[1.02] contrast-[1.02]"
                   loading="lazy"
