@@ -267,10 +267,10 @@ export const Navbar: React.FC = () => {
 
       {/* 2. Main Navbar (Pure White & Frosted Glass Background) */}
       <div className="bg-white/95 backdrop-blur-md border-b border-[#1F4A3C]/10 shadow-xs sticky top-0 z-40">
-        <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-12 h-16 sm:h-20 flex items-center justify-between">
+        <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-8 xl:px-12 h-16 sm:h-20 flex items-center justify-between gap-3 xl:gap-6">
           {/* Responsive Brand Logo */}
-          <Link href="/" className="flex items-center gap-2.5 sm:gap-4 group">
-            <div className="relative h-10 w-9 sm:h-14 sm:w-12 flex-shrink-0">
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3.5 group flex-shrink-0">
+            <div className="relative h-10 w-9 sm:h-12 sm:w-11 lg:h-13 lg:w-12 flex-shrink-0">
               <img
                 src="/images/logo.webp"
                 alt="KayaSadhak Logo"
@@ -279,20 +279,20 @@ export const Navbar: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
-                <span className="font-heading font-bold text-2xl sm:text-3xl lg:text-[34px] text-brand-green-900 leading-none tracking-tight">
+                <span className="font-heading font-bold text-2xl sm:text-[28px] lg:text-[30px] xl:text-[32px] text-brand-green-900 leading-none tracking-tight">
                   KayaSadhak
                 </span>
-                <KayaLeafMotif size={16} color="#C08A3E" className="opacity-90" />
+                <KayaLeafMotif size={15} color="#C08A3E" className="opacity-90" />
               </div>
-              <span className="font-display text-[9px] sm:text-[11px] text-brand-gold-600 font-semibold tracking-[0.16em] uppercase mt-0.5">
+              <span className="font-display text-[8px] sm:text-[9.5px] xl:text-[10px] text-brand-gold-600 font-bold tracking-[0.08em] sm:tracking-[0.11em] uppercase mt-0.5 whitespace-nowrap">
                 HOME YOGA • PERSONAL FITNESS TRAINER • YTT
               </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation Links with Premium Dropdowns */}
-          <nav className="hidden lg:flex items-center gap-7 font-body text-[15px] font-medium text-neutral-charcoal">
-            <Link href="/" className="hover:text-brand-green-900 py-2 transition-colors">
+          {/* Desktop Navigation Links with Premium Dropdowns - Guaranteed Single Line */}
+          <nav className="hidden lg:flex items-center gap-3.5 xl:gap-5 2xl:gap-6 font-body text-[13.5px] xl:text-[14.5px] font-medium text-neutral-charcoal flex-nowrap">
+            <Link href="/" className="hover:text-brand-green-900 py-2 transition-colors whitespace-nowrap">
               Home
             </Link>
 
@@ -304,10 +304,10 @@ export const Navbar: React.FC = () => {
             >
               <Link
                 href={dropdownMenus.yogaAtHome.link}
-                className="flex items-center gap-1 hover:text-brand-green-900 transition-colors py-2"
+                className="flex items-center gap-1 hover:text-brand-green-900 transition-colors py-2 whitespace-nowrap"
               >
                 <span>Yoga at Home</span>
-                <span className="text-xs text-neutral-grey group-hover:text-brand-green-900 transition-transform group-hover:rotate-180">
+                <span className="text-[10px] text-neutral-grey group-hover:text-brand-green-900 transition-transform group-hover:rotate-180 inline-block ml-0.5">
                   ▾
                 </span>
               </Link>
@@ -334,7 +334,7 @@ export const Navbar: React.FC = () => {
             {/* Direct Nav Item: Personal Fitness Trainer */}
             <Link
               href="/services/personal-fitness-trainer"
-              className="hover:text-brand-green-900 py-2 transition-colors"
+              className="hover:text-brand-green-900 py-2 transition-colors whitespace-nowrap"
             >
               Fitness Trainer
             </Link>
@@ -347,10 +347,10 @@ export const Navbar: React.FC = () => {
             >
               <Link
                 href={dropdownMenus.pricing.link}
-                className="flex items-center gap-1 hover:text-brand-green-900 transition-colors py-2"
+                className="flex items-center gap-1 hover:text-brand-green-900 transition-colors py-2 whitespace-nowrap"
               >
                 <span>Pricing Matrix</span>
-                <span className="text-xs text-neutral-grey group-hover:text-brand-green-900 transition-transform group-hover:rotate-180">
+                <span className="text-[10px] text-neutral-grey group-hover:text-brand-green-900 transition-transform group-hover:rotate-180 inline-block ml-0.5">
                   ▾
                 </span>
               </Link>
@@ -382,10 +382,10 @@ export const Navbar: React.FC = () => {
             >
               <Link
                 href={dropdownMenus.ytt.link}
-                className="flex items-center gap-1 hover:text-brand-green-900 transition-colors py-2"
+                className="flex items-center gap-1 hover:text-brand-green-900 transition-colors py-2 whitespace-nowrap"
               >
                 <span>YTT Courses</span>
-                <span className="text-xs text-neutral-grey group-hover:text-brand-green-900 transition-transform group-hover:rotate-180">
+                <span className="text-[10px] text-neutral-grey group-hover:text-brand-green-900 transition-transform group-hover:rotate-180 inline-block ml-0.5">
                   ▾
                 </span>
               </Link>
@@ -417,10 +417,10 @@ export const Navbar: React.FC = () => {
             >
               <Link
                 href={dropdownMenus.panchkarma.link}
-                className="flex items-center gap-1 hover:text-brand-green-900 transition-colors py-2"
+                className="flex items-center gap-1 hover:text-brand-green-900 transition-colors py-2 whitespace-nowrap"
               >
                 <span>Panchkarma</span>
-                <span className="text-xs text-neutral-grey group-hover:text-brand-green-900 transition-transform group-hover:rotate-180">
+                <span className="text-[10px] text-neutral-grey group-hover:text-brand-green-900 transition-transform group-hover:rotate-180 inline-block ml-0.5">
                   ▾
                 </span>
               </Link>
@@ -444,32 +444,24 @@ export const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <Link href="/about-us" className="hover:text-brand-green-900 py-2 transition-colors">
+            <Link href="/about-us" className="hover:text-brand-green-900 py-2 transition-colors whitespace-nowrap">
               About Us
             </Link>
 
-            <Link href="/contact-us" className="hover:text-brand-green-900 py-2 transition-colors">
+            <Link href="/contact-us" className="hover:text-brand-green-900 py-2 transition-colors whitespace-nowrap">
               Contact
             </Link>
           </nav>
 
-          {/* Desktop Right CTA Action Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
-            <a
-              href={`tel:${CONTACT_INFO.phoneClean}`}
-              className="px-4 py-2.5 rounded-xl border border-brand-green-900/30 text-brand-green-900 hover:bg-brand-green-900 hover:text-white font-body font-semibold text-xs tracking-wider transition-all flex items-center gap-2"
-            >
-              <FaPhoneAlt className="w-3 h-3 text-brand-gold-600" />
-              <span>{CONTACT_INFO.phone}</span>
-            </a>
-
+          {/* Desktop Right CTA Action Button (Direct Call button removed per user request) */}
+          <div className="hidden lg:flex items-center flex-shrink-0">
             <a
               href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(
                 'Hi KayaSadhak! I want to book a free 1-on-1 personal home yoga trial.'
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 rounded-xl bg-[#16302B] hover:bg-[#1F4A3C] text-white font-body font-semibold text-xs tracking-wider transition-all shadow-md flex items-center gap-2 border border-[#C08A3E]/40 group"
+              className="px-4 xl:px-5 py-2.5 rounded-xl bg-[#16302B] hover:bg-[#1F4A3C] text-white font-body font-semibold text-xs tracking-wider transition-all shadow-md flex items-center gap-2 border border-[#C08A3E]/40 group whitespace-nowrap"
             >
               <FaWhatsapp className="w-4 h-4 text-[#25D366] group-hover:scale-110 transition-transform" />
               <span>BOOK FREE TRIAL</span>
