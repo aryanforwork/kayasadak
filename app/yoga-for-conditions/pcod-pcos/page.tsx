@@ -9,16 +9,16 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaShieldAlt, FaFemale, FaHeartbeat, FaLeaf } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Yoga for PCOD & PCOS at Home in Delhi NCR | KayaSadhak',
+  title: 'Yoga for PCOD & PCOS at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
   description:
-    'Therapeutic 1-on-1 yoga at home for PCOD/PCOS hormonal balance in Delhi NCR — pelvic circulation & stress reduction focus. Not medical advice. Enquire.',
+    'Therapeutic 1-on-1 yoga at home for PCOD/PCOS hormonal balance in Delhi NCR & Chandigarh Tricity — pelvic circulation & stress reduction focus. Not medical advice. Enquire.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-for-conditions/pcod-pcos',
   },
   openGraph: {
-    title: 'Yoga for PCOD & PCOS at Home in Delhi NCR | KayaSadhak',
+    title: 'Yoga for PCOD & PCOS at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
     description:
-      'Therapeutic 1-on-1 yoga at home for PCOD/PCOS hormonal balance in Delhi NCR — pelvic circulation & stress reduction focus. Not medical advice. Enquire.',
+      'Therapeutic 1-on-1 yoga at home for PCOD/PCOS hormonal balance in Delhi NCR & Chandigarh Tricity — pelvic circulation & stress reduction focus. Not medical advice. Enquire.',
     url: 'https://www.kayasadhak.com/yoga-for-conditions/pcod-pcos',
     siteName: 'KayaSadhak',
     type: 'website',
@@ -55,7 +55,7 @@ export default function PcodPcosYogaPage() {
     {
       question: 'Can I request a female yoga instructor for PCOD sessions?',
       answer:
-        'Yes — a certified female instructor with specialized training in women’s endocrine health is our default recommendation and available across all Delhi NCR and Tricity hubs.',
+        'Yes — a certified female instructor with specialized training in women’s endocrine health is our default recommendation and available across all Delhi NCR & Chandigarh Tricity hubs.',
     },
     {
       question: 'How much does PCOD/PCOS home yoga cost?',
@@ -69,7 +69,7 @@ export default function PcodPcosYogaPage() {
     '@type': 'MedicalWebPage',
     name: 'Yoga for PCOD / PCOS & Hormonal Balance Support',
     description:
-      'Therapeutic 1-on-1 yoga at home for PCOD/PCOS hormonal balance in Delhi NCR — pelvic circulation & stress reduction focus.',
+      'Therapeutic 1-on-1 yoga at home for PCOD/PCOS hormonal balance in Delhi NCR & Chandigarh Tricity — pelvic circulation & stress reduction focus.',
     provider: {
       '@type': 'Organization',
       name: 'KayaSadhak',
@@ -125,7 +125,7 @@ export default function PcodPcosYogaPage() {
             </h1>
 
             <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200/95 leading-relaxed max-w-2xl">
-              A certified female instructor comes to your home in Delhi NCR to guide cycle-aware yoga — pelvic blood flow restoration, cortisol reduction, and metabolic support adapted to your personal symptoms.
+              A certified female instructor comes to your home in Delhi NCR & Chandigarh Tricity to guide cycle-aware yoga — pelvic blood flow restoration, cortisol reduction, and metabolic support adapted to your personal symptoms.
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">

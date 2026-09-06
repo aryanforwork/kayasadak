@@ -57,11 +57,11 @@
 - [ ] Sections A-G above all pass BEFORE submitting sitemap to Google Search Console or Bing Webmaster Tools
 
 ## I. Pricing & Tier Integrity — HIGH PRIORITY
-- [ ] All 9 prices (3 tiers × 3 frequencies) exactly match: Platinum ₹12,000 / ₹16,000 / ₹20,000; Gold ₹9,000 / ₹12,000 / ₹15,000; Silver ₹6,000 / ₹8,000 / ₹10,000 — re-calculated independently, not just visually compared
-- [ ] This identical 9-price matrix appears correctly on ALL FIVE required pages (Yoga at Home, Corporate, Senior Citizen, Kids, Prenatal/Postnatal) — zero drift between any of the five
-- [ ] All 9 `Offer` schema entries on each of the five pages match that page's visible table exactly, price-for-price
-- [ ] Display order is Platinum → Gold → Silver on every pricing table site-wide (confirmed order)
-- [ ] Tier price and qualification ranking match display order: Platinum is highest (₹1,000, Masters+10yrs), Gold mid (₹750, Grad+7yrs), Silver entry (₹500, Diploma+5yrs) — check this on all five pages independently
+- [ ] All 9 prices (3 tiers × 3 frequencies) exactly match: Silver ₹6,000 / ₹8,000 / ₹10,000; Gold ₹9,000 / ₹12,000 / ₹15,000; Platinum ₹12,000 / ₹16,000 / ₹20,000 — re-calculated independently, not just visually compared
+- [ ] This identical 9-price matrix appears correctly on all tiered service pages — zero drift between pages
+- [ ] All 9 `Offer` schema entries on each tiered service page match that page's visible table exactly, price-for-price, listed in Silver → Gold → Platinum order
+- [ ] Display order is Silver → Gold → Platinum on every pricing table site-wide (confirmed order)
+- [ ] Tier price and qualification ranking match display order: Silver entry (₹500, Diploma+5yrs), Gold mid (₹750, Grad+7yrs), Platinum highest (₹1,000, Masters+10yrs) — check this on all pages independently
 - [ ] Every teacher shown under a given tier badge genuinely meets that tier's stated qualification bar
 - [ ] Pricing is uniform across all served localities (no locality page contradicts the sitewide matrix)
 

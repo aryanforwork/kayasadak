@@ -11,14 +11,14 @@ import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaShieldAlt, FaProcedures, FaRun
 export const metadata: Metadata = {
   title: 'Yoga for Back Pain & Sciatica Relief at Home | KayaSadhak',
   description:
-    'Therapeutic 1-on-1 yoga at home in Delhi NCR for chronic back pain & sciatica — spine decompression, core stabilization. Not medical advice. Enquire now.',
+    'Therapeutic 1-on-1 yoga at home in Delhi NCR & Chandigarh Tricity for chronic back pain & sciatica — spine decompression, core stabilization. Not medical advice. Enquire now.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-for-conditions/back-pain',
   },
   openGraph: {
     title: 'Yoga for Back Pain & Sciatica Relief at Home | KayaSadhak',
     description:
-      'Therapeutic 1-on-1 yoga at home in Delhi NCR for chronic back pain & sciatica — spine decompression, core stabilization. Not medical advice. Enquire now.',
+      'Therapeutic 1-on-1 yoga at home in Delhi NCR & Chandigarh Tricity for chronic back pain & sciatica — spine decompression, core stabilization. Not medical advice. Enquire now.',
     url: 'https://www.kayasadhak.com/yoga-for-conditions/back-pain',
     siteName: 'KayaSadhak',
     type: 'website',
@@ -69,7 +69,7 @@ export default function BackPainYogaPage() {
     '@type': 'MedicalWebPage',
     name: 'Therapeutic Yoga for Chronic Back Pain & Sciatica Relief',
     description:
-      'Therapeutic 1-on-1 yoga at home in Delhi NCR for chronic back pain & sciatica — spine decompression, core stabilization.',
+      'Therapeutic 1-on-1 yoga at home in Delhi NCR & Chandigarh Tricity for chronic back pain & sciatica — spine decompression, core stabilization.',
     provider: {
       '@type': 'Organization',
       name: 'KayaSadhak',
@@ -125,7 +125,7 @@ export default function BackPainYogaPage() {
             </h1>
 
             <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200/95 leading-relaxed max-w-2xl">
-              A certified therapist visits your residence across Delhi NCR to guide a gentle practice tailored specifically around lumbar compression, disc safety, and sciatic nerve decompression.
+              A certified therapist visits your residence across Delhi NCR & Chandigarh Tricity to guide a gentle practice tailored specifically around lumbar compression, disc safety, and sciatic nerve decompression.
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">

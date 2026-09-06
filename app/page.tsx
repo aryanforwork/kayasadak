@@ -105,9 +105,9 @@ export default function HomePage() {
               {/* Tiers List */}
               <div className="space-y-1.5 sm:space-y-2 text-xs font-body pt-1 border-t border-white/15">
                 <div className="flex items-center gap-2.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#E5E7EB] shadow-sm flex-shrink-0" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-gray-400 shadow-sm flex-shrink-0" />
                   <span className="text-gray-200">
-                    <strong className="text-white">Platinum Tier (₹1,000/sess):</strong> Masters + 10+ yrs exp
+                    <strong className="text-gray-300">Silver Tier (₹500/sess):</strong> Yoga Diploma + 5+ yrs exp
                   </span>
                 </div>
                 <div className="flex items-center gap-2.5">
@@ -117,9 +117,9 @@ export default function HomePage() {
                   </span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-gray-400 shadow-sm flex-shrink-0" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#E5E7EB] shadow-sm flex-shrink-0" />
                   <span className="text-gray-200">
-                    <strong className="text-gray-300">Silver Tier (₹500/sess):</strong> Yoga Diploma + 5+ yrs exp
+                    <strong className="text-white">Platinum Tier (₹1,000/sess):</strong> Masters + 10+ yrs exp
                   </span>
                 </div>
               </div>
@@ -182,7 +182,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-brand-gold-400 font-bold">✓</span>
-                  <span className="text-gray-200">Rishikesh, Dharamshala & Online Hybrid</span>
+                  <span className="text-gray-200">Prenatal YTT, Rishikesh & Online Hybrid</span>
                 </div>
               </div>
 
@@ -199,12 +199,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Pillar 3: Panchkarma & Ayurveda */}
+          {/* Pillar 3: Personal Fitness Trainer */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group border border-[#1F4A3C]/20 flex flex-col justify-between min-h-[460px] sm:min-h-[580px]">
             {/* Background Image & Gradient Overlay */}
             <img
-              src="/images/pillar_panchkarma.webp"
-              alt="Ayurveda Panchkarma"
+              src="/images/hero_weight_loss_yoga.jpg"
+              alt="Personal Fitness Trainer at Home"
               className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
               decoding="async"
@@ -217,7 +217,7 @@ export default function HomePage() {
                 Pillar 03
               </span>
               <span className="bg-black/50 backdrop-blur-md border border-white/20 text-brand-gold-300 font-display text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
-                Clinical Detox
+                1-on-1 In-Home Fitness
               </span>
             </div>
 
@@ -225,36 +225,42 @@ export default function HomePage() {
             <div className="relative z-10 p-5 sm:p-8 space-y-4 sm:space-y-5 text-left text-white mt-auto">
               <div className="space-y-1.5 sm:space-y-2">
                 <h3 className="font-heading font-bold text-xl sm:text-2xl lg:text-3xl text-white group-hover:text-brand-gold-400 transition-colors">
-                  3. Panchkarma & Ayurveda
+                  3. Personal Fitness Trainer
                 </h3>
                 <p className="font-body text-xs sm:text-sm text-gray-200/90 leading-relaxed">
-                  Doctor-supervised Ayurvedic treatments, Abhyanga, Shirodhara, and Panchakarma cleanses delivered at home and in our 9 retreats.
+                  Certified 1-on-1 fitness coaching delivered at your home across Delhi NCR & Chandigarh Tricity. Filtered by verified trainer tiers:
                 </p>
               </div>
 
-              {/* Treatment Features */}
+              {/* Tiers List */}
               <div className="space-y-1.5 sm:space-y-2 text-xs font-body pt-1 border-t border-white/15">
-                <div className="flex items-center gap-2">
-                  <span className="text-brand-gold-400 font-bold">✓</span>
-                  <span className="text-gray-200">Shirodhara, Abhyanga & Kizhi Therapies</span>
+                <div className="flex items-center gap-2.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-gray-400 shadow-sm flex-shrink-0" />
+                  <span className="text-gray-200">
+                    <strong className="text-gray-300">Silver Tier (₹1,000/sess):</strong> Certified Trainer + 3+ yrs exp
+                  </span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-brand-gold-400 font-bold">✓</span>
-                  <span className="text-gray-200">BAMS Ayurvedic Doctor Consultations</span>
+                <div className="flex items-center gap-2.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-brand-gold-400 shadow-sm flex-shrink-0" />
+                  <span className="text-gray-200">
+                    <strong className="text-brand-gold-300">Gold Tier (₹1,500/sess):</strong> Strength/Nutrition + 5+ yrs exp
+                  </span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-brand-gold-400 font-bold">✓</span>
-                  <span className="text-gray-200">Complete 7 to 21-Day Detox Programs</span>
+                <div className="flex items-center gap-2.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#E5E7EB] shadow-sm flex-shrink-0" />
+                  <span className="text-gray-200">
+                    <strong className="text-white">Platinum Tier (₹2,000/sess):</strong> Master Credential + 8+ yrs exp
+                  </span>
                 </div>
               </div>
 
               {/* CTA Button */}
               <div className="pt-1.5 sm:pt-2">
                 <Link
-                  href="/services/panchkarma"
+                  href="/services/personal-fitness-trainer"
                   className="w-full py-3.5 bg-brand-gold-500 hover:bg-brand-gold-600 text-white text-center font-body text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group/btn active:scale-[0.98]"
                 >
-                  <span>Explore Panchkarma Therapies</span>
+                  <span>Explore Fitness Trainer Services</span>
                   <FaArrowRight className="w-3 h-3 text-white group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -279,11 +285,72 @@ export default function HomePage() {
             Transparent Monthly Pricing Matrix
           </h2>
           <p className="font-body text-sm sm:text-base text-[#5A574F]">
-            No hidden charges or travel fees across Delhi NCR & Chandigarh Tricity. Displayed strictly in Platinum (₹1,000) → Gold (₹750) → Silver (₹500) order.
+            No hidden charges or travel fees across Delhi NCR & Chandigarh Tricity. Displayed strictly in Silver (₹500) → Gold (₹750) → Platinum (₹1,000) order.
           </p>
         </div>
 
         <PricingTable />
+      </section>
+
+      {/* 6b. Distinct Physical Studio Section (Sector 45 Noida) */}
+      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 my-10 font-body">
+        <div className="bg-[#16302B] text-white rounded-[32px] sm:rounded-[40px] p-8 sm:p-12 lg:p-14 border border-brand-gold-500/30 shadow-2xl relative overflow-hidden">
+          {/* Subtle Background Sacred Architecture Accent */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-brand-gold-500/5 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+            <div className="lg:col-span-8 space-y-4 text-left">
+              <div className="inline-flex items-center gap-2 bg-brand-gold-500/20 border border-brand-gold-500/40 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-brand-gold-400">
+                <KayaLeafMotif size={14} color="#C08A3E" />
+                <span>PHYSICAL WALK-IN SANCTUARY • SECTOR 45, NOIDA</span>
+              </div>
+
+              <h2 className="font-heading font-bold text-2xl sm:text-4xl text-white leading-tight">
+                Prefer an In-Person Sanctuary? Visit Our Studio in Sector 45, Noida
+              </h2>
+
+              <p className="font-body text-xs sm:text-sm text-brand-green-50/90 leading-relaxed max-w-2xl font-light">
+                While our personal instructors travel directly to residences across Delhi NCR & Chandigarh Tricity, we also welcome practitioners to our dedicated physical studio at <strong className="text-white font-medium">BJ Residency, Sadarpur Main Rd, Sector-45, Noida</strong>. Experience daily group classes in Hatha, Vinyasa, Ashtanga, Power Yoga, and on-site accredited Yoga Teacher Training (YTT) batches.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4 text-xs text-brand-gold-300 pt-1">
+                <span>📍 BJ Residency, Sector 45, Noida</span>
+                <span>•</span>
+                <span>🧘 Daily Morning & Evening Group Batches</span>
+                <span>•</span>
+                <span>📞 +91 87969 89667</span>
+              </div>
+
+              <div className="pt-3 flex flex-wrap gap-4">
+                <Link
+                  href="/studio-noida-sector-45"
+                  className="px-6 py-3.5 bg-brand-gold-500 hover:bg-brand-gold-600 text-white font-body font-bold text-xs sm:text-sm rounded-xl transition-all shadow-lg flex items-center gap-2"
+                >
+                  <span>Explore Sector 45 Studio (Directions & Classes)</span>
+                  <span>➔</span>
+                </Link>
+                <a
+                  href="https://wa.me/918796989667?text=Hi%20KayaSadhak!%20I%20want%20to%20inquire%20about%20classes%20at%20your%20Sector%2045%20Noida%20Studio."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-body font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2"
+                >
+                  <span>WhatsApp Studio Desk (+91 87969 89667)</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-4 bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-3 text-xs text-left">
+              <div className="font-heading font-bold text-sm text-brand-gold-400 border-b border-white/15 pb-2">
+                Studio Offerings at a Glance
+              </div>
+              <div className="text-gray-200">✓ <strong>Class Styles:</strong> Hatha, Vinyasa, Ashtanga, Power & Yin Yoga</div>
+              <div className="text-gray-200">✓ <strong>Teacher Training:</strong> 200-Hour on-site weekend/immersion batches</div>
+              <div className="text-gray-200">✓ <strong>Props & Mats:</strong> Sanitized mats, blocks & bolsters provided</div>
+              <div className="text-gray-200">✓ <strong>Atmosphere:</strong> Quiet hall with wooden floors & natural light</div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* 7. Central Glow Mandala Sanctuary Section */}
@@ -360,7 +427,7 @@ export default function HomePage() {
                       100% Punctuality
                     </div>
                     <div className="font-body text-[11px] text-[#4A4842] leading-tight font-medium">
-                      Guarantee across Delhi NCR & Tricity
+                      Guarantee across Delhi NCR & Chandigarh Tricity
                     </div>
                   </div>
                 </div>

@@ -9,16 +9,16 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaShieldAlt, FaFeatherAlt, FaWind, FaHeartbeat } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Yoga for Thyroid Health at Home in Delhi | KayaSadhak',
+  title: 'Yoga for Thyroid Health at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
   description:
-    '1-on-1 therapeutic yoga at home for hypothyroid & hyperthyroid support in Delhi NCR — Jalandhara Bandha, Ujjayi breathing. Not medical advice. Enquire.',
+    '1-on-1 therapeutic yoga at home for hypothyroid & hyperthyroid support in Delhi NCR & Chandigarh Tricity — Jalandhara Bandha, Ujjayi breathing. Not medical advice. Enquire.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-for-conditions/thyroid',
   },
   openGraph: {
-    title: 'Yoga for Thyroid Health at Home in Delhi | KayaSadhak',
+    title: 'Yoga for Thyroid Health at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
     description:
-      '1-on-1 therapeutic yoga at home for hypothyroid & hyperthyroid support in Delhi NCR — Jalandhara Bandha, Ujjayi breathing. Not medical advice. Enquire.',
+      '1-on-1 therapeutic yoga at home for hypothyroid & hyperthyroid support in Delhi NCR & Chandigarh Tricity — Jalandhara Bandha, Ujjayi breathing. Not medical advice. Enquire.',
     url: 'https://www.kayasadhak.com/yoga-for-conditions/thyroid',
     siteName: 'KayaSadhak',
     type: 'website',
@@ -64,7 +64,7 @@ export default function ThyroidYogaPage() {
     '@type': 'MedicalWebPage',
     name: 'Yoga for Thyroid Health — Hypothyroid & Hyperthyroid Support',
     description:
-      '1-on-1 therapeutic yoga at home for hypothyroid & hyperthyroid support in Delhi NCR — Jalandhara Bandha, Ujjayi breathing.',
+      '1-on-1 therapeutic yoga at home for hypothyroid & hyperthyroid support in Delhi NCR & Chandigarh Tricity — Jalandhara Bandha, Ujjayi breathing.',
     provider: {
       '@type': 'Organization',
       name: 'KayaSadhak',
@@ -120,7 +120,7 @@ export default function ThyroidYogaPage() {
             </h1>
 
             <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200/95 leading-relaxed max-w-2xl">
-              A certified teacher visits your home in Delhi NCR to guide targeted asanas and Ujjayi breathwork adapted specifically to whether you are managing underactive (hypo) or overactive (hyper) thyroid.
+              A certified teacher visits your home in Delhi NCR & Chandigarh Tricity to guide targeted asanas and Ujjayi breathwork adapted specifically to whether you are managing underactive (hypo) or overactive (hyper) thyroid.
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
@@ -249,7 +249,7 @@ export default function ThyroidYogaPage() {
                   <span className="text-[#B37B2E] font-bold">✓</span> Integrated Ujjayi & Thyroid Breathwork Guidance
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#B37B2E] font-bold">✓</span> Female & Male Faculty Across Delhi NCR
+                  <span className="text-[#B37B2E] font-bold">✓</span> Female & Male Faculty Across Delhi NCR & Chandigarh Tricity
                 </div>
               </div>
             </div>

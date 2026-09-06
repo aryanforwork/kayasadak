@@ -7,9 +7,9 @@ import { KayaLeafMotif } from '@/components/KayaLeafMotif';
 import { PRICING_TIERS, CONTACT_INFO } from '@/config/pricing';
 
 export const metadata: Metadata = {
-  title: 'KayaSadhak Pricing — Gold, Silver & Platinum Home Yoga Plans',
+  title: 'KayaSadhak Pricing — Silver, Gold & Platinum Home Yoga Plans',
   description:
-    'Transparent 3×3 pricing matrix for home yoga in Delhi NCR. Platinum ₹1,000, Gold ₹750, Silver ₹500/session. Verified instructors & flexible packages.',
+    'Transparent 3×3 pricing matrix for home yoga in Delhi NCR & Chandigarh Tricity. Silver ₹500, Gold ₹750, Platinum ₹1,000/session. Verified instructors & flexible packages.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/pricing',
   },

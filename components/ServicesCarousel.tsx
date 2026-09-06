@@ -19,12 +19,22 @@ export const SERVICE_CARDS: ServiceCardData[] = [
   {
     id: 'home-yoga',
     title: 'Personal Home Yoga',
-    subtitle: 'Delhi NCR & Tricity Residences',
+    subtitle: 'Delhi NCR & Chandigarh Tricity',
     description:
       'Choose 1-on-1 private home sessions tailored to your comfort and health goals with verified Silver, Gold & Platinum teachers.',
     btnText: 'EXPLORE HOME YOGA',
     btnLink: '/services/yoga-at-home',
     image: '/images/card_home_yoga.webp',
+  },
+  {
+    id: 'personal-fitness-trainer',
+    title: 'Personal Fitness Trainer',
+    subtitle: 'Delhi NCR & Chandigarh Tricity',
+    description:
+      'Certified 1-on-1 fitness training at your home across Delhi NCR & Chandigarh Tricity with verified Silver, Gold & Platinum trainers.',
+    btnText: 'EXPLORE FITNESS (₹1,000+)',
+    btnLink: '/services/personal-fitness-trainer',
+    image: '/images/hero_weight_loss_yoga.jpg',
   },
   {
     id: 'ytt-certification',

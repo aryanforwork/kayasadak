@@ -9,14 +9,14 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaHeartbeat, FaFemale, FaShieldAlt, FaCalendarCheck } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Prenatal & Postnatal Yoga at Home in Delhi NCR | KayaSadhak',
+  title: 'Prenatal & Postnatal Yoga at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
   description:
     'Trimester-wise prenatal yoga & postpartum recovery sessions at home in Delhi NCR & Chandigarh Tricity. Certified female teachers available. Free trial.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/services/prenatal-postnatal-yoga',
   },
   openGraph: {
-    title: 'Prenatal & Postnatal Yoga at Home in Delhi NCR | KayaSadhak',
+    title: 'Prenatal & Postnatal Yoga at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
     description:
       'Trimester-wise prenatal yoga & postpartum recovery sessions at home in Delhi NCR & Chandigarh Tricity. Certified female teachers available. Free trial.',
     url: 'https://www.kayasadhak.com/services/prenatal-postnatal-yoga',
@@ -45,7 +45,7 @@ export default function PrenatalPostnatalYogaPage() {
     {
       question: 'Do you only send female teachers for this service?',
       answer:
-        'A certified female instructor is our default recommendation and available on request across all Delhi NCR and Tricity localities.',
+        'A certified female instructor is our default recommendation and available on request across all Delhi NCR & Chandigarh Tricity localities.',
     },
     {
       question: 'What if I have a high-risk pregnancy?',
@@ -73,8 +73,90 @@ export default function PrenatalPostnatalYogaPage() {
       name: 'KayaSadhak',
       url: 'https://www.kayasadhak.com',
     },
+    areaServed: [
+      { '@type': 'City', name: 'Delhi' },
+      { '@type': 'City', name: 'Noida' },
+      { '@type': 'City', name: 'Gurugram' },
+      { '@type': 'City', name: 'Faridabad' },
+      { '@type': 'City', name: 'Ghaziabad' },
+      { '@type': 'City', name: 'Chandigarh' },
+      { '@type': 'City', name: 'Mohali' },
+      { '@type': 'City', name: 'Panchkula' },
+    ],
     description:
-      'Trimester-wise pregnancy yoga and postnatal core recovery delivered at home across Delhi NCR & Chandigarh Tricity.',
+      'Trimester-wise pregnancy yoga and postnatal core recovery delivered at home across Delhi NCR & Chandigarh Tricity. Silver (₹500), Gold (₹750), and Platinum (₹1,000) tiers.',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Prenatal & Postnatal Yoga at Home Monthly Packages',
+      itemListElement: [
+        // Silver Tier (3 offers)
+        {
+          '@type': 'Offer',
+          name: 'Silver Prenatal Yoga Tier - 12 Sessions (3 Days/Week)',
+          price: '6000',
+          priceCurrency: 'INR',
+          description: 'Silver Tier prenatal & postnatal home yoga, 12 sessions per month at ₹500/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Silver Prenatal Yoga Tier - 16 Sessions (4 Days/Week)',
+          price: '8000',
+          priceCurrency: 'INR',
+          description: 'Silver Tier prenatal & postnatal home yoga, 16 sessions per month at ₹500/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Silver Prenatal Yoga Tier - 20 Sessions (5 Days/Week)',
+          price: '10000',
+          priceCurrency: 'INR',
+          description: 'Silver Tier prenatal & postnatal home yoga, 20 sessions per month at ₹500/session.',
+        },
+        // Gold Tier (3 offers)
+        {
+          '@type': 'Offer',
+          name: 'Gold Prenatal Yoga Tier - 12 Sessions (3 Days/Week)',
+          price: '9000',
+          priceCurrency: 'INR',
+          description: 'Gold Tier prenatal & postnatal home yoga, 12 sessions per month at ₹750/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Gold Prenatal Yoga Tier - 16 Sessions (4 Days/Week)',
+          price: '12000',
+          priceCurrency: 'INR',
+          description: 'Gold Tier prenatal & postnatal home yoga, 16 sessions per month at ₹750/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Gold Prenatal Yoga Tier - 20 Sessions (5 Days/Week)',
+          price: '15000',
+          priceCurrency: 'INR',
+          description: 'Gold Tier prenatal & postnatal home yoga, 20 sessions per month at ₹750/session.',
+        },
+        // Platinum Tier (3 offers)
+        {
+          '@type': 'Offer',
+          name: 'Platinum Prenatal Yoga Tier - 12 Sessions (3 Days/Week)',
+          price: '12000',
+          priceCurrency: 'INR',
+          description: 'Platinum Tier prenatal & postnatal home yoga, 12 sessions per month at ₹1,000/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Platinum Prenatal Yoga Tier - 16 Sessions (4 Days/Week)',
+          price: '16000',
+          priceCurrency: 'INR',
+          description: 'Platinum Tier prenatal & postnatal home yoga, 16 sessions per month at ₹1,000/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Platinum Prenatal Yoga Tier - 20 Sessions (5 Days/Week)',
+          price: '20000',
+          priceCurrency: 'INR',
+          description: 'Platinum Tier prenatal & postnatal home yoga, 20 sessions per month at ₹1,000/session.',
+        },
+      ],
+    },
   };
 
   const faqSchema = {
@@ -105,7 +187,7 @@ export default function PrenatalPostnatalYogaPage() {
       <section className="relative min-h-[520px] sm:min-h-[580px] bg-black flex items-center overflow-hidden">
         <img
           src="/images/hero_prenatal_yoga.jpg"
-          alt="Prenatal & Postnatal Yoga at Home in Delhi NCR"
+          alt="Prenatal & Postnatal Yoga at Home in Delhi NCR & Chandigarh Tricity"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
@@ -121,7 +203,7 @@ export default function PrenatalPostnatalYogaPage() {
             </div>
 
             <h1 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-white tracking-tight">
-              Prenatal & Postnatal Yoga at Home — Trimester-Wise, in Delhi NCR
+              Prenatal & Postnatal Yoga at Home — Trimester-Wise, in Delhi NCR & Chandigarh Tricity
             </h1>
 
             <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200/95 leading-relaxed max-w-2xl">
@@ -247,7 +329,7 @@ export default function PrenatalPostnatalYogaPage() {
                 Book a Free Trial with a Certified Female Instructor
               </h2>
               <p className="text-sm text-[#4A4842] leading-relaxed">
-                Connect directly with our faculty on WhatsApp. Share your trimester (or weeks postpartum) and your locality across Delhi NCR or Chandigarh.
+                Connect directly with our faculty on WhatsApp. Share your trimester (or weeks postpartum) and your locality across Delhi NCR & Chandigarh Tricity.
               </p>
               <div className="pt-2 space-y-2 text-xs text-[#16302B] font-medium">
                 <div className="flex items-center gap-2">

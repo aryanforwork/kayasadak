@@ -20,6 +20,7 @@ import {
   FaLeaf,
   FaHeartbeat,
   FaUserTie,
+  FaUserCheck,
 } from 'react-icons/fa';
 
 export const Navbar: React.FC = () => {
@@ -33,8 +34,13 @@ export const Navbar: React.FC = () => {
       items: [
         {
           name: 'Personal 1-on-1 Home Yoga',
-          desc: 'Verified instructors at your residence in Delhi NCR & Tricity',
+          desc: 'Verified instructors at your residence in Delhi NCR & Chandigarh Tricity',
           link: '/services/yoga-at-home',
+        },
+        {
+          name: 'Personal Fitness Trainer',
+          desc: 'Certified 1-on-1 home fitness training from ₹1,000/sess',
+          link: '/services/personal-fitness-trainer',
         },
         {
           name: 'Senior Citizen Home Yoga',
@@ -46,6 +52,11 @@ export const Navbar: React.FC = () => {
           desc: 'On-site & virtual desk ergonomics and stress relief',
           link: '/services/corporate-yoga',
         },
+        {
+          name: 'Sector 45 Noida Studio',
+          desc: 'Walk-in physical sanctuary at BJ Residency with group classes & YTT',
+          link: '/studio-noida-sector-45',
+        },
       ],
     },
     pricing: {
@@ -53,14 +64,14 @@ export const Navbar: React.FC = () => {
       link: '/pricing',
       items: [
         {
-          name: 'Transparent 3×3 Pricing Matrix',
-          desc: 'No hidden charges or travel fees across all 20 local hubs',
+          name: 'Transparent Monthly Pricing Matrix',
+          desc: 'No hidden charges or travel fees across Delhi NCR & Chandigarh Tricity',
           link: '/pricing',
         },
         {
-          name: 'Platinum Tier — ₹1,000 / session',
-          desc: 'Masters Degree + Adv TTC (10+ Years Experience)',
-          link: '/pricing#platinum',
+          name: 'Silver Tier — ₹500 / session',
+          desc: 'Graduation + Diploma in Yoga (5+ Years Experience)',
+          link: '/pricing#silver',
         },
         {
           name: 'Gold Tier — ₹750 / session',
@@ -68,9 +79,9 @@ export const Navbar: React.FC = () => {
           link: '/pricing#gold',
         },
         {
-          name: 'Silver Tier — ₹500 / session',
-          desc: 'Graduation + Diploma in Yoga (5+ Years Experience)',
-          link: '/pricing#silver',
+          name: 'Platinum Tier — ₹1,000 / session',
+          desc: 'Masters Degree + Adv TTC (10+ Years Experience)',
+          link: '/pricing#platinum',
         },
       ],
     },
@@ -92,6 +103,11 @@ export const Navbar: React.FC = () => {
           name: '500-Hour Master TTC',
           desc: 'Comprehensive master instructor & clinical sadhak training',
           link: '/yoga-teacher-training/200-hour-ttc',
+        },
+        {
+          name: 'Prenatal Yoga Teacher Training',
+          desc: 'Specialized prenatal TTC in partnership with IFY & Yoga Alliance',
+          link: '/yoga-teacher-training/prenatal-ttc',
         },
         {
           name: 'Rishikesh & Himalayan Centers',
@@ -269,7 +285,7 @@ export const Navbar: React.FC = () => {
                 <KayaLeafMotif size={16} color="#C08A3E" className="opacity-90" />
               </div>
               <span className="font-display text-[9px] sm:text-[11px] text-brand-gold-600 font-semibold tracking-[0.16em] uppercase mt-0.5">
-                Home Yoga • YTT • Panchkarma
+                HOME YOGA • PERSONAL FITNESS TRAINER • YTT
               </span>
             </div>
           </Link>
@@ -314,6 +330,14 @@ export const Navbar: React.FC = () => {
                 ))}
               </div>
             </div>
+
+            {/* Direct Nav Item: Personal Fitness Trainer */}
+            <Link
+              href="/services/personal-fitness-trainer"
+              className="hover:text-brand-green-900 py-2 transition-colors"
+            >
+              Fitness Trainer
+            </Link>
 
             {/* Dropdown 2: Pricing Matrix */}
             <div
@@ -581,6 +605,28 @@ export const Navbar: React.FC = () => {
                       <Link href="/services/corporate-yoga" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
                         Corporate Desk Wellness
                       </Link>
+                      <Link href="/studio-noida-sector-45" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        Sector 45 Noida Studio
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Section 1b: Personal Fitness Trainer */}
+                  <div className="py-1.5 space-y-1">
+                    <Link href="/services/personal-fitness-trainer" onClick={() => setMobileMenuOpen(false)}
+                      className="flex items-center gap-3 py-2.5 px-3 rounded-xl text-[#16302B] font-bold text-sm hover:bg-[#F3EEE2] transition-colors">
+                      <span className="w-8 h-8 rounded-lg bg-[#16302B]/10 flex items-center justify-center flex-shrink-0">
+                        <FaUserCheck className="w-3.5 h-3.5 text-[#16302B]" />
+                      </span>
+                      <span>Personal Fitness Trainer</span>
+                    </Link>
+                    <div className="ml-11 border-l-2 border-[#C08A3E]/25 pl-3 space-y-0.5">
+                      <Link href="/services/personal-fitness-trainer" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        1-on-1 Home Fitness Coaching
+                      </Link>
+                      <Link href="/services/personal-fitness-trainer#pricing" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        Silver (₹1k) • Gold (₹1.5k) • Plat (₹2k)
+                      </Link>
                     </div>
                   </div>
 
@@ -599,14 +645,14 @@ export const Navbar: React.FC = () => {
                       </span>
                     </div>
                     <div className="ml-11 border-l-2 border-[#C08A3E]/25 pl-3 space-y-0.5">
-                      <Link href="/pricing#platinum" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
-                        Platinum Tier (₹1,000 / sess) — Masters Degree
+                      <Link href="/pricing#silver" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        Silver Tier (₹500 / sess) — Diploma in Yoga
                       </Link>
                       <Link href="/pricing#gold" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
                         Gold Tier (₹750 / sess) — Graduation in Yoga
                       </Link>
-                      <Link href="/pricing#silver" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
-                        Silver Tier (₹500 / sess) — Diploma in Yoga
+                      <Link href="/pricing#platinum" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        Platinum Tier (₹1,000 / sess) — Masters Degree
                       </Link>
                     </div>
                   </div>
@@ -626,6 +672,9 @@ export const Navbar: React.FC = () => {
                       </Link>
                       <Link href="/yoga-teacher-training/200-hour-ttc" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
                         300 / 500-Hour Advanced TTC
+                      </Link>
+                      <Link href="/yoga-teacher-training/prenatal-ttc" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        Prenatal Yoga Teacher Training
                       </Link>
                       <Link href="/yoga-teacher-training/locations/rishikesh" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
                         9 Locations (Rishikesh, Delhi NCR)

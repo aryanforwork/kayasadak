@@ -9,16 +9,16 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaUserCheck, FaMapMarkerAlt, FaShieldAlt, FaClock, FaCalendarAlt } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Personal Yoga Teacher at Home in Delhi NCR | KayaSadhak',
+  title: 'Personal Yoga Teacher at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
   description:
-    'Certified yoga teacher at your home in Delhi NCR & Chandigarh Tricity. Transparent Platinum, Gold & Silver pricing from ₹500/session. Free trial on WhatsApp.',
+    'Certified yoga teacher at your home in Delhi NCR & Chandigarh Tricity. Transparent Silver, Gold & Platinum pricing from ₹500/session. Free trial on WhatsApp.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/services/yoga-at-home',
   },
   openGraph: {
-    title: 'Personal Yoga Teacher at Home in Delhi NCR | KayaSadhak',
+    title: 'Personal Yoga Teacher at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
     description:
-      'Certified yoga teacher at your home in Delhi NCR & Chandigarh Tricity. Transparent Platinum, Gold & Silver pricing from ₹500/session. Free trial on WhatsApp.',
+      'Certified yoga teacher at your home in Delhi NCR & Chandigarh Tricity. Transparent Silver, Gold & Platinum pricing from ₹500/session. Free trial on WhatsApp.',
     url: 'https://www.kayasadhak.com/services/yoga-at-home',
     siteName: 'KayaSadhak',
     type: 'website',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function YogaAtHomePage() {
   const faqs = [
     {
-      question: 'How much does a personal yoga teacher at home cost in Delhi NCR?',
+      question: 'How much does a personal yoga teacher at home cost in Delhi NCR & Chandigarh Tricity?',
       answer:
         'KayaSadhak’s home sessions run ₹500 to ₹1,000 per session depending on the teacher tier you choose (Silver, Gold, or Platinum), with monthly packages from ₹6,000 for 3 sessions a week. The full breakdown is in the pricing table on this page.',
     },
@@ -84,7 +84,79 @@ export default function YogaAtHomePage() {
       { '@type': 'City', name: 'Panchkula' },
     ],
     description:
-      'Certified yoga teacher at your home in Delhi NCR & Chandigarh Tricity. Transparent Platinum, Gold & Silver pricing from ₹500/session.',
+      'Certified yoga teacher at your home in Delhi NCR & Chandigarh Tricity. Transparent Silver, Gold & Platinum pricing from ₹500/session.',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Personal Yoga Teacher at Home Monthly Packages',
+      itemListElement: [
+        // Silver Tier (3 offers)
+        {
+          '@type': 'Offer',
+          name: 'Silver Yoga Tier - 12 Sessions (3 Days/Week)',
+          price: '6000',
+          priceCurrency: 'INR',
+          description: 'Silver Tier personal yoga teacher at home, 12 sessions per month at ₹500/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Silver Yoga Tier - 16 Sessions (4 Days/Week)',
+          price: '8000',
+          priceCurrency: 'INR',
+          description: 'Silver Tier personal yoga teacher at home, 16 sessions per month at ₹500/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Silver Yoga Tier - 20 Sessions (5 Days/Week)',
+          price: '10000',
+          priceCurrency: 'INR',
+          description: 'Silver Tier personal yoga teacher at home, 20 sessions per month at ₹500/session.',
+        },
+        // Gold Tier (3 offers)
+        {
+          '@type': 'Offer',
+          name: 'Gold Yoga Tier - 12 Sessions (3 Days/Week)',
+          price: '9000',
+          priceCurrency: 'INR',
+          description: 'Gold Tier personal yoga teacher at home, 12 sessions per month at ₹750/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Gold Yoga Tier - 16 Sessions (4 Days/Week)',
+          price: '12000',
+          priceCurrency: 'INR',
+          description: 'Gold Tier personal yoga teacher at home, 16 sessions per month at ₹750/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Gold Yoga Tier - 20 Sessions (5 Days/Week)',
+          price: '15000',
+          priceCurrency: 'INR',
+          description: 'Gold Tier personal yoga teacher at home, 20 sessions per month at ₹750/session.',
+        },
+        // Platinum Tier (3 offers)
+        {
+          '@type': 'Offer',
+          name: 'Platinum Yoga Tier - 12 Sessions (3 Days/Week)',
+          price: '12000',
+          priceCurrency: 'INR',
+          description: 'Platinum Tier personal yoga teacher at home, 12 sessions per month at ₹1,000/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Platinum Yoga Tier - 16 Sessions (4 Days/Week)',
+          price: '16000',
+          priceCurrency: 'INR',
+          description: 'Platinum Tier personal yoga teacher at home, 16 sessions per month at ₹1,000/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Platinum Yoga Tier - 20 Sessions (5 Days/Week)',
+          price: '20000',
+          priceCurrency: 'INR',
+          description: 'Platinum Tier personal yoga teacher at home, 20 sessions per month at ₹1,000/session.',
+        },
+      ],
+    },
   };
 
   const faqSchema = {
@@ -115,7 +187,7 @@ export default function YogaAtHomePage() {
       <section className="relative min-h-[520px] sm:min-h-[580px] bg-black flex items-center overflow-hidden">
         <img
           src="/images/hero_home_yoga_ncr.webp"
-          alt="Personal Yoga Teacher at Home in Delhi NCR"
+          alt="Personal Yoga Teacher at Home in Delhi NCR & Chandigarh Tricity"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-75 scale-105 transition-opacity duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />

@@ -41,9 +41,8 @@ pages and their schema blocks must be updated together as one coordinated
 change.
 
 ## 18. Tier display order and price/qualification ranking alignment
-**Why this rule exists:** the client has confirmed Option A: display order (Platinum → Gold → Silver) matches price/qualification hierarchy (Platinum = ₹1,000, Masters+10yrs; Gold = ₹750, Grad+7yrs; Silver = ₹500, Diploma+5yrs).
-**Guardrail:** Every sub-agent touching tier display, badge design, price
-tables, or copy must implement BOTH facts together exactly as stated in PRD.md §3.1: list Platinum first as top tier, Gold second as mid tier, Silver third as entry tier. Verify this explicitly at QA on every one of the five pricing-table pages.
+**Why this rule exists:** Display order matches ascending price order for BOTH service lines (Yoga: Silver ₹500 → Gold ₹750 → Platinum ₹1,000; Fitness Trainer: Silver ₹1,000 → Gold ₹1,500 → Platinum ₹2,000).
+**Guardrail:** Every sub-agent touching tier display, badge design, price tables, or copy must implement Silver first as entry tier, Gold second as mid tier, and Platinum third as top tier (Silver → Gold → Platinum). Verify this explicitly at QA on every one of the 6 tiered service pages and the main pricing page.
 
 ---
 

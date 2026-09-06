@@ -11,14 +11,14 @@ import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaShieldAlt, FaMoon, FaBed, FaBr
 export const metadata: Metadata = {
   title: 'Yoga for Anxiety, Stress & Insomnia at Home | KayaSadhak',
   description:
-    '1-on-1 therapeutic yoga at home in Delhi NCR for anxiety, stress & insomnia — Yoga Nidra, breathwork & guided meditation. Not medical advice. Enquire now.',
+    '1-on-1 therapeutic yoga at home in Delhi NCR & Chandigarh Tricity for anxiety, stress & insomnia — Yoga Nidra, breathwork & guided meditation. Not medical advice. Enquire now.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-for-conditions/anxiety-insomnia',
   },
   openGraph: {
     title: 'Yoga for Anxiety, Stress & Insomnia at Home | KayaSadhak',
     description:
-      '1-on-1 therapeutic yoga at home in Delhi NCR for anxiety, stress & insomnia — Yoga Nidra, breathwork & guided meditation. Not medical advice. Enquire now.',
+      '1-on-1 therapeutic yoga at home in Delhi NCR & Chandigarh Tricity for anxiety, stress & insomnia — Yoga Nidra, breathwork & guided meditation. Not medical advice. Enquire now.',
     url: 'https://www.kayasadhak.com/yoga-for-conditions/anxiety-insomnia',
     siteName: 'KayaSadhak',
     type: 'website',
@@ -69,7 +69,7 @@ export default function AnxietyInsomniaYogaPage() {
     '@type': 'MedicalWebPage',
     name: 'Yoga for Anxiety, Stress & Insomnia — Calm Built Into Your Week',
     description:
-      '1-on-1 therapeutic yoga at home in Delhi NCR for anxiety, stress & insomnia — Yoga Nidra, breathwork & guided meditation.',
+      '1-on-1 therapeutic yoga at home in Delhi NCR & Chandigarh Tricity for anxiety, stress & insomnia — Yoga Nidra, breathwork & guided meditation.',
     provider: {
       '@type': 'Organization',
       name: 'KayaSadhak',
@@ -125,7 +125,7 @@ export default function AnxietyInsomniaYogaPage() {
             </h1>
 
             <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200/95 leading-relaxed max-w-2xl">
-              A certified therapist visits your home in Delhi NCR to guide slow restorative asanas, parasympathetic breathwork, and deeply rejuvenating Yoga Nidra to reset an overstimulated nervous system.
+              A certified therapist visits your home in Delhi NCR & Chandigarh Tricity to guide slow restorative asanas, parasympathetic breathwork, and deeply rejuvenating Yoga Nidra to reset an overstimulated nervous system.
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">

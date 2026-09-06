@@ -5,17 +5,17 @@ import { Footer } from '@/components/Footer';
 import { MobileBottomDock } from '@/components/MobileBottomDock';
 
 export const metadata: Metadata = {
-  title: 'Home Yoga, YTT & Panchkarma in Delhi NCR | KayaSadhak',
+  title: 'Home Yoga, YTT & Personal Fitness in Delhi NCR & Chandigarh Tricity | KayaSadhak',
   description:
-    'Personal home yoga teachers in Delhi NCR, certified 200/300/500-Hr YTT courses, and authentic home Panchkarma therapies. Founded by Nivil Chaudhary. Book today.',
+    'Personal home yoga teachers, fitness trainers, certified YTT courses, and authentic home Panchkarma in Delhi NCR & Chandigarh Tricity. Founded by Nivil Chaudhary. Book today.',
   metadataBase: new URL('https://www.kayasadhak.com'),
   alternates: {
     canonical: 'https://www.kayasadhak.com',
   },
   openGraph: {
-    title: 'Home Yoga, YTT & Panchkarma in Delhi NCR | KayaSadhak',
+    title: 'Home Yoga, YTT & Personal Fitness in Delhi NCR & Chandigarh Tricity | KayaSadhak',
     description:
-      'Personal home yoga teachers in Delhi NCR, certified 200/300/500-Hr YTT courses, and authentic home Panchkarma therapies. Founded by Nivil Chaudhary.',
+      'Personal home yoga teachers, fitness trainers, certified YTT courses, and authentic home Panchkarma in Delhi NCR & Chandigarh Tricity. Founded by Nivil Chaudhary.',
     url: 'https://www.kayasadhak.com',
     siteName: 'KayaSadhak',
     locale: 'en_IN',
@@ -33,6 +33,8 @@ export default function RootLayout({
     '@type': 'Organization',
     '@id': 'https://www.kayasadhak.com/#organization',
     name: 'KayaSadhak',
+    description:
+      'Personal home yoga instruction, personal fitness training, certified YTT courses, and authentic Ayurvedic Panchakarma across Delhi NCR & Chandigarh Tricity.',
     url: 'https://www.kayasadhak.com',
     logo: 'https://www.kayasadhak.com/images/logo.png',
     founder: {

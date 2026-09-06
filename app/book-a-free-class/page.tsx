@@ -12,7 +12,7 @@ export default function BookFreeClassPage() {
   const [locality, setLocality] = useState('');
   const [service, setService] = useState('Personal Yoga at Home');
 
-  const [tier, setTier] = useState('Platinum Tier');
+  const [tier, setTier] = useState('Silver Tier');
   const [frequency, setFrequency] = useState('12 Sessions / Month (3 days/wk)');
 
   const [days, setDays] = useState('Mon-Wed-Fri (3 Days)');

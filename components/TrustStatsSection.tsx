@@ -117,7 +117,7 @@ export const TrustStatsSection: React.FC = () => {
 
             {/* Description */}
             <p className="font-body text-[10px] sm:text-xs text-[#5A574F] leading-snug line-clamp-2 sm:line-clamp-none max-w-[240px] mx-auto font-medium">
-              Presence across Delhi NCR & Tricity ensures quick matching.
+              Presence across Delhi NCR & Chandigarh Tricity ensures quick matching.
             </p>
 
           </div>

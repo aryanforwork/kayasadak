@@ -54,7 +54,11 @@ yoga teacher at home cost in Delhi" queries can only surface real,
 structured pricing data, which almost no competitor in this category
 currently provides on-page.
 
-## 6. Local / "Near Me" Plan
+## 6. Confirmed Footprint Phrasing Standard
+Whenever mentioning home-services coverage sitewide in headings, metadata, body text, or schema, use the standard pattern: **"Delhi NCR & Chandigarh Tricity"** (or **"Delhi NCR + Chandigarh Tricity"** where space is tight). Ensure Chandigarh Tricity is explicitly named alongside Delhi NCR rather than left implicit.
+
+
+## 7. Local / "Near Me" Plan
 *(unchanged from v1, all still open per PRD.md §8: NAP details, GBP
 category already confirmed as "Yoga Instructor"/"Yoga Teacher," real
 per-cluster geo coordinates requirement carries forward unchanged and

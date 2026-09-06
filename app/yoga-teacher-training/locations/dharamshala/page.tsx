@@ -193,8 +193,8 @@ export default function DharamshalaYTTPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 bg-black/40 backdrop-blur-md p-3.5 rounded-2xl border border-white/20 text-white text-xs">
-              <div className="font-heading font-bold text-sm text-[#E5C384]">All 5 Programs Available</div>
-              <p className="text-[11px] text-gray-200 mt-0.5">200-Hour Foundation, 300-Hour Advanced, 500-Hour Master, 200-Hour Kundalini, and 50-Hour Yin YTT.</p>
+              <div className="font-heading font-bold text-sm text-[#E5C384]">All 6 Programs Available</div>
+              <p className="text-[11px] text-gray-200 mt-0.5">200-Hour Foundation, 300-Hour Advanced, 500-Hour Master, 200-Hour Kundalini, 50-Hour Yin YTT, and Prenatal TTC.</p>
             </div>
           </div>
         </div>

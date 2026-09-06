@@ -8,16 +8,16 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaSpa, FaShieldAlt, FaLeaf, FaUserMd } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Authentic Home Panchkarma & Ayurvedic Care Delhi | KayaSadhak',
+  title: 'Authentic Home Panchkarma & Ayurvedic Care in Delhi NCR & Chandigarh Tricity | KayaSadhak',
   description:
-    'Doctor-guided Panchkarma at home in Delhi NCR — Abhyanga, Shirodhara, Swedana & Basti with authentic medicated oils. Free consultation on WhatsApp.',
+    'Doctor-guided Panchkarma at home in Delhi NCR & Chandigarh Tricity — Abhyanga, Shirodhara, Swedana & Basti with authentic medicated oils. Free consultation on WhatsApp.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/services/panchkarma',
   },
   openGraph: {
-    title: 'Authentic Home Panchkarma & Ayurvedic Care Delhi | KayaSadhak',
+    title: 'Authentic Home Panchkarma & Ayurvedic Care in Delhi NCR & Chandigarh Tricity | KayaSadhak',
     description:
-      'Doctor-guided Panchkarma at home in Delhi NCR — Abhyanga, Shirodhara, Swedana & Basti with authentic medicated oils. Free consultation on WhatsApp.',
+      'Doctor-guided Panchkarma at home in Delhi NCR & Chandigarh Tricity — Abhyanga, Shirodhara, Swedana & Basti with authentic medicated oils. Free consultation on WhatsApp.',
     url: 'https://www.kayasadhak.com/services/panchkarma',
     siteName: 'KayaSadhak',
     type: 'website',
@@ -73,7 +73,7 @@ export default function PanchkarmaPage() {
       url: 'https://www.kayasadhak.com',
     },
     description:
-      'Doctor-guided Panchkarma at home in Delhi NCR — Abhyanga, Shirodhara, Swedana & Basti with authentic medicated oils.',
+      'Doctor-guided Panchkarma at home in Delhi NCR & Chandigarh Tricity — Abhyanga, Shirodhara, Swedana & Basti with authentic medicated oils.',
   };
 
   const faqSchema = {
@@ -120,7 +120,7 @@ export default function PanchkarmaPage() {
             </div>
 
             <h1 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-white tracking-tight">
-              Authentic Home Panchkarma & Ayurvedic Detox Care in Delhi NCR
+              Authentic Home Panchkarma & Ayurvedic Detox Care in Delhi NCR & Chandigarh Tricity
             </h1>
 
             <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200/95 leading-relaxed max-w-2xl">
@@ -236,7 +236,7 @@ export default function PanchkarmaPage() {
                 Book Your Home Panchkarma Consultation
               </h2>
               <p className="text-sm text-[#4A4842] leading-relaxed">
-                Connect directly with our Ayurvedic faculty on WhatsApp. Share your health concerns, preferred treatment dates, and locality across Delhi NCR or Chandigarh.
+                Connect directly with our Ayurvedic faculty on WhatsApp. Share your health concerns, preferred treatment dates, and locality across Delhi NCR & Chandigarh Tricity.
               </p>
               <div className="pt-2 space-y-2 text-xs text-[#16302B] font-medium">
                 <div className="flex items-center gap-2">

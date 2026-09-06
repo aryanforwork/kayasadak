@@ -8,16 +8,16 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaBuilding, FaLaptop, FaUserTie, FaUsers, FaCalendarAlt } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Corporate Yoga & Desk Wellness Sessions Delhi | KayaSadhak',
+  title: 'Corporate Yoga & Desk Wellness Sessions Delhi NCR & Chandigarh Tricity | KayaSadhak',
   description:
-    'Onsite corporate yoga for Delhi NCR offices — desk stretches, posture correction & stress-relief sessions for teams. Certified trainers. Book a free demo.',
+    'Onsite corporate yoga for Delhi NCR & Chandigarh Tricity offices — desk stretches, posture correction & stress-relief sessions for teams. Certified trainers. Book a free demo.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/services/corporate-yoga',
   },
   openGraph: {
-    title: 'Corporate Yoga & Desk Wellness Sessions Delhi | KayaSadhak',
+    title: 'Corporate Yoga & Desk Wellness Sessions Delhi NCR & Chandigarh Tricity | KayaSadhak',
     description:
-      'Onsite corporate yoga for Delhi NCR offices — desk stretches, posture correction & stress-relief sessions for teams. Certified trainers. Book a free demo.',
+      'Onsite corporate yoga for Delhi NCR & Chandigarh Tricity offices — desk stretches, posture correction & stress-relief sessions for teams. Certified trainers. Book a free demo.',
     url: 'https://www.kayasadhak.com/services/corporate-yoga',
     siteName: 'KayaSadhak',
     type: 'website',
@@ -59,7 +59,7 @@ export default function CorporateYogaPage() {
     {
       question: 'Can our CEO or a senior leader book individual sessions alongside the team program?',
       answer:
-        'Yes, using our standard Platinum (₹1,000), Gold (₹750), or Silver (₹500) individual pricing tiers.',
+        'Yes, using our standard Silver (₹500), Gold (₹750), or Platinum (₹1,000) individual pricing tiers.',
     },
   ];
 
@@ -72,8 +72,90 @@ export default function CorporateYogaPage() {
       name: 'KayaSadhak',
       url: 'https://www.kayasadhak.com',
     },
+    areaServed: [
+      { '@type': 'City', name: 'Delhi' },
+      { '@type': 'City', name: 'Noida' },
+      { '@type': 'City', name: 'Gurugram' },
+      { '@type': 'City', name: 'Faridabad' },
+      { '@type': 'City', name: 'Ghaziabad' },
+      { '@type': 'City', name: 'Chandigarh' },
+      { '@type': 'City', name: 'Mohali' },
+      { '@type': 'City', name: 'Panchkula' },
+    ],
     description:
-      'Onsite corporate yoga for Delhi NCR offices — desk stretches, posture correction & stress-relief sessions for teams.',
+      'Onsite corporate yoga for Delhi NCR & Chandigarh Tricity offices — desk stretches, posture correction & stress-relief sessions for teams. Individual leadership tiers from Silver (₹500), Gold (₹750) to Platinum (₹1,000).',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Corporate Yoga & Executive Private Monthly Packages',
+      itemListElement: [
+        // Silver Tier (3 offers)
+        {
+          '@type': 'Offer',
+          name: 'Silver Tier Corporate / Private - 12 Sessions (3 Days/Week)',
+          price: '6000',
+          priceCurrency: 'INR',
+          description: 'Silver Tier private session for corporate leaders, 12 sessions per month at ₹500/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Silver Tier Corporate / Private - 16 Sessions (4 Days/Week)',
+          price: '8000',
+          priceCurrency: 'INR',
+          description: 'Silver Tier private session for corporate leaders, 16 sessions per month at ₹500/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Silver Tier Corporate / Private - 20 Sessions (5 Days/Week)',
+          price: '10000',
+          priceCurrency: 'INR',
+          description: 'Silver Tier private session for corporate leaders, 20 sessions per month at ₹500/session.',
+        },
+        // Gold Tier (3 offers)
+        {
+          '@type': 'Offer',
+          name: 'Gold Tier Corporate / Private - 12 Sessions (3 Days/Week)',
+          price: '9000',
+          priceCurrency: 'INR',
+          description: 'Gold Tier private session for corporate leaders, 12 sessions per month at ₹750/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Gold Tier Corporate / Private - 16 Sessions (4 Days/Week)',
+          price: '12000',
+          priceCurrency: 'INR',
+          description: 'Gold Tier private session for corporate leaders, 16 sessions per month at ₹750/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Gold Tier Corporate / Private - 20 Sessions (5 Days/Week)',
+          price: '15000',
+          priceCurrency: 'INR',
+          description: 'Gold Tier private session for corporate leaders, 20 sessions per month at ₹750/session.',
+        },
+        // Platinum Tier (3 offers)
+        {
+          '@type': 'Offer',
+          name: 'Platinum Tier Corporate / Private - 12 Sessions (3 Days/Week)',
+          price: '12000',
+          priceCurrency: 'INR',
+          description: 'Platinum Tier private session for corporate leaders, 12 sessions per month at ₹1,000/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Platinum Tier Corporate / Private - 16 Sessions (4 Days/Week)',
+          price: '16000',
+          priceCurrency: 'INR',
+          description: 'Platinum Tier private session for corporate leaders, 16 sessions per month at ₹1,000/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Platinum Tier Corporate / Private - 20 Sessions (5 Days/Week)',
+          price: '20000',
+          priceCurrency: 'INR',
+          description: 'Platinum Tier private session for corporate leaders, 20 sessions per month at ₹1,000/session.',
+        },
+      ],
+    },
   };
 
   const faqSchema = {
@@ -120,11 +202,11 @@ export default function CorporateYogaPage() {
             </div>
 
             <h1 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-white tracking-tight">
-              Corporate Yoga & Workplace Wellness Sessions for Delhi NCR Offices
+              Corporate Yoga & Workplace Wellness Sessions for Delhi NCR & Chandigarh Tricity Offices
             </h1>
 
             <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200/95 leading-relaxed max-w-2xl">
-              KayaSadhak sends certified teachers to your office in Delhi, Gurugram, Noida, Faridabad, or Ghaziabad for desk-friendly stretches, posture correction, and stress-relief sessions. No change of clothes required.
+              KayaSadhak sends certified teachers to your office across Delhi NCR (Gurugram, Noida, Delhi, Faridabad, Ghaziabad) & Chandigarh Tricity for desk-friendly stretches, posture correction, and stress-relief sessions. No change of clothes required.
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">

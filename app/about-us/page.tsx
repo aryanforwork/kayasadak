@@ -155,7 +155,7 @@ export default function AboutPage() {
                   Having dedicated more than a decade to clinical yoga therapy, Hatha alignment, and teacher mentoring, <strong className="text-brand-green-900 font-semibold">Nivil Chaudhary</strong> founded KayaSadhak after observing a troubling trend in urban wellness: unverified local tutors offering generic routines without anatomical screening or safety protocols.
                 </p>
                 <p>
-                  Under Nivil’s direct stewardship, KayaSadhak pioneered Delhi NCR’s first <strong className="text-brand-green-900 font-semibold">3-Tier Instructor Qualification Framework</strong> (Silver, Gold, and Platinum), ensuring that every practitioner is matched with an instructor whose degrees, physical certifications, and therapeutic capabilities have been personally audited.
+                  Under Nivil’s direct stewardship, KayaSadhak pioneered Delhi NCR & Chandigarh Tricity’s first <strong className="text-brand-green-900 font-semibold">3-Tier Instructor Qualification Framework</strong> (Silver, Gold, and Platinum), ensuring that every practitioner is matched with an instructor whose degrees, physical certifications, and therapeutic capabilities have been personally audited.
                 </p>
               </div>
 
@@ -167,7 +167,7 @@ export default function AboutPage() {
                     <span>Verified Creds</span>
                   </div>
                   <p className="font-body text-[11px] text-neutral-grey leading-tight">
-                    Strict background audits & degrees across Platinum, Gold & Silver tiers.
+                    Strict background audits & degrees across Silver, Gold & Platinum tiers.
                   </p>
                 </div>
 

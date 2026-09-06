@@ -27,12 +27,25 @@ export const SLIDES: SlideData[] = [
     titleHighlight: 'Yoga Teacher',
     titleSuffix: ' At Home',
     description:
-      '"Learn from verified 1-on-1 female & male yoga instructors at your home — available across all localities in Delhi NCR & Tricity. Personalized sessions tailored to your comfort and health goals."',
+      '"Learn from verified 1-on-1 female & male yoga instructors at your home — available across all localities in Delhi NCR & Chandigarh Tricity. Personalized sessions tailored to your comfort and health goals."',
     ctaText: 'Book Home Yoga Session',
     ctaLink: 'https://wa.me/918273264561?text=Hi%20KayaSadhak!%20I%20want%20to%20book%20a%20free%20home%20yoga%20trial.',
     isExternal: true,
-    locationLabel: 'Delhi NCR & Tricity Luxury Residences',
+    locationLabel: 'Delhi NCR & Chandigarh Tricity Residences',
     image: '/images/hero_home_yoga_ncr.webp',
+  },
+  {
+    id: 'personal-fitness',
+    badge: 'Delhi NCR • Chandigarh Tricity • 1-on-1 Fitness',
+    titlePrefix: 'Personal ',
+    titleHighlight: 'Fitness Trainer',
+    titleSuffix: ' At Home',
+    description:
+      '"Certified 1-on-1 personal fitness training delivered at your home across Delhi NCR & Chandigarh Tricity. Silver (₹1,000), Gold (₹1,500), and Platinum (₹2,000) tiers with zero gym commute."',
+    ctaText: 'Explore Personal Fitness',
+    ctaLink: '/services/personal-fitness-trainer',
+    locationLabel: 'Delhi NCR & Chandigarh Tricity Private Residences',
+    image: '/images/hero_weight_loss_yoga.jpg',
   },
   {
     id: 'rishikesh-ytt',

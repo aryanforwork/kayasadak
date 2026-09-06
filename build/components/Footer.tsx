@@ -102,7 +102,7 @@ export const Footer: React.FC = () => {
                 <KayaLeafMotif size={22} color="#C08A3E" />
               </div>
               <span className="text-xs sm:text-sm text-brand-gold-600 font-bold tracking-[0.2em] uppercase mt-1">
-                HOME YOGA • YTT INSTITUTE • PANCHKARMA
+                HOME YOGA • PERSONAL FITNESS TRAINER • YTT
               </span>
             </div>
           </Link>
@@ -136,7 +136,7 @@ export const Footer: React.FC = () => {
           {/* Column 1: Brand Story & Socials (3 Cols) */}
           <div className="lg:col-span-3 space-y-5 text-left">
             <p className="text-xs sm:text-sm text-gray-300/90 leading-relaxed">
-              KayaSadhak delivers certified personal home yoga instruction, professional Yoga Teacher Training (YTT) courses, and authentic Ayurvedic Panchakarma therapies across Delhi NCR and Chandigarh Tricity. Founded by Nivil Chaudhary (12+ years experience).
+              KayaSadhak delivers certified personal home yoga instruction, professional Yoga Teacher Training (YTT) courses, and authentic Ayurvedic Panchakarma therapies across Delhi NCR & Chandigarh Tricity. Founded by Nivil Chaudhary (12+ years experience).
             </p>
 
             <div className="space-y-2 text-xs sm:text-sm text-gray-200">
@@ -216,6 +216,12 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/services/personal-fitness-trainer" className="hover:text-brand-gold-600 flex items-center gap-2 transition-colors font-medium text-white">
+                  <KayaLeafMotif size={11} color="#C08A3E" />
+                  <span>Personal Fitness Trainer</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/corporate-yoga" className="hover:text-brand-gold-600 flex items-center gap-2 transition-colors">
                   <KayaLeafMotif size={11} color="#C08A3E" />
                   <span>Corporate Wellness Programs</span>
@@ -228,15 +234,21 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/services/yoga-at-home" className="hover:text-brand-gold-600 flex items-center gap-2 transition-colors">
+                <Link href="/services/kids-yoga" className="hover:text-brand-gold-600 flex items-center gap-2 transition-colors">
                   <KayaLeafMotif size={11} color="#C08A3E" />
                   <span>Kids Yoga & Posture Care</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/yoga-at-home" className="hover:text-brand-gold-600 flex items-center gap-2 transition-colors">
+                <Link href="/services/prenatal-postnatal-yoga" className="hover:text-brand-gold-600 flex items-center gap-2 transition-colors">
                   <KayaLeafMotif size={11} color="#C08A3E" />
                   <span>Prenatal & Postnatal Yoga</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/studio-noida-sector-45" className="hover:text-brand-gold-600 flex items-center gap-2 transition-colors">
+                  <KayaLeafMotif size={11} color="#C08A3E" />
+                  <span>Sector 45 Noida Studio</span>
                 </Link>
               </li>
               <li>
@@ -272,6 +284,12 @@ export const Footer: React.FC = () => {
                 <Link href="/yoga-teacher-training/200-hour-ttc" className="hover:text-brand-gold-600 font-bold text-white flex items-center gap-2 transition-colors">
                   <FaChevronRight className="w-2.5 h-2.5 text-brand-gold-600 flex-shrink-0" />
                   <span>200-Hour TTC</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/yoga-teacher-training/prenatal-ttc" className="hover:text-brand-gold-600 font-bold text-brand-gold-400 flex items-center gap-2 transition-colors">
+                  <FaChevronRight className="w-2.5 h-2.5 text-brand-gold-600 flex-shrink-0" />
+                  <span>Prenatal Yoga TTC</span>
                 </Link>
               </li>
               <li>
@@ -329,9 +347,15 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/yoga-teacher-at-home/delhi/south-delhi" className="hover:text-brand-gold-600 flex items-center gap-2 transition-colors">
+                <Link href="/yoga-teacher-at-home/noida" className="hover:text-brand-gold-600 flex items-center gap-2 transition-colors">
                   <FaChevronRight className="w-2.5 h-2.5 text-brand-gold-600 flex-shrink-0" />
-                  <span>Noida Sectors</span>
+                  <span>Noida Sectors (Home)</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/studio-noida-sector-45" className="hover:text-brand-gold-600 font-bold text-brand-gold-400 flex items-center gap-2 transition-colors">
+                  <FaChevronRight className="w-2.5 h-2.5 text-brand-gold-600 flex-shrink-0" />
+                  <span>Sector 45 Noida Studio</span>
                 </Link>
               </li>
               <li>

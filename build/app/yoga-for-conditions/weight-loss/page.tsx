@@ -9,16 +9,16 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaFire, FaShieldAlt, FaDumbbell, FaHeartbeat } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Therapeutic Yoga for Weight Loss at Home | KayaSadhak',
+  title: 'Therapeutic Yoga for Weight Loss at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
   description:
-    '1-on-1 yoga at home in Delhi NCR for healthy weight management — metabolic-boosting core work & Agnisar kriya. Not medical advice. Enquire on WhatsApp.',
+    '1-on-1 yoga at home in Delhi NCR & Chandigarh Tricity for healthy weight management — metabolic-boosting core work & Agnisar kriya. Not medical advice. Enquire on WhatsApp.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-for-conditions/weight-loss',
   },
   openGraph: {
-    title: 'Therapeutic Yoga for Weight Loss at Home | KayaSadhak',
+    title: 'Therapeutic Yoga for Weight Loss at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
     description:
-      '1-on-1 yoga at home in Delhi NCR for healthy weight management — metabolic-boosting core work & Agnisar kriya. Not medical advice. Enquire on WhatsApp.',
+      '1-on-1 yoga at home in Delhi NCR & Chandigarh Tricity for healthy weight management — metabolic-boosting core work & Agnisar kriya. Not medical advice. Enquire on WhatsApp.',
     url: 'https://www.kayasadhak.com/yoga-for-conditions/weight-loss',
     siteName: 'KayaSadhak',
     type: 'website',
@@ -69,7 +69,7 @@ export default function WeightLossYogaPage() {
     '@type': 'MedicalWebPage',
     name: 'Therapeutic Yoga for Healthy Weight Management',
     description:
-      '1-on-1 yoga at home in Delhi NCR for healthy weight management — metabolic-boosting core work & Agnisar kriya.',
+      '1-on-1 yoga at home in Delhi NCR & Chandigarh Tricity for healthy weight management — metabolic-boosting core work & Agnisar kriya.',
     provider: {
       '@type': 'Organization',
       name: 'KayaSadhak',
@@ -125,7 +125,7 @@ export default function WeightLossYogaPage() {
             </h1>
 
             <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200/95 leading-relaxed max-w-2xl">
-              A certified KayaSadhak instructor visits your home across Delhi NCR to guide a sustainable metabolic practice — functional core strengthening, Agnisar kriya, and stress-reduction breathwork tailored to your body.
+              A certified KayaSadhak instructor visits your home across Delhi NCR & Chandigarh Tricity to guide a sustainable metabolic practice — functional core strengthening, Agnisar kriya, and stress-reduction breathwork tailored to your body.
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
@@ -252,7 +252,7 @@ export default function WeightLossYogaPage() {
                   <span className="text-[#B37B2E] font-bold">✓</span> Sustainable Routine with 0 Equipment Required
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#B37B2E] font-bold">✓</span> Certified Instructors across Delhi NCR
+                  <span className="text-[#B37B2E] font-bold">✓</span> Certified Instructors across Delhi NCR & Chandigarh Tricity
                 </div>
               </div>
             </div>

@@ -24,6 +24,17 @@ export const PricingTable: React.FC = () => {
       {/* Mobile-Only Segmented Control Tab Switcher */}
       <div className="md:hidden flex items-center p-1.5 bg-[#EAE2D2] rounded-2xl mb-6 shadow-inner border border-[#D9CEB9]">
         <button
+          onClick={() => setActiveTab('silver')}
+          className={`flex-1 py-2.5 px-2 rounded-xl font-display font-bold text-xs transition-all flex items-center justify-center gap-1.5 ${
+            activeTab === 'silver'
+              ? 'bg-white text-[#16302B] shadow-md border border-[#D9CEB9]'
+              : 'text-[#5A574F] hover:text-[#16302B]'
+          }`}
+        >
+          <span>Silver (₹500)</span>
+        </button>
+
+        <button
           onClick={() => setActiveTab('gold')}
           className={`flex-1 py-2.5 px-2 rounded-xl font-display font-bold text-xs transition-all flex items-center justify-center gap-1.5 ${
             activeTab === 'gold'
@@ -46,63 +57,46 @@ export const PricingTable: React.FC = () => {
           <FaCrown className="w-3 h-3 text-[#E5C384]" />
           <span>Platinum (₹1k)</span>
         </button>
-
-        <button
-          onClick={() => setActiveTab('silver')}
-          className={`flex-1 py-2.5 px-2 rounded-xl font-display font-bold text-xs transition-all flex items-center justify-center gap-1.5 ${
-            activeTab === 'silver'
-              ? 'bg-white text-[#16302B] shadow-md border border-[#D9CEB9]'
-              : 'text-[#5A574F] hover:text-[#16302B]'
-          }`}
-        >
-          <span>Silver (₹500)</span>
-        </button>
       </div>
 
       {/* 3 Pricing Cards Grid: Tabbed on Mobile (< md), 3-col on Desktop (>= md) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
         
-        {/* CARD 1: PLATINUM TIER (Left Card - Master Credential) */}
-        <div className={`bg-[#FAF6F0] border-2 border-[#16302B] rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex-col justify-between relative overflow-hidden group ${
-          activeTab === 'platinum' ? 'flex' : 'hidden md:flex'
+        {/* CARD 1: SILVER TIER (Left Card) */}
+        <div className={`bg-[#FAF6F0] border border-[#D9CEB9] rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex-col justify-between relative overflow-hidden group ${
+          activeTab === 'silver' ? 'flex' : 'hidden md:flex'
         }`}>
           
-          {/* Top Dark Green Ribbon Badge */}
-          <div className="absolute top-0 right-0 bg-[#16302B] text-[#E5C384] font-display text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-bl-2xl shadow-sm flex items-center gap-1.5 border-b border-l border-[#C08A3E]/30">
-            <FaCrown className="w-3 h-3 text-[#E5C384]" />
-            <span>MASTER CREDENTIAL</span>
-          </div>
-
           <div className="space-y-6 pt-3">
             
             {/* Top Wreath Medal Emblem & Tier Title */}
             <div className="text-center">
-              <div className="w-18 h-18 rounded-full border border-[#C08A3E]/40 bg-[#F5EFE4] flex items-center justify-center mx-auto shadow-sm group-hover:scale-105 transition-transform">
-                <div className="w-14 h-14 rounded-full border border-[#C08A3E]/60 flex items-center justify-center text-[#16302B]">
-                  <FaCrown className="w-7 h-7 text-[#16302B]" />
+              <div className="w-18 h-18 rounded-full border border-[#C0C0C0] bg-[#EFEFEF] flex items-center justify-center mx-auto shadow-sm group-hover:scale-105 transition-transform">
+                <div className="w-14 h-14 rounded-full border border-[#A0A0A0]/40 flex items-center justify-center text-[#5A574F]">
+                  <KayaLeafMotif size={24} color="#5A574F" />
                 </div>
               </div>
 
-              <div className="font-display font-bold text-xs tracking-[0.22em] text-[#16302B] uppercase mt-3">
-                PLATINUM TIER
+              <div className="font-display font-bold text-xs tracking-[0.22em] text-[#5A574F] uppercase mt-3">
+                SILVER TIER
               </div>
 
               {/* Price */}
               <div className="flex items-baseline justify-center gap-1 mt-2">
                 <span className="font-heading font-bold text-4xl sm:text-[46px] text-[#16302B] leading-none">
-                  ₹1,000
+                  ₹500
                 </span>
                 <span className="font-body text-xs text-[#5A574F] font-medium">/ session</span>
               </div>
             </div>
 
             {/* Qualification Box */}
-            <div className="bg-[#EFE8DC]/80 border border-[#E0D7C4] rounded-2xl p-3.5 text-left text-xs text-[#4A4842] flex items-center gap-3 shadow-inner">
-              <div className="w-8 h-8 rounded-lg bg-[#FAF6F0] border border-[#DCD3C0] text-[#B37B2E] flex items-center justify-center flex-shrink-0">
+            <div className="bg-[#EFE8DC]/70 border border-[#E0D7C4] rounded-2xl p-3.5 text-left text-xs text-[#4A4842] flex items-center gap-3 shadow-inner">
+              <div className="w-8 h-8 rounded-lg bg-[#FAF6F0] border border-[#DCD3C0] text-[#5A574F] flex items-center justify-center flex-shrink-0">
                 <FaGraduationCap className="w-4 h-4" />
               </div>
               <p className="leading-tight font-medium">
-                Complete Masters Degree + Graduation + Advanced Teacher Training <span className="font-bold text-[#16302B]">(10+ Years Experience)</span>
+                Graduation + Diploma in Yoga <span className="font-bold text-[#16302B]">(5+ Years Experience)</span>
               </p>
             </div>
 
@@ -117,17 +111,17 @@ export const PricingTable: React.FC = () => {
               <div className="space-y-2 font-body text-xs sm:text-sm">
                 <div className="flex items-center justify-between p-3 rounded-xl bg-[#F3EEE4] border border-[#E0D7C4]/60">
                   <span className="font-medium text-[#4A4842]">12 Sessions / Month (3d/wk)</span>
-                  <span className="font-heading font-bold text-base sm:text-lg text-[#16302B]">₹12,000</span>
+                  <span className="font-heading font-bold text-base sm:text-lg text-[#16302B]">₹6,000</span>
                 </div>
 
                 <div className="flex items-center justify-between p-3 rounded-xl bg-[#E2EBE7] border border-[#16302B]/20 shadow-xs">
                   <span className="font-bold text-[#16302B]">16 Sessions / Month (4d/wk)</span>
-                  <span className="font-heading font-bold text-base sm:text-lg text-[#16302B]">₹16,000</span>
+                  <span className="font-heading font-bold text-base sm:text-lg text-[#16302B]">₹8,000</span>
                 </div>
 
                 <div className="flex items-center justify-between p-3 rounded-xl bg-[#F3EEE4] border border-[#E0D7C4]/60">
                   <span className="font-medium text-[#4A4842]">20 Sessions / Month (5d/wk)</span>
-                  <span className="font-heading font-bold text-base sm:text-lg text-[#16302B]">₹20,000</span>
+                  <span className="font-heading font-bold text-base sm:text-lg text-[#16302B]">₹10,000</span>
                 </div>
               </div>
             </div>
@@ -140,7 +134,7 @@ export const PricingTable: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <FaCheckCircle className="w-4 h-4 text-[#C08A3E] flex-shrink-0" />
-                <span>Masters Degree & 10+ Yrs Clinical Care</span>
+                <span>Yoga Diploma & 5+ Yrs Verified Practice</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <FaCheckCircle className="w-4 h-4 text-[#C08A3E] flex-shrink-0" />
@@ -158,7 +152,7 @@ export const PricingTable: React.FC = () => {
           <div className="pt-8">
             <a
               href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(
-                'Hi KayaSadhak! I am interested in booking a Platinum Tier (₹1,000/sess) home yoga package.'
+                'Hi KayaSadhak! I am interested in booking a Silver Tier (₹500/sess) home yoga package.'
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -166,7 +160,7 @@ export const PricingTable: React.FC = () => {
             >
               <div className="flex items-center gap-2.5">
                 <FaWhatsapp className="w-4.5 h-4.5 text-[#25D366]" />
-                <span className="uppercase tracking-wider">SELECT PLATINUM PLAN</span>
+                <span className="uppercase tracking-wider">SELECT SILVER PLAN</span>
               </div>
               <FaArrowRight className="w-4 h-4 text-[#E5C384] group-hover/btn:translate-x-1 transition-transform" />
             </a>
@@ -286,41 +280,47 @@ export const PricingTable: React.FC = () => {
 
         </div>
 
-        {/* CARD 3: SILVER TIER (Right Card) */}
-        <div className={`bg-[#FAF6F0] border border-[#D9CEB9] rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex-col justify-between relative overflow-hidden group ${
-          activeTab === 'silver' ? 'flex' : 'hidden md:flex'
+        {/* CARD 3: PLATINUM TIER (Right Card - Master Credential) */}
+        <div className={`bg-[#FAF6F0] border-2 border-[#16302B] rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex-col justify-between relative overflow-hidden group ${
+          activeTab === 'platinum' ? 'flex' : 'hidden md:flex'
         }`}>
           
+          {/* Top Dark Green Ribbon Badge */}
+          <div className="absolute top-0 right-0 bg-[#16302B] text-[#E5C384] font-display text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-bl-2xl shadow-sm flex items-center gap-1.5 border-b border-l border-[#C08A3E]/30">
+            <FaCrown className="w-3 h-3 text-[#E5C384]" />
+            <span>MASTER CREDENTIAL</span>
+          </div>
+
           <div className="space-y-6 pt-3">
             
             {/* Top Wreath Medal Emblem & Tier Title */}
             <div className="text-center">
-              <div className="w-18 h-18 rounded-full border border-[#C0C0C0] bg-[#EFEFEF] flex items-center justify-center mx-auto shadow-sm group-hover:scale-105 transition-transform">
-                <div className="w-14 h-14 rounded-full border border-[#A0A0A0]/40 flex items-center justify-center text-[#5A574F]">
-                  <KayaLeafMotif size={24} color="#5A574F" />
+              <div className="w-18 h-18 rounded-full border border-[#C08A3E]/40 bg-[#F5EFE4] flex items-center justify-center mx-auto shadow-sm group-hover:scale-105 transition-transform">
+                <div className="w-14 h-14 rounded-full border border-[#C08A3E]/60 flex items-center justify-center text-[#16302B]">
+                  <FaCrown className="w-7 h-7 text-[#16302B]" />
                 </div>
               </div>
 
-              <div className="font-display font-bold text-xs tracking-[0.22em] text-[#5A574F] uppercase mt-3">
-                SILVER TIER
+              <div className="font-display font-bold text-xs tracking-[0.22em] text-[#16302B] uppercase mt-3">
+                PLATINUM TIER
               </div>
 
               {/* Price */}
               <div className="flex items-baseline justify-center gap-1 mt-2">
                 <span className="font-heading font-bold text-4xl sm:text-[46px] text-[#16302B] leading-none">
-                  ₹500
+                  ₹1,000
                 </span>
                 <span className="font-body text-xs text-[#5A574F] font-medium">/ session</span>
               </div>
             </div>
 
             {/* Qualification Box */}
-            <div className="bg-[#EFE8DC]/70 border border-[#E0D7C4] rounded-2xl p-3.5 text-left text-xs text-[#4A4842] flex items-center gap-3 shadow-inner">
-              <div className="w-8 h-8 rounded-lg bg-[#FAF6F0] border border-[#DCD3C0] text-[#5A574F] flex items-center justify-center flex-shrink-0">
+            <div className="bg-[#EFE8DC]/80 border border-[#E0D7C4] rounded-2xl p-3.5 text-left text-xs text-[#4A4842] flex items-center gap-3 shadow-inner">
+              <div className="w-8 h-8 rounded-lg bg-[#FAF6F0] border border-[#DCD3C0] text-[#B37B2E] flex items-center justify-center flex-shrink-0">
                 <FaGraduationCap className="w-4 h-4" />
               </div>
               <p className="leading-tight font-medium">
-                Graduation + Diploma in Yoga <span className="font-bold text-[#16302B]">(5+ Years Experience)</span>
+                Complete Masters Degree + Graduation + Advanced Teacher Training <span className="font-bold text-[#16302B]">(10+ Years Experience)</span>
               </p>
             </div>
 
@@ -335,17 +335,17 @@ export const PricingTable: React.FC = () => {
               <div className="space-y-2 font-body text-xs sm:text-sm">
                 <div className="flex items-center justify-between p-3 rounded-xl bg-[#F3EEE4] border border-[#E0D7C4]/60">
                   <span className="font-medium text-[#4A4842]">12 Sessions / Month (3d/wk)</span>
-                  <span className="font-heading font-bold text-base sm:text-lg text-[#16302B]">₹6,000</span>
+                  <span className="font-heading font-bold text-base sm:text-lg text-[#16302B]">₹12,000</span>
                 </div>
 
                 <div className="flex items-center justify-between p-3 rounded-xl bg-[#E2EBE7] border border-[#16302B]/20 shadow-xs">
                   <span className="font-bold text-[#16302B]">16 Sessions / Month (4d/wk)</span>
-                  <span className="font-heading font-bold text-base sm:text-lg text-[#16302B]">₹8,000</span>
+                  <span className="font-heading font-bold text-base sm:text-lg text-[#16302B]">₹16,000</span>
                 </div>
 
                 <div className="flex items-center justify-between p-3 rounded-xl bg-[#F3EEE4] border border-[#E0D7C4]/60">
                   <span className="font-medium text-[#4A4842]">20 Sessions / Month (5d/wk)</span>
-                  <span className="font-heading font-bold text-base sm:text-lg text-[#16302B]">₹10,000</span>
+                  <span className="font-heading font-bold text-base sm:text-lg text-[#16302B]">₹20,000</span>
                 </div>
               </div>
             </div>
@@ -358,7 +358,7 @@ export const PricingTable: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <FaCheckCircle className="w-4 h-4 text-[#C08A3E] flex-shrink-0" />
-                <span>Yoga Diploma & 5+ Yrs Verified Practice</span>
+                <span>Masters Degree & 10+ Yrs Clinical Care</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <FaCheckCircle className="w-4 h-4 text-[#C08A3E] flex-shrink-0" />
@@ -376,7 +376,7 @@ export const PricingTable: React.FC = () => {
           <div className="pt-8">
             <a
               href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(
-                'Hi KayaSadhak! I am interested in booking a Silver Tier (₹500/sess) home yoga package.'
+                'Hi KayaSadhak! I am interested in booking a Platinum Tier (₹1,000/sess) home yoga package.'
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -384,7 +384,7 @@ export const PricingTable: React.FC = () => {
             >
               <div className="flex items-center gap-2.5">
                 <FaWhatsapp className="w-4.5 h-4.5 text-[#25D366]" />
-                <span className="uppercase tracking-wider">SELECT SILVER PLAN</span>
+                <span className="uppercase tracking-wider">SELECT PLATINUM PLAN</span>
               </div>
               <FaArrowRight className="w-4 h-4 text-[#E5C384] group-hover/btn:translate-x-1 transition-transform" />
             </a>

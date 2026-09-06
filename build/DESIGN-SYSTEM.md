@@ -44,11 +44,11 @@
 ## 5. Hero & Homepage Layout Architecture
 
 - **Full-Bleed Editorial Hero:** Hero leads with high-impact editorial photography and Newsreader serif headlines (`56-72px`). The Lead Generation Form is moved below the fold into a dedicated section.
-- **Option A Pricing Matrix:** Renders Platinum (₹1,000) → Gold (₹750) → Silver (₹500) left-to-right.
+- **Pricing Matrix Display Order:** Renders Silver (₹500 / ₹1,000) → Gold (₹750 / ₹1,500) → Platinum (₹1,000 / ₹2,000) left-to-right (ascending order).
 - **14 Rich Homepage Sections:**
   1. Full-Bleed Editorial Hero (No Form in Hero)
   2. Real Stats Trust Bar (12+ Yrs Exp, 20 Locality Clusters, 9 YTT Hubs, 3 Qualification Tiers)
-  3. Three Pillars (Personal Home Yoga, YTT Institute, Authentic Panchkarma)
+  3. Three Pillars (Personal Home Yoga, Personal Fitness Trainer, YTT Institute)
   4. "What Health Goal or Condition Are You Looking to Address?" Chips
   5. Transparent 3×3 Tier/Pricing Matrix Preview
   6. YTT Program & Location Showcase

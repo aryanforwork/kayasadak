@@ -45,7 +45,7 @@ export const OmniSanctuary: React.FC = () => {
                 CLASSES & SCHEDULE
               </h3>
               <p className="text-xs sm:text-sm text-gray-300/80 leading-relaxed">
-                Flexible morning & evening 1-on-1 private home schedules matched to your daily routine in Delhi NCR & Tricity.
+                Flexible morning & evening 1-on-1 private home schedules matched to your daily routine in Delhi NCR & Chandigarh Tricity.
               </p>
             </div>
           </div>
@@ -65,7 +65,7 @@ export const OmniSanctuary: React.FC = () => {
                 NEED TO KNOW
               </h3>
               <p className="text-xs sm:text-sm text-gray-300/80 leading-relaxed">
-                All mats, props & copper water vessels provided. Zero travel fees across all localities in Delhi NCR & Tricity.
+                All mats, props & copper water vessels provided. Zero travel fees across all localities in Delhi NCR & Chandigarh Tricity.
               </p>
               <div className="pt-1">
                 <Link

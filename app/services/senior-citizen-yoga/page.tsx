@@ -9,14 +9,14 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaUserCheck, FaHeart, FaShieldAlt, FaChair, FaWalking } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Senior Citizen Yoga at Home in Delhi NCR | KayaSadhak',
+  title: 'Senior Citizen Yoga at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
   description:
     'Gentle chair yoga, joint mobility & fall-prevention sessions for seniors, taught at home in Delhi NCR & Chandigarh Tricity. From ₹500/session. Free trial.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/services/senior-citizen-yoga',
   },
   openGraph: {
-    title: 'Senior Citizen Yoga at Home in Delhi NCR | KayaSadhak',
+    title: 'Senior Citizen Yoga at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
     description:
       'Gentle chair yoga, joint mobility & fall-prevention sessions for seniors, taught at home in Delhi NCR & Chandigarh Tricity. From ₹500/session. Free trial.',
     url: 'https://www.kayasadhak.com/services/senior-citizen-yoga',
@@ -73,8 +73,90 @@ export default function SeniorCitizenYogaPage() {
       name: 'KayaSadhak',
       url: 'https://www.kayasadhak.com',
     },
+    areaServed: [
+      { '@type': 'City', name: 'Delhi' },
+      { '@type': 'City', name: 'Noida' },
+      { '@type': 'City', name: 'Gurugram' },
+      { '@type': 'City', name: 'Faridabad' },
+      { '@type': 'City', name: 'Ghaziabad' },
+      { '@type': 'City', name: 'Chandigarh' },
+      { '@type': 'City', name: 'Mohali' },
+      { '@type': 'City', name: 'Panchkula' },
+    ],
     description:
-      'Gentle chair yoga, joint mobility & fall-prevention sessions for seniors, taught at home in Delhi NCR & Chandigarh Tricity.',
+      'Gentle chair yoga, joint mobility & fall-prevention sessions for seniors, taught at home in Delhi NCR & Chandigarh Tricity. Silver (₹500), Gold (₹750), and Platinum (₹1,000) tiers.',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Senior Citizen Yoga at Home Monthly Packages',
+      itemListElement: [
+        // Silver Tier (3 offers)
+        {
+          '@type': 'Offer',
+          name: 'Silver Senior Yoga Tier - 12 Sessions (3 Days/Week)',
+          price: '6000',
+          priceCurrency: 'INR',
+          description: 'Silver Tier senior citizen home yoga, 12 sessions per month at ₹500/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Silver Senior Yoga Tier - 16 Sessions (4 Days/Week)',
+          price: '8000',
+          priceCurrency: 'INR',
+          description: 'Silver Tier senior citizen home yoga, 16 sessions per month at ₹500/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Silver Senior Yoga Tier - 20 Sessions (5 Days/Week)',
+          price: '10000',
+          priceCurrency: 'INR',
+          description: 'Silver Tier senior citizen home yoga, 20 sessions per month at ₹500/session.',
+        },
+        // Gold Tier (3 offers)
+        {
+          '@type': 'Offer',
+          name: 'Gold Senior Yoga Tier - 12 Sessions (3 Days/Week)',
+          price: '9000',
+          priceCurrency: 'INR',
+          description: 'Gold Tier senior citizen home yoga, 12 sessions per month at ₹750/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Gold Senior Yoga Tier - 16 Sessions (4 Days/Week)',
+          price: '12000',
+          priceCurrency: 'INR',
+          description: 'Gold Tier senior citizen home yoga, 16 sessions per month at ₹750/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Gold Senior Yoga Tier - 20 Sessions (5 Days/Week)',
+          price: '15000',
+          priceCurrency: 'INR',
+          description: 'Gold Tier senior citizen home yoga, 20 sessions per month at ₹750/session.',
+        },
+        // Platinum Tier (3 offers)
+        {
+          '@type': 'Offer',
+          name: 'Platinum Senior Yoga Tier - 12 Sessions (3 Days/Week)',
+          price: '12000',
+          priceCurrency: 'INR',
+          description: 'Platinum Tier senior citizen home yoga, 12 sessions per month at ₹1,000/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Platinum Senior Yoga Tier - 16 Sessions (4 Days/Week)',
+          price: '16000',
+          priceCurrency: 'INR',
+          description: 'Platinum Tier senior citizen home yoga, 16 sessions per month at ₹1,000/session.',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Platinum Senior Yoga Tier - 20 Sessions (5 Days/Week)',
+          price: '20000',
+          priceCurrency: 'INR',
+          description: 'Platinum Tier senior citizen home yoga, 20 sessions per month at ₹1,000/session.',
+        },
+      ],
+    },
   };
 
   const faqSchema = {
@@ -121,7 +203,7 @@ export default function SeniorCitizenYogaPage() {
             </div>
 
             <h1 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-white tracking-tight">
-              Senior Citizen Yoga at Home — Gentle, Joint-Safe Sessions in Delhi NCR
+              Senior Citizen Yoga at Home — Gentle, Joint-Safe Sessions in Delhi NCR & Chandigarh Tricity
             </h1>
 
             <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200/95 leading-relaxed max-w-2xl">
@@ -244,7 +326,7 @@ export default function SeniorCitizenYogaPage() {
               </div>
 
               <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed">
-                Many of our senior-citizen bookings come from adult children arranging sessions for parents in a different part of Delhi NCR or Chandigarh.
+                Many of our senior-citizen bookings come from adult children arranging sessions for parents in a different part of Delhi NCR & Chandigarh Tricity.
               </p>
 
               <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed">
