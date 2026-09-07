@@ -283,7 +283,19 @@ export const Footer: React.FC = () => {
               <li>
                 <Link href="/yoga-teacher-training/200-hour-ttc" className="hover:text-brand-gold-600 font-bold text-white flex items-center gap-2 transition-colors">
                   <FaChevronRight className="w-2.5 h-2.5 text-brand-gold-600 flex-shrink-0" />
-                  <span>200-Hour TTC</span>
+                  <span>200-Hour Foundation TTC</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/yoga-teacher-training/300-hour-ttc" className="hover:text-brand-gold-600 font-bold text-white flex items-center gap-2 transition-colors">
+                  <FaChevronRight className="w-2.5 h-2.5 text-brand-gold-600 flex-shrink-0" />
+                  <span>300-Hour Advanced TTC</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/yoga-teacher-training/500-hour-ttc" className="hover:text-brand-gold-600 font-bold text-white flex items-center gap-2 transition-colors">
+                  <FaChevronRight className="w-2.5 h-2.5 text-brand-gold-600 flex-shrink-0" />
+                  <span>500-Hour Master TTC</span>
                 </Link>
               </li>
               <li>
@@ -295,7 +307,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link href="/yoga-teacher-training/locations/rishikesh" className="hover:text-brand-gold-600 flex items-center gap-2 transition-colors">
                   <FaChevronRight className="w-2.5 h-2.5 text-brand-gold-600 flex-shrink-0" />
-                  <span>Rishikesh Ashram</span>
+                  <span>Rishikesh Ashram Center</span>
                 </Link>
               </li>
               <li>

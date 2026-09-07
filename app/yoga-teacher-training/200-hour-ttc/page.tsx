@@ -153,9 +153,9 @@ export default function YTT200HourPage() {
 
       <div className="space-y-16 sm:space-y-20 mt-16 sm:mt-20">
 
-      {/* 2. Training Syllabus (As per Curriculum Specification) */}
+      {/* 2. Training Syllabus - Section by Section Architectural Spread */}
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="space-y-4 mb-10 text-left">
+        <div className="space-y-4 mb-12 sm:mb-16 text-left">
           <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/80 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
             <KayaLeafMotif size={12} color="#C08A3E" />
             <span>Curriculum &amp; Course Architecture</span>
@@ -163,92 +163,222 @@ export default function YTT200HourPage() {
           <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#16302B]">
             Training Syllabus
           </h2>
-          <p className="text-sm sm:text-base text-[#5A574F] max-w-3xl">
-            A comprehensive, lineage-grounded foundation spanning philosophy, biomechanics, classical pranayama, and professional teaching pedagogy.
+          <p className="text-sm sm:text-base text-[#5A574F] max-w-3xl leading-relaxed">
+            A comprehensive, lineage-grounded foundation spanning four core domains: classical philosophy, biomechanical wellness, teaching pedagogy, and living scriptural wisdom.
           </p>
         </div>
 
-        {/* 4 Syllabus Modules - Architectural photographic layout matching curriculum spec */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-          {/* Module 1: Foundations of Yoga */}
-          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col sm:flex-row">
-            <div className="sm:w-[42%] min-h-[220px] sm:min-h-full relative overflow-hidden bg-[#EAE2D2]">
-              <img
-                src="/images/syllabus_200_foundations.png"
-                alt="Foundations of Yoga - Pranayama and fundamental yogic concepts"
-                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
-              />
-            </div>
-            <div className="sm:w-[58%] p-6 sm:p-7 flex flex-col justify-center text-left space-y-3">
-              <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#16302B]">
-                Foundations of Yoga
-              </h3>
-              <ul className="space-y-2 text-xs sm:text-sm text-[#4A4842] leading-relaxed list-disc list-outside pl-4">
-                <li>Introduction to yoga and its fundamental concepts</li>
-                <li>Patanjali Yoga Sutras and the foundations of yogic philosophy</li>
-                <li>The five paths of yoga: Gyan, Karma, Bhakti, Raja and Hatha Yoga</li>
-              </ul>
+        {/* Section by Section Modules with High-Resolution Photography */}
+        <div className="space-y-12 sm:space-y-16 lg:space-y-20">
+          {/* Section 1: Foundations of Yoga */}
+          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 lg:p-12 shadow-xs">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="lg:col-span-7 space-y-5 text-left order-2 lg:order-1">
+                <div className="space-y-2">
+                  <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/80 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
+                    <span>Module 01 • Core Yogic Philosophy</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-[#16302B]">
+                    Foundations of Yoga
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5A574F] leading-relaxed">
+                  Immerse into the timeless philosophical underpinnings of yoga. Explore traditional definitions, the evolution of yogic thought, and how classical texts guide the student from physical movement toward profound self-mastery.
+                </p>
+
+                <div className="space-y-3 pt-1 text-xs sm:text-sm text-[#3E3C36]">
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#C08A3E] mt-1.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-[#16302B]">Introduction to yoga and its fundamental concepts:</strong>{' '}
+                      Historical origins, etymology of Yuj, classical definitions, and the progression from personal sadhana to certified instruction.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#C08A3E] mt-1.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-[#16302B]">Patanjali Yoga Sutras and the foundations of yogic philosophy:</strong>{' '}
+                      Study of Samadhi Pada and Sadhana Pada, understanding Chitta Vritti Nirodha, and the systematic 8 limbs of Ashtanga Yoga.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#C08A3E] mt-1.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-[#16302B]">The five paths of yoga:</strong>{' '}
+                      Comprehensive integration of Gyan (path of knowledge), Karma (selfless action), Bhakti (devotion), Raja (mental control), and Hatha (energetic harmony).
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-5 order-1 lg:order-2">
+                <div className="overflow-hidden rounded-[28px] border border-[#E0D8C3] shadow-md bg-[#EDE6D6]">
+                  <img
+                    src="/images/syllabus_200_foundations.jpg"
+                    alt="Foundations of Yoga - Woman yogi practicing Nadi Shodhana Pranayama in serene garden"
+                    className="w-full h-auto object-cover object-center transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Module 2: Practice & Wellness */}
-          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col sm:flex-row">
-            <div className="sm:w-[42%] min-h-[220px] sm:min-h-full relative overflow-hidden bg-[#EAE2D2]">
-              <img
-                src="/images/syllabus_200_practice.png"
-                alt="Practice & Wellness - Anatomy, physiology and breathing techniques"
-                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
-              />
-            </div>
-            <div className="sm:w-[58%] p-6 sm:p-7 flex flex-col justify-center text-left space-y-3">
-              <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#16302B]">
-                Practice &amp; Wellness
-              </h3>
-              <ul className="space-y-2 text-xs sm:text-sm text-[#4A4842] leading-relaxed list-disc list-outside pl-4">
-                <li>Anatomy and physiology for safe and effective yoga practice</li>
-                <li>Breathing techniques (Pranayamas) and their role in health and wellbeing</li>
-              </ul>
+          {/* Section 2: Practice & Wellness */}
+          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 lg:p-12 shadow-xs">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="lg:col-span-5 order-1">
+                <div className="overflow-hidden rounded-[28px] border border-[#E0D8C3] shadow-md bg-[#EDE6D6]">
+                  <img
+                    src="/images/syllabus_200_practice.jpg"
+                    alt="Practice & Wellness - Large outdoor group yoga class on lush green lawn"
+                    className="w-full h-auto object-cover object-center transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 space-y-5 text-left order-2">
+                <div className="space-y-2">
+                  <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/80 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
+                    <span>Module 02 • Biomechanics &amp; Breath</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-[#16302B]">
+                    Practice &amp; Wellness
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5A574F] leading-relaxed">
+                  Bridge the ancient science of Prana with modern human anatomy and physiology. Learn to instruct asanas with biomechanical precision while regulating the autonomic nervous system through classical breathwork.
+                </p>
+
+                <div className="space-y-3 pt-1 text-xs sm:text-sm text-[#3E3C36]">
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#C08A3E] mt-1.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-[#16302B]">Anatomy and physiology for safe and effective yoga practice:</strong>{' '}
+                      Skeletal mechanics, joint articulation, muscular engagement, spine health, and injury-prevention protocols for every body type.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#C08A3E] mt-1.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-[#16302B]">Breathing techniques (Pranayamas) and their role in health and wellbeing:</strong>{' '}
+                      Systematic practice of Nadi Shodhana, Kapalabhati, Ujjayi, Bhastrika, and Sheetali with correct bandhas (energy locks) and retention ratios.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#C08A3E] mt-1.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-[#16302B]">Integrative Somatic Wellness:</strong>{' '}
+                      Understanding the vagus nerve, parasympathetic recovery, hormonal equilibrium, and the holistic physiological benefits of daily asana sadhana.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Module 3: Teaching & Mastery */}
-          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col sm:flex-row">
-            <div className="sm:w-[42%] min-h-[220px] sm:min-h-full relative overflow-hidden bg-[#EAE2D2]">
-              <img
-                src="/images/syllabus_200_teaching.png"
-                alt="Teaching & Mastery - Methodology, communication and class sequencing"
-                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
-              />
-            </div>
-            <div className="sm:w-[58%] p-6 sm:p-7 flex flex-col justify-center text-left space-y-3">
-              <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#16302B]">
-                Teaching &amp; Mastery
-              </h3>
-              <ul className="space-y-2 text-xs sm:text-sm text-[#4A4842] leading-relaxed list-disc list-outside pl-4">
-                <li>Communication skills and effective interaction with students</li>
-                <li>Teaching methodology and principles of conducting yoga sessions</li>
-                <li>Designing yoga sequences and structured classes</li>
-              </ul>
+          {/* Section 3: Teaching & Mastery */}
+          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 lg:p-12 shadow-xs">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="lg:col-span-7 space-y-5 text-left order-2 lg:order-1">
+                <div className="space-y-2">
+                  <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/80 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
+                    <span>Module 03 • Pedagogy &amp; Leadership</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-[#16302B]">
+                    Teaching &amp; Mastery
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5A574F] leading-relaxed">
+                  Transform personal practice into inspiring, safe, and authoritative teaching. Master the art of holding sacred space, articulating clear anatomical cues, and leading structured classes with unwavering confidence.
+                </p>
+
+                <div className="space-y-3 pt-1 text-xs sm:text-sm text-[#3E3C36]">
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#C08A3E] mt-1.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-[#16302B]">Communication skills and effective interaction with students:</strong>{' '}
+                      Voice projection, empathetic dialogue, trauma-informed presence, active listening, and addressing individual student limitations.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#C08A3E] mt-1.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-[#16302B]">Teaching methodology and principles of conducting yoga sessions:</strong>{' '}
+                      Room setup, demonstration etiquette, verbal cueing hierarchy, and master principles of hands-on and hands-off alignment assists.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#C08A3E] mt-1.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-[#16302B]">Designing yoga sequences and structured classes:</strong>{' '}
+                      Crafting balanced Vinyasa flows, traditional Hatha progressions, restorative cool-downs, and theme-based class architectures.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-5 order-1 lg:order-2">
+                <div className="overflow-hidden rounded-[28px] border border-[#E0D8C3] shadow-md bg-[#EDE6D6]">
+                  <img
+                    src="/images/syllabus_200_teaching.jpg"
+                    alt="Teaching & Mastery - Ashram yoga master demonstrating Bhujangasana to semicircle of students"
+                    className="w-full h-auto object-cover object-center transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Module 4: Philosophy of Yoga */}
-          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col sm:flex-row">
-            <div className="sm:w-[42%] min-h-[220px] sm:min-h-full relative overflow-hidden bg-[#EAE2D2]">
-              <img
-                src="/images/syllabus_200_philosophy.png"
-                alt="Philosophy of Yoga - Bhagavad Gita teachings and living yogic principles"
-                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
-              />
-            </div>
-            <div className="sm:w-[58%] p-6 sm:p-7 flex flex-col justify-center text-left space-y-3">
-              <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#16302B]">
-                Philosophy of Yoga
-              </h3>
-              <ul className="space-y-2 text-xs sm:text-sm text-[#4A4842] leading-relaxed list-disc list-outside pl-4">
-                <li>The Bhagavad Gita and its key teachings on life, action and self-awareness</li>
-                <li>The principles of yoga and their application in daily life and practice</li>
-              </ul>
+          {/* Section 4: Philosophy of Yoga */}
+          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 lg:p-12 shadow-xs">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="lg:col-span-5 order-1">
+                <div className="overflow-hidden rounded-[28px] border border-[#E0D8C3] shadow-md bg-[#EDE6D6]">
+                  <img
+                    src="/images/syllabus_200_philosophy.jpg"
+                    alt="Philosophy of Yoga - Students in mindful low lunge posture with yoga blocks"
+                    className="w-full h-auto object-cover object-center transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 space-y-5 text-left order-2">
+                <div className="space-y-2">
+                  <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/80 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
+                    <span>Module 04 • Living Wisdom &amp; Texts</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-[#16302B]">
+                    Philosophy of Yoga
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5A574F] leading-relaxed">
+                  Awaken the spiritual essence of the yogic tradition through direct immersion in canonical Vedic scriptures, cultivating deep inner awareness, ethical integrity, and mindful action in everyday life.
+                </p>
+
+                <div className="space-y-3 pt-1 text-xs sm:text-sm text-[#3E3C36]">
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#C08A3E] mt-1.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-[#16302B]">The Bhagavad Gita and its key teachings on life, action and self-awareness:</strong>{' '}
+                      Exploring Karma Yoga (selfless action), Swadharma (individual purpose), and emotional equanimity amid modern worldly duties.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#C08A3E] mt-1.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-[#16302B]">The principles of yoga and their application in daily life and practice:</strong>{' '}
+                      Living the Yamas and Niyamas, cultivating Vairagya (non-attachment) and Abhyasa (constant practice) in modern lifestyle settings.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#C08A3E] mt-1.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-[#16302B]">Sanskrit Chanting &amp; Living Sadhana:</strong>{' '}
+                      Traditional Vedic invocations, the sacred meaning of Om, mantra chanting, and integrating meditation into daily personal routines.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

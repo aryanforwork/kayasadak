@@ -97,12 +97,12 @@ export const Navbar: React.FC = () => {
         {
           name: '300-Hour Advanced TTC',
           desc: 'Advanced Hatha, Vinyasa & therapeutic instruction',
-          link: '/yoga-teacher-training/200-hour-ttc',
+          link: '/yoga-teacher-training/300-hour-ttc',
         },
         {
           name: '500-Hour Master TTC',
           desc: 'Comprehensive master instructor & clinical sadhak training',
-          link: '/yoga-teacher-training/200-hour-ttc',
+          link: '/yoga-teacher-training/500-hour-ttc',
         },
         {
           name: 'Prenatal Yoga Teacher Training',
@@ -662,8 +662,11 @@ export const Navbar: React.FC = () => {
                       <Link href="/yoga-teacher-training/200-hour-ttc" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
                         200-Hour Foundation TTC
                       </Link>
-                      <Link href="/yoga-teacher-training/200-hour-ttc" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
-                        300 / 500-Hour Advanced TTC
+                      <Link href="/yoga-teacher-training/300-hour-ttc" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        300-Hour Advanced TTC
+                      </Link>
+                      <Link href="/yoga-teacher-training/500-hour-ttc" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
+                        500-Hour Master TTC
                       </Link>
                       <Link href="/yoga-teacher-training/prenatal-ttc" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 text-xs text-[#5A574F] hover:text-[#16302B] transition-colors">
                         Prenatal Yoga Teacher Training
