@@ -45,7 +45,7 @@ export const SLIDES: SlideData[] = [
     ctaText: 'Explore Personal Fitness',
     ctaLink: '/services/personal-fitness-trainer',
     locationLabel: 'Delhi NCR & Chandigarh Tricity Private Residences',
-    image: '/images/hero_weight_loss_yoga.jpg',
+    image: '/images/hero_personal_fitness_trainer.jpg',
   },
   {
     id: 'rishikesh-ytt',

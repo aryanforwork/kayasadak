@@ -153,65 +153,269 @@ export default function YTT200HourPage() {
 
       <div className="space-y-16 sm:space-y-20 mt-16 sm:mt-20">
 
-      {/* 2. Course Curriculum Grid */}
+      {/* 2. Training Syllabus (As per Curriculum Specification) */}
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="text-center max-w-2xl mx-auto space-y-2 mb-8">
+        <div className="space-y-4 mb-10 text-left">
           <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/80 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
             <KayaLeafMotif size={12} color="#C08A3E" />
-            <span>200-Hour Core Modules</span>
+            <span>Curriculum &amp; Course Architecture</span>
           </div>
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-[#16302B]">
-            What the 200-Hour Foundation Covers
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#16302B]">
+            Training Syllabus
           </h2>
+          <p className="text-sm sm:text-base text-[#5A574F] max-w-3xl">
+            A comprehensive, lineage-grounded foundation spanning philosophy, biomechanics, classical pranayama, and professional teaching pedagogy.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
-          <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-2.5 shadow-xs">
-            <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center font-bold">01</div>
-            <h3 className="font-heading font-bold text-lg text-[#16302B]">Asana Alignment & Mastery</h3>
-            <p className="text-xs text-[#5A574F] leading-relaxed">
-              Foundational postures in Hatha and Ashtanga Vinyasa, with repetition to demonstrate, adjust, and cue correctly.
-            </p>
+        {/* 4 Syllabus Modules - Architectural photographic layout matching curriculum spec */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+          {/* Module 1: Foundations of Yoga */}
+          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col sm:flex-row">
+            <div className="sm:w-[42%] min-h-[220px] sm:min-h-full relative overflow-hidden bg-[#EAE2D2]">
+              <img
+                src="/images/syllabus_200_foundations.png"
+                alt="Foundations of Yoga - Pranayama and fundamental yogic concepts"
+                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div className="sm:w-[58%] p-6 sm:p-7 flex flex-col justify-center text-left space-y-3">
+              <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#16302B]">
+                Foundations of Yoga
+              </h3>
+              <ul className="space-y-2 text-xs sm:text-sm text-[#4A4842] leading-relaxed list-disc list-outside pl-4">
+                <li>Introduction to yoga and its fundamental concepts</li>
+                <li>Patanjali Yoga Sutras and the foundations of yogic philosophy</li>
+                <li>The five paths of yoga: Gyan, Karma, Bhakti, Raja and Hatha Yoga</li>
+              </ul>
+            </div>
           </div>
 
-          <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-2.5 shadow-xs">
-            <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center font-bold">02</div>
-            <h3 className="font-heading font-bold text-lg text-[#16302B]">Anatomy & Injury Prevention</h3>
-            <p className="text-xs text-[#5A574F] leading-relaxed">
-              Biomechanics, skeletal variations, muscle engagement, and injury management so you teach safely from day one.
-            </p>
+          {/* Module 2: Practice & Wellness */}
+          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col sm:flex-row">
+            <div className="sm:w-[42%] min-h-[220px] sm:min-h-full relative overflow-hidden bg-[#EAE2D2]">
+              <img
+                src="/images/syllabus_200_practice.png"
+                alt="Practice & Wellness - Anatomy, physiology and breathing techniques"
+                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div className="sm:w-[58%] p-6 sm:p-7 flex flex-col justify-center text-left space-y-3">
+              <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#16302B]">
+                Practice &amp; Wellness
+              </h3>
+              <ul className="space-y-2 text-xs sm:text-sm text-[#4A4842] leading-relaxed list-disc list-outside pl-4">
+                <li>Anatomy and physiology for safe and effective yoga practice</li>
+                <li>Breathing techniques (Pranayamas) and their role in health and wellbeing</li>
+              </ul>
+            </div>
           </div>
 
-          <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-2.5 shadow-xs">
-            <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center font-bold">03</div>
-            <h3 className="font-heading font-bold text-lg text-[#16302B]">Pranayama & Kriyas</h3>
-            <p className="text-xs text-[#5A574F] leading-relaxed">
-              Classical yogic breath control (Nadi Shodhana, Kapalabhati, Bhastrika, Ujjayi, Sheetali) and cleansing kriyas.
-            </p>
+          {/* Module 3: Teaching & Mastery */}
+          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col sm:flex-row">
+            <div className="sm:w-[42%] min-h-[220px] sm:min-h-full relative overflow-hidden bg-[#EAE2D2]">
+              <img
+                src="/images/syllabus_200_teaching.png"
+                alt="Teaching & Mastery - Methodology, communication and class sequencing"
+                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div className="sm:w-[58%] p-6 sm:p-7 flex flex-col justify-center text-left space-y-3">
+              <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#16302B]">
+                Teaching &amp; Mastery
+              </h3>
+              <ul className="space-y-2 text-xs sm:text-sm text-[#4A4842] leading-relaxed list-disc list-outside pl-4">
+                <li>Communication skills and effective interaction with students</li>
+                <li>Teaching methodology and principles of conducting yoga sessions</li>
+                <li>Designing yoga sequences and structured classes</li>
+              </ul>
+            </div>
           </div>
 
-          <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-2.5 shadow-xs">
-            <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center font-bold">04</div>
-            <h3 className="font-heading font-bold text-lg text-[#16302B]">Philosophy & Sanskrit Texts</h3>
-            <p className="text-xs text-[#5A574F] leading-relaxed">
-              Patanjali Yoga Sutras, Hatha Yoga Pradipika, the 8 Limbs of Yoga, Chakras, and ethical Yama/Niyama lifestyle.
-            </p>
+          {/* Module 4: Philosophy of Yoga */}
+          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col sm:flex-row">
+            <div className="sm:w-[42%] min-h-[220px] sm:min-h-full relative overflow-hidden bg-[#EAE2D2]">
+              <img
+                src="/images/syllabus_200_philosophy.png"
+                alt="Philosophy of Yoga - Bhagavad Gita teachings and living yogic principles"
+                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div className="sm:w-[58%] p-6 sm:p-7 flex flex-col justify-center text-left space-y-3">
+              <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#16302B]">
+                Philosophy of Yoga
+              </h3>
+              <ul className="space-y-2 text-xs sm:text-sm text-[#4A4842] leading-relaxed list-disc list-outside pl-4">
+                <li>The Bhagavad Gita and its key teachings on life, action and self-awareness</li>
+                <li>The principles of yoga and their application in daily life and practice</li>
+              </ul>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-2.5 shadow-xs">
-            <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center font-bold">05</div>
-            <h3 className="font-heading font-bold text-lg text-[#16302B]">Teaching Methodology & Voice</h3>
-            <p className="text-xs text-[#5A574F] leading-relaxed">
-              Class sequencing, hands-on adjustments, verbal cueing, room energy management, and overcoming stage fear.
-            </p>
+      {/* 3. Benefits of the Program - Architectural Editorial Layout (Not on cards) */}
+      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="border-t border-b border-[#E0D8C3] py-12 sm:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 text-left">
+            {/* Left Header Column */}
+            <div className="lg:col-span-4 space-y-4">
+              <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/80 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
+                <KayaLeafMotif size={12} color="#C08A3E" />
+                <span>Life &amp; Career Impact</span>
+              </div>
+              <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#16302B] leading-tight">
+                Benefits of the Program
+              </h2>
+              <p className="text-xs sm:text-sm text-[#5A574F] leading-relaxed">
+                Graduating from the 200-Hour TTC transforms far more than your teaching credential — it redefines your physical vitality, mental equilibrium, and professional standing in the global wellness landscape.
+              </p>
+              <div className="pt-2">
+                <div className="p-4 rounded-2xl bg-[#EDE6D6]/70 border border-[#DCD3BE] text-xs text-[#3E3C36] space-y-2">
+                  <div className="font-bold text-[#16302B] uppercase tracking-wider text-[11px]">Key Transformation:</div>
+                  <p className="italic">
+                    &ldquo;Step out with the poise, clear vocal projection, and deep anatomical knowledge to guide any student safely from their very first class.&rdquo;
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content Column - Clean Editorial Numbered Flow */}
+            <div className="lg:col-span-8 divide-y divide-[#E2D9C4]">
+              <div className="pb-6 sm:pb-8 text-left space-y-2">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-display font-bold text-xl sm:text-2xl text-[#C08A3E]">01.</span>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-[#16302B]">
+                    International Teaching Credential &amp; Global Mobility
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed pl-8 sm:pl-9">
+                  Graduate with a dual-recognized certificate awarded under our partnership with the Indian Federation of Yoga, Yoga Alliance (USA) standards, and AYUSH Ministry guidelines, granting you the credentials to teach at premier studios, retreats, and international wellness hubs.
+                </p>
+              </div>
+
+              <div className="py-6 sm:py-8 text-left space-y-2">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-display font-bold text-xl sm:text-2xl text-[#C08A3E]">02.</span>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-[#16302B]">
+                    Anatomical Precision &amp; Injury-Free Cueing
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed pl-8 sm:pl-9">
+                  Gain functional biomechanical mastery over joint angles, skeletal variations, muscle activation, and common counter-indications. Confidently modify postures for beginners, seniors, and practitioners recovering from muscular strain.
+                </p>
+              </div>
+
+              <div className="py-6 sm:py-8 text-left space-y-2">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-display font-bold text-xl sm:text-2xl text-[#C08A3E]">03.</span>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-[#16302B]">
+                    Living Yogic Philosophy &amp; Mental Equilibrium
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed pl-8 sm:pl-9">
+                  Move beyond surface postures into the timeless psychological wisdom of Patanjali’s Yoga Sutras and the Bhagavad Gita. Learn how to translate ancient concepts of Vairagya, Abhyasa, and Karma Yoga into everyday emotional resilience and mindful living.
+                </p>
+              </div>
+
+              <div className="py-6 sm:py-8 text-left space-y-2">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-display font-bold text-xl sm:text-2xl text-[#C08A3E]">04.</span>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-[#16302B]">
+                    Cellular Detoxification via Shatkriyas &amp; Classical Pranayama
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed pl-8 sm:pl-9">
+                  Undergo authentic daily yogic purifications (Jala Neti, Kapalabhati, Agnisara) combined with rigorous breath retention (Kumbhaka) that heighten lung capacity, optimize nervous system regulation, and cultivate intense mental focus.
+                </p>
+              </div>
+
+              <div className="pt-6 sm:pt-8 text-left space-y-2">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-display font-bold text-xl sm:text-2xl text-[#C08A3E]">05.</span>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-[#16302B]">
+                    Immediate Placement Support &amp; KayaSadhak Faculty Opportunities
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed pl-8 sm:pl-9">
+                  Top graduates are directly invited to audition for KayaSadhak’s premier home yoga network, studio faculty positions in Noida Sector 45, corporate wellness contracts, and guest workshops across Delhi NCR and Chandigarh Tricity.
+                </p>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-2.5 shadow-xs">
-            <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center font-bold">06</div>
-            <h3 className="font-heading font-bold text-lg text-[#16302B]">Practicum & Live Auditions</h3>
-            <p className="text-xs text-[#5A574F] leading-relaxed">
-              Live practice teaching under senior master faculty feedback with formal graduation certification.
-            </p>
+      {/* 4. Why This TTC Stands Out - Prestigious High-Contrast Architectural Section (Not on cards) */}
+      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="bg-[#16302B] text-white rounded-[32px] sm:rounded-[40px] p-8 sm:p-12 lg:p-16 border border-[#C08A3E]/30 shadow-2xl relative overflow-hidden">
+          {/* Subtle Ambient Background Accent */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#C08A3E]/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 space-y-10 text-left">
+            <div className="max-w-3xl space-y-3">
+              <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[0.14em] text-[#E5C384]">
+                <KayaLeafMotif size={12} color="#E5C384" />
+                <span>The KayaSadhak Hallmark</span>
+              </div>
+              <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+                Why This TTC Stands Out
+              </h2>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">
+                Unlike mass commercialized programs that dilute yogic heritage into mere physical workouts, our 200-Hour training preserves unbroken lineage authenticity with institutional rigor.
+              </p>
+            </div>
+
+            {/* Structured Editorial Grid with Subtle Dividers */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4 border-t border-white/15">
+              <div className="space-y-2.5">
+                <div className="text-[#E5C384] font-display text-xs uppercase tracking-widest font-bold">Lineage &amp; Ethics</div>
+                <h3 className="font-heading font-bold text-lg text-white">Dual Lineage Accreditation</h3>
+                <p className="text-xs text-gray-300/90 leading-relaxed">
+                  Conducted under formal institutional partnership with the Indian Federation of Yoga and Yoga Alliance USA, aligned with AYUSH Ministry national curricula.
+                </p>
+              </div>
+
+              <div className="space-y-2.5">
+                <div className="text-[#E5C384] font-display text-xs uppercase tracking-widest font-bold">Geographic Flexibility</div>
+                <h3 className="font-heading font-bold text-lg text-white">9 Premier Training Centers</h3>
+                <p className="text-xs text-gray-300/90 leading-relaxed">
+                  Train locally in Delhi, Gurugram, Noida, and Chandigarh, or opt for full residential ashram immersions on the holy banks of the Ganga in Rishikesh or Himalayan Dharamshala.
+                </p>
+              </div>
+
+              <div className="space-y-2.5">
+                <div className="text-[#E5C384] font-display text-xs uppercase tracking-widest font-bold">Personalized Attention</div>
+                <h3 className="font-heading font-bold text-lg text-white">Strict Small-Cohort Mentorship</h3>
+                <p className="text-xs text-gray-300/90 leading-relaxed">
+                  We cap student enrollment to guarantee that master faculty provide individual hands-on posture corrections, vocal coaching, and personalized sadhana guidance.
+                </p>
+              </div>
+
+              <div className="space-y-2.5">
+                <div className="text-[#E5C384] font-display text-xs uppercase tracking-widest font-bold">Therapeutic Depth</div>
+                <h3 className="font-heading font-bold text-lg text-white">Clinical &amp; Therapy Foundations</h3>
+                <p className="text-xs text-gray-300/90 leading-relaxed">
+                  Learn how to safely address lumbar disc pain, sciatica, postural misalignments, and anxiety using classical restorative alignment and precision prop usage.
+                </p>
+              </div>
+
+              <div className="space-y-2.5">
+                <div className="text-[#E5C384] font-display text-xs uppercase tracking-widest font-bold">Authentic Texts</div>
+                <h3 className="font-heading font-bold text-lg text-white">Original Sanskrit &amp; Textual Study</h3>
+                <p className="text-xs text-gray-300/90 leading-relaxed">
+                  Direct engagement with classical shlokas from the Hatha Yoga Pradipika, Yoga Sutras, and Bhagavad Gita, ensuring you teach with profound cultural authenticity.
+                </p>
+              </div>
+
+              <div className="space-y-2.5">
+                <div className="text-[#E5C384] font-display text-xs uppercase tracking-widest font-bold">Career Growth</div>
+                <h3 className="font-heading font-bold text-lg text-white">Direct Alumni Career Network</h3>
+                <p className="text-xs text-gray-300/90 leading-relaxed">
+                  Receive lifelong community access, post-graduation practice hours, refresher invitations, and direct referrals across KayaSadhak&apos;s corporate and private clientele.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

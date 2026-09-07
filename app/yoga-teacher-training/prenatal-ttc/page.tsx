@@ -192,68 +192,270 @@ export default function PrenatalYTTPage() {
       </section>
 
       <div className="space-y-16 sm:space-y-20 mt-16 sm:mt-20">
-        {/* 2. Course Curriculum Grid */}
+        {/* 2. Training Syllabus (From Curriculum Specification) */}
         <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
-          <div className="text-center max-w-2xl mx-auto space-y-2 mb-8">
-            <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/80 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
-              <KayaLeafMotif size={12} color="#C08A3E" />
-              <span>Specialized Syllabus</span>
+          <div className="bg-[#FAF6F0] border border-[#E5DEC9] rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 lg:p-12 shadow-xs">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              {/* Left Column: Syllabus Points */}
+              <div className="lg:col-span-7 space-y-6 text-left">
+                <div className="space-y-2">
+                  <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/80 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
+                    <KayaLeafMotif size={12} color="#C08A3E" />
+                    <span>Prenatal TTC Curriculum</span>
+                  </div>
+                  <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#16302B]">
+                    Training Syllabus
+                  </h2>
+                  <p className="text-xs sm:text-sm text-[#5A574F]">
+                    A complete sacred science curriculum covering pre-conception planning, trimester-specific physiology, high-risk care, postpartum recovery, and Garbha Sanskar.
+                  </p>
+                </div>
+
+                {/* Detailed Nested Syllabus List matching the curriculum specification */}
+                <div className="space-y-3.5 pt-2 text-xs sm:text-sm text-[#3E3C36] leading-relaxed">
+                  <div className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C08A3E] mt-2 flex-shrink-0" />
+                    <span>Yoga and pregnancy</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C08A3E] mt-2 flex-shrink-0" />
+                    <span>Understanding women and a women&apos;s physiology</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C08A3E] mt-2 flex-shrink-0" />
+                    <span>Pre-conception planning</span>
+                  </div>
+
+                  <div className="space-y-1.5 pl-4 border-l-2 border-[#C08A3E]/30 py-1">
+                    <div className="font-semibold text-[#16302B]">Physiology of pregnancy and changes during pregnancy:</div>
+                    <ol className="list-decimal list-inside pl-2 space-y-1 text-[#4A4842]">
+                      <li>High risk pregnancies</li>
+                      <li>Special conditions and related practices</li>
+                    </ol>
+                  </div>
+
+                  <div className="space-y-1.5 pl-4 border-l-2 border-[#C08A3E]/30 py-1">
+                    <div className="font-semibold text-[#16302B]">Post natal challenges and care:</div>
+                    <ol className="list-decimal list-inside pl-2 space-y-1 text-[#4A4842]">
+                      <li>Post-partum depression</li>
+                      <li>Body toning post delivery</li>
+                      <li>Isometric exercises as a part of sukshma vyayama for pregnancy</li>
+                    </ol>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 pt-1">
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#C08A3E] flex-shrink-0" />
+                      <span>Practicals (asanas) &amp; safe prop alignment</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#C08A3E] flex-shrink-0" />
+                      <span>Ayurveda and nutrition</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#C08A3E] flex-shrink-0" />
+                      <span>Teaching methodology</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#C08A3E] flex-shrink-0" />
+                      <span>Yoga nidra and meditation</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#C08A3E] flex-shrink-0" />
+                      <span>Common practices during all trimester</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#C08A3E] flex-shrink-0" />
+                      <span>Trimester specific practices</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-1.5 pl-4 border-l-2 border-[#C08A3E]/30 py-1">
+                    <div className="font-semibold text-[#16302B]">Allied subjects:</div>
+                    <ol className="list-decimal list-inside pl-2 space-y-1 text-[#4A4842]">
+                      <li>Music and its effect on the womb</li>
+                      <li>Astrology and 16 rites for a soul</li>
+                      <li>Ayurveda and childbirth – Diet, nutrition and childcare</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Authentic Visual Presentation */}
+              <div className="lg:col-span-5 flex items-center justify-center">
+                <div className="w-full max-w-md overflow-hidden rounded-[28px] border border-[#E0D8C3] shadow-md bg-[#EDE6D6]">
+                  <img
+                    src="/images/syllabus_prenatal_asana.png"
+                    alt="Prenatal Yoga Teacher Training - Pregnant Woman in Safe Posture Practice"
+                    className="w-full h-auto object-cover object-center transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+              </div>
             </div>
-            <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-[#16302B]">
-              Prenatal &amp; Postnatal TTC Curriculum
-            </h2>
-            <p className="text-xs sm:text-sm text-[#5A574F]">
-              Comprehensive scientific, anatomical, and traditional grounding in maternal wellness.
-            </p>
           </div>
+        </section>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
-            <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-2.5 shadow-xs">
-              <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center font-bold">01</div>
-              <h3 className="font-heading font-bold text-lg text-[#16302B]">Trimester-Wise Anatomy &amp; Hormones</h3>
-              <p className="text-xs text-[#5A574F] leading-relaxed">
-                Physiological changes across 1st, 2nd, and 3rd trimesters. Understanding relaxin, pelvic widening, cardiovascular shifts, and postural adaptation.
-              </p>
+        {/* 3. Benefits of the Program - Architectural Editorial Layout (Not on cards) */}
+        <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="border-t border-b border-[#E0D8C3] py-12 sm:py-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 text-left">
+              {/* Left Header Column */}
+              <div className="lg:col-span-4 space-y-4">
+                <div className="inline-flex items-center gap-2 border border-[#C08A3E]/40 bg-[#EBE3D3]/80 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[0.14em] text-[#B37B2E]">
+                  <KayaLeafMotif size={12} color="#C08A3E" />
+                  <span>Specialist Career &amp; Service</span>
+                </div>
+                <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#16302B] leading-tight">
+                  Benefits of the Program
+                </h2>
+                <p className="text-xs sm:text-sm text-[#5A574F] leading-relaxed">
+                  Becoming a certified Prenatal and Postnatal Yoga specialist positions you in one of the most fulfilling, sacred, and financially rewarding niches in modern wellness.
+                </p>
+                <div className="pt-2">
+                  <div className="p-4 rounded-2xl bg-[#EDE6D6]/70 border border-[#DCD3BE] text-xs text-[#3E3C36] space-y-2">
+                    <div className="font-bold text-[#16302B] uppercase tracking-wider text-[11px]">Niche Opportunity:</div>
+                    <p className="italic">
+                      &ldquo;Specialized prenatal yoga teachers command 50% to 100% higher rates for private 1-on-1 home sessions across Delhi NCR and Chandigarh.&rdquo;
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Content Column - Clean Editorial Numbered Flow */}
+              <div className="lg:col-span-8 divide-y divide-[#E2D9C4]">
+                <div className="pb-6 sm:pb-8 text-left space-y-2">
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-display font-bold text-xl sm:text-2xl text-[#C08A3E]">01.</span>
+                    <h3 className="font-heading font-bold text-lg sm:text-xl text-[#16302B]">
+                      Clinical Competence &amp; Maternal Safety Mastery
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed pl-8 sm:pl-9">
+                    Gain exhaustive knowledge of obstetric anatomy, relaxin hormones, blood volume surges, and pelvic biomechanics. Master symptom recognition for pre-eclampsia, placenta previa, gestational hypertension, and know exactly how to guide high-risk pregnancies safely.
+                  </p>
+                </div>
+
+                <div className="py-6 sm:py-8 text-left space-y-2">
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-display font-bold text-xl sm:text-2xl text-[#C08A3E]">02.</span>
+                    <h3 className="font-heading font-bold text-lg sm:text-xl text-[#16302B]">
+                      Sacred Garbha Sanskar &amp; Womb Communication
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed pl-8 sm:pl-9">
+                    Integrate ancient Vedic traditions of Garbha Sanskar, Nada yoga (sound vibrations for the womb), prenatal meditation, and 16 soul rites (Samskaras), offering expectant mothers profound emotional peace and conscious maternal bonding.
+                  </p>
+                </div>
+
+                <div className="py-6 sm:py-8 text-left space-y-2">
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-display font-bold text-xl sm:text-2xl text-[#C08A3E]">03.</span>
+                    <h3 className="font-heading font-bold text-lg sm:text-xl text-[#16302B]">
+                      Labor Preparation &amp; Pain Management Breathwork
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed pl-8 sm:pl-9">
+                    Equip mothers with natural labor tools: diaphragmatic breathing, perineal relaxation cues, vocal toning, and active birthing postures that shorten active labor duration and minimize medical interventions.
+                  </p>
+                </div>
+
+                <div className="py-6 sm:py-8 text-left space-y-2">
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-display font-bold text-xl sm:text-2xl text-[#C08A3E]">04.</span>
+                    <h3 className="font-heading font-bold text-lg sm:text-xl text-[#16302B]">
+                      Postnatal Core Rehabilitation &amp; Diastasis Recti Repair
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed pl-8 sm:pl-9">
+                    Safely guide new mothers through the crucial fourth trimester, restoring deep transverse abdominal wall strength, healing diastasis recti, strengthening the pelvic floor, and providing supportive emotional practices against postpartum depression.
+                  </p>
+                </div>
+
+                <div className="pt-6 sm:pt-8 text-left space-y-2">
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-display font-bold text-xl sm:text-2xl text-[#C08A3E]">05.</span>
+                    <h3 className="font-heading font-bold text-lg sm:text-xl text-[#16302B]">
+                      High-Demand Direct In-Home Private Client Referrals
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#4A4842] leading-relaxed pl-8 sm:pl-9">
+                    Certified prenatal teachers receive priority onboarding for private home yoga clients through KayaSadhak across South Delhi, Gurugram Golf Course Road, and Chandigarh luxury sectors, ensuring rapid return on training investment.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-2.5 shadow-xs">
-              <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center font-bold">02</div>
-              <h3 className="font-heading font-bold text-lg text-[#16302B]">Asana Modifications &amp; Prop Support</h3>
-              <p className="text-xs text-[#5A574F] leading-relaxed">
-                Adapting classical Hatha and Yin postures using bolsters, chairs, blocks, and wall ropes for joint stability and zero abdominal compression.
-              </p>
-            </div>
+        {/* 4. Why This TTC Stands Out - Prestigious High-Contrast Architectural Section (Not on cards) */}
+        <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="bg-[#16302B] text-white rounded-[32px] sm:rounded-[40px] p-8 sm:p-12 lg:p-16 border border-[#C08A3E]/30 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[#C08A3E]/10 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-2.5 shadow-xs">
-              <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center font-bold">03</div>
-              <h3 className="font-heading font-bold text-lg text-[#16302B]">Contraindications &amp; Red Flags</h3>
-              <p className="text-xs text-[#5A574F] leading-relaxed">
-                Screening for placenta previa, pre-eclampsia, gestational hypertension, and recognizing symptoms that require immediate clinical cessation.
-              </p>
-            </div>
+            <div className="relative z-10 space-y-10 text-left">
+              <div className="max-w-3xl space-y-3">
+                <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[0.14em] text-[#E5C384]">
+                  <KayaLeafMotif size={12} color="#E5C384" />
+                  <span>The KayaSadhak Distinction</span>
+                </div>
+                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+                  Why This TTC Stands Out
+                </h2>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">
+                  A rare synthesis of clinical maternal biomechanics, ancient Ayurvedic nourishment, and authentic Garbha Sanskar traditions that mainstream courses overlook.
+                </p>
+              </div>
 
-            <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-2.5 shadow-xs">
-              <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center font-bold">04</div>
-              <h3 className="font-heading font-bold text-lg text-[#16302B]">Labor Breathwork &amp; Garbha Sanskar</h3>
-              <p className="text-xs text-[#5A574F] leading-relaxed">
-                Pranayama techniques safe for pregnancy (Brahmari, Ujjayi, deep diaphragmatic), vocal toning, pelvic floor release, and prenatal meditation.
-              </p>
-            </div>
+              {/* Structured Editorial Grid with Subtle Dividers */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4 border-t border-white/15">
+                <div className="space-y-2.5">
+                  <div className="text-[#E5C384] font-display text-xs uppercase tracking-widest font-bold">Medical Rigor</div>
+                  <h3 className="font-heading font-bold text-lg text-white">High-Risk Pregnancy Protocols</h3>
+                  <p className="text-xs text-gray-300/90 leading-relaxed">
+                    Clear clinical safety boundaries, prop modifications, and emergency cessation red flags taught alongside leading obstetric and Ayurvedic insights.
+                  </p>
+                </div>
 
-            <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-2.5 shadow-xs">
-              <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center font-bold">05</div>
-              <h3 className="font-heading font-bold text-lg text-[#16302B]">Postnatal Core &amp; Diastasis Recti</h3>
-              <p className="text-xs text-[#5A574F] leading-relaxed">
-                Postpartum recovery timelines (vaginal vs c-section), safe transverse abdominis activation, closing diastasis recti, and pelvic floor toning.
-              </p>
-            </div>
+                <div className="space-y-2.5">
+                  <div className="text-[#E5C384] font-display text-xs uppercase tracking-widest font-bold">Sacred Heritage</div>
+                  <h3 className="font-heading font-bold text-lg text-white">Complete Garbha Sanskar</h3>
+                  <p className="text-xs text-gray-300/90 leading-relaxed">
+                    Classical study of the 16 soul rites, musical resonance on fetal brain development, and customized tridoshic maternal nutrition for each trimester.
+                  </p>
+                </div>
 
-            <div className="bg-[#FAF6F0] p-6 rounded-3xl border border-[#E5DEC9] space-y-2.5 shadow-xs">
-              <div className="w-10 h-10 rounded-xl bg-[#16302B] text-[#E5C384] flex items-center justify-center font-bold">06</div>
-              <h3 className="font-heading font-bold text-lg text-[#16302B]">Teaching Practicum &amp; Live Guidance</h3>
-              <p className="text-xs text-[#5A574F] leading-relaxed">
-                Designing real trimester-based class sequences, hands-on adjustments, empathetic verbal cueing, and certified graduation assessment.
-              </p>
+                <div className="space-y-2.5">
+                  <div className="text-[#E5C384] font-display text-xs uppercase tracking-widest font-bold">Hands-On Props</div>
+                  <h3 className="font-heading font-bold text-lg text-white">Dedicated Prop Laboratories</h3>
+                  <p className="text-xs text-gray-300/90 leading-relaxed">
+                    Mastery over pregnancy bolsters, birthing balls, wall ropes, and chair yoga variations that alleviate pelvic girdle pain and backache effortlessly.
+                  </p>
+                </div>
+
+                <div className="space-y-2.5">
+                  <div className="text-[#E5C384] font-display text-xs uppercase tracking-widest font-bold">Accredited Recognition</div>
+                  <h3 className="font-heading font-bold text-lg text-white">Dual Institutional Framework</h3>
+                  <p className="text-xs text-gray-300/90 leading-relaxed">
+                    Conducted in tie-up with the Indian Federation of Yoga, Yoga Alliance (USA) standards, and AYUSH Ministry guidelines for authentic certification.
+                  </p>
+                </div>
+
+                <div className="space-y-2.5">
+                  <div className="text-[#E5C384] font-display text-xs uppercase tracking-widest font-bold">Postnatal Care</div>
+                  <h3 className="font-heading font-bold text-lg text-white">Comprehensive 4th Trimester Care</h3>
+                  <p className="text-xs text-gray-300/90 leading-relaxed">
+                    Dedicated focus on postpartum emotional healing, diastasis recti assessment, pelvic floor reconnection, and postnatal Ayurvedic restoration.
+                  </p>
+                </div>
+
+                <div className="space-y-2.5">
+                  <div className="text-[#E5C384] font-display text-xs uppercase tracking-widest font-bold">Client Pipeline</div>
+                  <h3 className="font-heading font-bold text-lg text-white">Direct High-Value Referrals</h3>
+                  <p className="text-xs text-gray-300/90 leading-relaxed">
+                    Seamless path to receiving high-paying private prenatal home clients across KayaSadhak&apos;s established clientele in Delhi NCR and Chandigarh.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

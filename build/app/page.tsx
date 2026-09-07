@@ -203,7 +203,7 @@ export default function HomePage() {
           <div className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group border border-[#1F4A3C]/20 flex flex-col justify-between min-h-[460px] sm:min-h-[580px]">
             {/* Background Image & Gradient Overlay */}
             <img
-              src="/images/hero_weight_loss_yoga.jpg"
+              src="/images/hero_personal_fitness_trainer.jpg"
               alt="Personal Fitness Trainer at Home"
               className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"

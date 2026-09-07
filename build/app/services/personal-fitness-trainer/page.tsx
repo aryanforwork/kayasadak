@@ -35,6 +35,14 @@ export const metadata: Metadata = {
       'Certified 1-on-1 personal fitness trainer at your home across Delhi NCR & Chandigarh Tricity. Silver (₹1,000), Gold (₹1,500), Platinum (₹2,000) tiers. Book a home trial on WhatsApp.',
     url: 'https://www.kayasadhak.com/services/personal-fitness-trainer',
     siteName: 'KayaSadhak',
+    images: [
+      {
+        url: 'https://www.kayasadhak.com/images/hero_personal_fitness_trainer.jpg',
+        width: 1200,
+        height: 675,
+        alt: 'Personal Fitness Trainer Coaching Client at Home',
+      },
+    ],
     type: 'website',
   },
 };
@@ -230,8 +238,8 @@ export default function PersonalFitnessTrainerPage() {
       {/* 1. Hero Photographic Header */}
       <section className="relative min-h-[520px] sm:min-h-[580px] bg-black flex items-center overflow-hidden">
         <img
-          src="/images/hero_weight_loss_yoga.jpg"
-          alt="Personal Fitness Trainer at Home in Delhi NCR & Chandigarh Tricity"
+          src="/images/hero_personal_fitness_trainer.jpg"
+          alt="Personal Fitness Trainer Coaching Client at Home in Delhi NCR & Chandigarh Tricity"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-70 scale-105 transition-opacity duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30" />

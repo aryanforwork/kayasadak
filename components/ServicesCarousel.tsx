@@ -34,7 +34,7 @@ export const SERVICE_CARDS: ServiceCardData[] = [
       'Certified 1-on-1 fitness training at your home across Delhi NCR & Chandigarh Tricity with verified Silver, Gold & Platinum trainers.',
     btnText: 'EXPLORE FITNESS (₹1,000+)',
     btnLink: '/services/personal-fitness-trainer',
-    image: '/images/hero_weight_loss_yoga.jpg',
+    image: '/images/hero_personal_fitness_trainer.jpg',
   },
   {
     id: 'ytt-certification',
