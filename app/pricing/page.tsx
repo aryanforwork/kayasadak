@@ -113,7 +113,7 @@ export default function PricingPage() {
   };
 
   return (
-    <div className="space-y-12 sm:space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
+    <div className="pb-16 bg-[#F3EEE2] text-[#26241F]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
@@ -126,7 +126,7 @@ export default function PricingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      {/* Hero Photographic Banner */}
+      {/* Hero Photographic Banner — flush with navbar */}
       <section className="relative bg-[#16302B] text-white pt-10 sm:pt-16 pb-14 sm:pb-24 overflow-hidden border-b border-brand-gold-500/20">
         <div className="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style={{ backgroundImage: "url('/images/logo.webp')" }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#16302B] via-[#16302B]/90 to-[#1F4A3C]/70 z-10"></div>
@@ -147,7 +147,8 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Main Pricing Table Component */}
+      <div className="space-y-12 sm:space-y-20 mt-12 sm:mt-20">
+        {/* Main Pricing Table Component */}
       <section className="w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-12 space-y-6">
         <PricingTable />
       </section>
@@ -226,6 +227,7 @@ export default function PricingPage() {
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <FaqAccordion items={pricingFaqs} title="Pricing & Package FAQs" />
       </section>
+      </div>
     </div>
   );
 }

@@ -141,7 +141,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
+    <div className="pb-16 bg-[#F3EEE2] text-[#26241F]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
@@ -160,11 +160,12 @@ export default function HomePage() {
         Personal Yoga Teacher at Home, Certified Yoga Teacher Training (YTT) &amp; Personal Fitness in Delhi NCR &amp; Chandigarh Tricity — KayaSadhak
       </h1>
 
-      {/* 1. Full-Bleed Interactive Hero Slider Carousel */}
+      {/* 1. Full-Bleed Interactive Hero Slider Carousel — flush with navbar */}
       <HeroSlider />
 
-      {/* 2. Premium Luxury Trust & Stats Section (Screenshot 1 1:1) */}
-      <TrustStatsSection />
+      <div className="space-y-20 mt-20">
+        {/* 2. Premium Luxury Trust & Stats Section (Screenshot 1 1:1) */}
+        <TrustStatsSection />
 
       {/* 3. Interactive Services Carousel (Screenshot 1 - Updated with distinct Abhyanga & Shirodhara images) */}
       <ServicesCarousel />
@@ -619,6 +620,7 @@ export default function HomePage() {
 
       {/* 11. Full-Width Feature Banner (Screenshot 4 replacing Screenshot 3 section position) */}
       <FeatureBanner />
+      </div>
     </div>
   );
 }

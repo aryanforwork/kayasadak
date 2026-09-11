@@ -232,7 +232,7 @@ export default function StudioNoidaPage() {
   };
 
   return (
-    <div className="space-y-16 sm:space-y-24 pb-20 bg-[#F3EEE2] text-[#26241F]">
+    <div className="pb-20 bg-[#F3EEE2] text-[#26241F]">
       {/* Schema Injection */}
       <script
         type="application/ld+json"
@@ -247,7 +247,7 @@ export default function StudioNoidaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* 1. Hero Banner */}
+      {/* 1. Hero Banner — flush with navbar */}
       <section className="relative bg-[#16302B] text-white pt-16 sm:pt-20 pb-20 sm:pb-28 overflow-hidden border-b border-brand-gold-500/20">
         <div
           className="absolute inset-0 z-0 opacity-15 bg-cover bg-center"
@@ -376,7 +376,8 @@ export default function StudioNoidaPage() {
         </div>
       </section>
 
-      {/* 3. Real Embedded Google Map Section */}
+      <div className="space-y-16 sm:space-y-24 mt-16 sm:mt-24">
+        {/* 3. Real Embedded Google Map Section */}
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 space-y-6">
         <div className="text-center max-w-3xl mx-auto space-y-2">
           <div className="inline-flex items-center gap-2 text-brand-gold-600 font-body text-xs font-bold uppercase tracking-wider">
@@ -790,6 +791,7 @@ export default function StudioNoidaPage() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

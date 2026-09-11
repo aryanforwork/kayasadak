@@ -83,7 +83,7 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="space-y-16 sm:space-y-24 pb-20 bg-[#F3EEE2] text-[#26241F]">
+    <div className="pb-20 bg-[#F3EEE2] text-[#26241F]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
@@ -92,7 +92,7 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      {/* 1. Full-Bleed Editorial Hero Banner */}
+      {/* 1. Full-Bleed Editorial Hero Banner — flush with navbar */}
       <section className="relative bg-[#16302B] text-white pt-16 sm:pt-20 pb-20 sm:pb-28 overflow-hidden border-b border-brand-gold-500/20">
         {/* Subtle background overlay */}
         <div
@@ -131,8 +131,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. Masterpiece Founder Spotlight & Story Card */}
-      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 -mt-10 sm:-mt-16 relative z-30">
+      <div className="space-y-16 sm:space-y-24">
+        {/* 2. Masterpiece Founder Spotlight & Story Card */}
+        <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 -mt-10 sm:-mt-16 relative z-30">
         <div className="bg-[#FFFDF9] border border-[#E5DEC9] rounded-[32px] sm:rounded-[44px] p-6 sm:p-10 lg:p-14 shadow-[0_20px_50px_rgba(22,48,43,0.08)] overflow-hidden relative">
           
           {/* Subtle Corner Arch Ornament */}
@@ -466,6 +467,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

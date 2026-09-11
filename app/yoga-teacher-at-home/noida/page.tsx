@@ -130,7 +130,7 @@ export default function NoidaLocalityPage() {
 
 
   return (
-    <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body space-y-16">
+    <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -144,7 +144,7 @@ export default function NoidaLocalityPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Hero Header */}
+      {/* Hero Header — flush with navbar */}
       <section className="relative bg-[#16302B] text-white pt-16 pb-20 overflow-hidden border-b border-brand-gold-500/20">
         <div
           className="absolute inset-0 z-0 opacity-20 bg-cover bg-center"
@@ -227,7 +227,8 @@ export default function NoidaLocalityPage() {
         </div>
       </section>
 
-      {/* Noida Sectors Footprint */}
+      <div className="space-y-16 mt-16">
+        {/* Noida Sectors Footprint */}
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 space-y-6">
         <div className="text-center max-w-3xl mx-auto space-y-2">
           <h2 className="font-heading text-3xl font-bold text-brand-green-900">
@@ -281,6 +282,7 @@ export default function NoidaLocalityPage() {
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <FaqAccordion items={faqs} title="Noida Home Yoga & Studio FAQs" />
       </section>
+      </div>
     </div>
   );
 }

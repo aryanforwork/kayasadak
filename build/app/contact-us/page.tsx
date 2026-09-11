@@ -77,7 +77,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="space-y-12 sm:space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
+    <div className="pb-16 bg-[#F3EEE2] text-[#26241F]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
@@ -86,7 +86,7 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      {/* Hero Banner */}
+      {/* Hero Banner — flush with navbar */}
       <section className="relative bg-[#16302B] text-white pt-10 sm:pt-16 pb-14 sm:pb-24 overflow-hidden border-b border-brand-gold-500/20">
         <div className="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style={{ backgroundImage: "url('/images/logo.webp')" }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#16302B] via-[#16302B]/90 to-[#1F4A3C]/70 z-10"></div>
@@ -107,7 +107,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* 2-Column Section */}
+      <div className="space-y-12 sm:space-y-20 mt-12 sm:mt-20">
+        {/* 2-Column Section */}
       <section className="w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column */}
@@ -183,6 +184,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

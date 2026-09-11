@@ -53,8 +53,8 @@ export default function BookFreeClassPage() {
   };
 
   return (
-    <div className="space-y-10 sm:space-y-16 pb-16 bg-[#F3EEE2] text-[#26241F]">
-      {/* Hero Banner */}
+    <div className="pb-16 bg-[#F3EEE2] text-[#26241F]">
+      {/* Hero Banner — flush with navbar */}
       <section className="relative bg-[#16302B] text-white pt-10 sm:pt-16 pb-12 sm:pb-20 overflow-hidden border-b border-brand-gold-500/20">
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-12 text-center space-y-3 sm:space-y-4">
           <div className="inline-flex items-center gap-2 bg-brand-gold-500/20 border border-brand-gold-500/40 px-3.5 py-1 rounded-full text-[11px] font-body font-semibold text-brand-gold-500 tracking-widest uppercase">
@@ -72,7 +72,8 @@ export default function BookFreeClassPage() {
         </div>
       </section>
 
-      {/* Progress Bar */}
+      <div className="space-y-10 sm:space-y-16 mt-10 sm:mt-16">
+        {/* Progress Bar */}
       <div className="w-full max-w-3xl mx-auto px-3 sm:px-4">
         <div className="w-full bg-gray-200 h-2.5 rounded-full overflow-hidden">
           <div
@@ -382,6 +383,7 @@ export default function BookFreeClassPage() {
             </div>
           )}
         </form>
+      </div>
       </div>
     </div>
   );
