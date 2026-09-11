@@ -8,19 +8,25 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaSpa, FaShieldAlt, FaLeaf, FaUserMd } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Authentic Home Panchkarma & Ayurvedic Care in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+  title: 'Ayurvedic Panchkarma at Home in Delhi NCR | KayaSadhak',
   description:
-    'Doctor-guided Panchkarma at home in Delhi NCR & Chandigarh Tricity — Abhyanga, Shirodhara, Swedana & Basti with authentic medicated oils. Free consultation on WhatsApp.',
+    'Doctor-guided Panchkarma at home in Delhi NCR & Chandigarh — Abhyanga, Shirodhara, Swedana & Basti with medicated herbal oils. Consult on WhatsApp.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/services/panchkarma',
   },
   openGraph: {
-    title: 'Authentic Home Panchkarma & Ayurvedic Care in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+    title: 'Ayurvedic Panchkarma at Home in Delhi NCR | KayaSadhak',
     description:
-      'Doctor-guided Panchkarma at home in Delhi NCR & Chandigarh Tricity — Abhyanga, Shirodhara, Swedana & Basti with authentic medicated oils. Free consultation on WhatsApp.',
+      'Doctor-guided Panchkarma at home in Delhi NCR & Chandigarh — Abhyanga, Shirodhara, Swedana & Basti with medicated herbal oils. Consult on WhatsApp.',
     url: 'https://www.kayasadhak.com/services/panchkarma',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ayurvedic Panchkarma at Home in Delhi NCR | KayaSadhak',
+    description:
+      'Doctor-guided Panchkarma at home in Delhi NCR & Chandigarh — Abhyanga, Shirodhara, Swedana & Basti with medicated herbal oils. Consult on WhatsApp.',
   },
 };
 
@@ -88,9 +94,38 @@ export default function PanchkarmaPage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://www.kayasadhak.com/services/yoga-at-home',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Panchkarma at Home',
+        item: 'https://www.kayasadhak.com/services/panchkarma',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -105,10 +140,10 @@ export default function PanchkarmaPage() {
         <img
           src="/images/hero_panchkarma_kerala.webp"
           alt="Home Panchkarma & Ayurvedic Detox Care"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-75 scale-105 transition-opacity duration-500"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

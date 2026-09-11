@@ -7,11 +7,25 @@ import { KayaLeafMotif } from '@/components/KayaLeafMotif';
 import { PRICING_TIERS, CONTACT_INFO } from '@/config/pricing';
 
 export const metadata: Metadata = {
-  title: 'KayaSadhak Pricing — Silver, Gold & Platinum Home Yoga Plans',
+  title: 'Home Yoga Pricing | Silver, Gold & Platinum | KayaSadhak',
   description:
-    'Transparent 3×3 pricing matrix for home yoga in Delhi NCR & Chandigarh Tricity. Silver ₹500, Gold ₹750, Platinum ₹1,000/session. Verified instructors & flexible packages.',
+    'Transparent pricing for home yoga in Delhi NCR & Chandigarh. Silver ₹500, Gold ₹750, Platinum ₹1,000 per session. Verified instructors, no hidden fees.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/pricing',
+  },
+  openGraph: {
+    title: 'Home Yoga Pricing | Silver, Gold & Platinum | KayaSadhak',
+    description:
+      'Transparent pricing for home yoga in Delhi NCR & Chandigarh. Silver ₹500, Gold ₹750, Platinum ₹1,000 per session. Verified instructors, no hidden fees.',
+    url: 'https://www.kayasadhak.com/pricing',
+    siteName: 'KayaSadhak',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Home Yoga Pricing | Silver, Gold & Platinum | KayaSadhak',
+    description:
+      'Transparent pricing for home yoga in Delhi NCR & Chandigarh. Silver ₹500, Gold ₹750, Platinum ₹1,000 per session. Verified instructors, no hidden fees.',
   },
 };
 
@@ -34,8 +48,84 @@ export default function PricingPage() {
     },
   ];
 
+  const pricingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'OfferCatalog',
+    name: 'KayaSadhak Home Yoga Pricing Tiers',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        name: 'Silver Tier Home Yoga',
+        description: 'Graduation + Diploma in Yoga with 5+ years experience. Available in 12, 16, or 20 sessions/month.',
+        price: '500',
+        priceCurrency: 'INR',
+        unitText: 'per session',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Gold Tier Home Yoga',
+        description: 'Graduation in Yoga + Advanced TTC with 7+ years experience. Available in 12, 16, or 20 sessions/month.',
+        price: '750',
+        priceCurrency: 'INR',
+        unitText: 'per session',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Platinum Tier Home Yoga',
+        description: 'Masters + Graduation in Yoga + Advanced TTC with 10+ years experience. Available in 12, 16, or 20 sessions/month.',
+        price: '1000',
+        priceCurrency: 'INR',
+        unitText: 'per session',
+      },
+    ],
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: pricingFaqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Pricing Plans',
+        item: 'https://www.kayasadhak.com/pricing',
+      },
+    ],
+  };
+
   return (
     <div className="space-y-12 sm:space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Photographic Banner */}
       <section className="relative bg-[#16302B] text-white pt-10 sm:pt-16 pb-14 sm:pb-24 overflow-hidden border-b border-brand-gold-500/20">
         <div className="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style={{ backgroundImage: "url('/images/logo.webp')" }}></div>

@@ -5,13 +5,19 @@ import { Footer } from '@/components/Footer';
 import { MobileBottomDock } from '@/components/MobileBottomDock';
 
 export const metadata: Metadata = {
-  title: 'Home Yoga, YTT & Personal Fitness in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+  title: 'Personal Home Yoga, YTT & Fitness in Delhi NCR | KayaSadhak',
   description:
-    'Personal home yoga teachers, fitness trainers, certified YTT courses, and authentic home Panchkarma in Delhi NCR & Chandigarh Tricity. Founded by Nivil Chaudhary. Book today.',
+    'Book certified 1-on-1 yoga teachers & fitness trainers at home in Delhi NCR & Chandigarh Tricity. Certified YTT courses & home Panchkarma. Free trial session.',
   metadataBase: new URL('https://www.kayasadhak.com'),
   alternates: {
     canonical: 'https://www.kayasadhak.com',
   },
+  icons: {
+    icon: '/images/logo.png',
+    shortcut: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
+  manifest: '/manifest.json',
   openGraph: {
     title: 'Home Yoga, YTT & Personal Fitness in Delhi NCR & Chandigarh Tricity | KayaSadhak',
     description:
@@ -20,6 +26,34 @@ export const metadata: Metadata = {
     siteName: 'KayaSadhak',
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: '/images/hero_home_yoga_ncr.webp',
+        width: 1200,
+        height: 630,
+        alt: 'KayaSadhak Home Yoga, YTT & Personal Fitness',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Home Yoga, YTT & Personal Fitness in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+    description:
+      'Personal home yoga teachers, fitness trainers, certified YTT courses, and authentic home Panchkarma in Delhi NCR & Chandigarh Tricity. Founded by Nivil Chaudhary.',
+    site: '@kayasadhak',
+    creator: '@kayasadhak',
+    images: ['/images/hero_home_yoga_ncr.webp'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -74,28 +108,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-        <link
-          rel="preload"
-          as="image"
-          type="image/webp"
-          href="/images/hero_home_yoga_ncr.webp"
-        />
-        <link
-          rel="dns-prefetch"
-          href="https://cdnjs.cloudflare.com"
-        />
-        <link
-          rel="preconnect"
-          href="https://cdnjs.cloudflare.com"
-          crossOrigin="anonymous"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

@@ -20,19 +20,25 @@ import {
 } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Prenatal Yoga Teacher Training | KayaSadhak',
+  title: 'Prenatal Yoga Teacher Training Certification | KayaSadhak',
   description:
-    'Specialized Prenatal Yoga Teacher Training in tie-up with Indian Federation of Yoga, Yoga Alliance USA & AYUSH Ministry standards. Trimester-wise methodology & safe postpartum care.',
+    'Specialized Prenatal Yoga Teacher Training in tie-up with Indian Federation of Yoga & Yoga Alliance USA. Trimester methodology & postpartum care.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-teacher-training/prenatal-ttc',
   },
   openGraph: {
-    title: 'Prenatal Yoga Teacher Training | KayaSadhak',
+    title: 'Prenatal Yoga Teacher Training Certification | KayaSadhak',
     description:
-      'Specialized Prenatal Yoga Teacher Training in tie-up with Indian Federation of Yoga, Yoga Alliance USA & AYUSH Ministry standards. Trimester-wise methodology & safe postpartum care.',
+      'Specialized Prenatal Yoga Teacher Training in tie-up with Indian Federation of Yoga & Yoga Alliance USA. Trimester methodology & postpartum care.',
     url: 'https://www.kayasadhak.com/yoga-teacher-training/prenatal-ttc',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Prenatal Yoga Teacher Training Certification | KayaSadhak',
+    description:
+      'Specialized Prenatal Yoga Teacher Training in tie-up with Indian Federation of Yoga & Yoga Alliance USA. Trimester methodology & postpartum care.',
   },
 };
 
@@ -141,10 +147,10 @@ export default function PrenatalYTTPage() {
         <img
           src="/images/hero_prenatal_yoga.jpg"
           alt="Prenatal Yoga Teacher Training Course"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

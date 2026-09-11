@@ -1,0 +1,28 @@
+# KayaSadhak Production Robots.txt
+# Domain: https://www.kayasadhak.com
+# Compliance: Googlebot, Bingbot, Applebot, PerplexityBot, GPTBot, ClaudeBot
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# Explicitly Allow AI Crawler Bot Extraction for GEO / AEO Visibility
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Sitemap Index
+Sitemap: https://www.kayasadhak.com/sitemap.xml

@@ -19,11 +19,25 @@ import {
 } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'KayaSadhak Yoga Studio — Sector 45, Noida | Classes & YTT',
+  title: 'Yoga Studio in Sector 45 Noida | Classes & YTT | KayaSadhak',
   description:
-    'Visit KayaSadhak Yoga Studio at BJ Residency, Sadarpur Main Rd, Sector-45, Noida. Group & private yoga classes (Hatha, Vinyasa, Ashtanga) & on-site YTT batches. Call +91 87969 89667.',
+    'Visit KayaSadhak Yoga Studio at BJ Residency, Sector-45, Noida. Daily group & private classes (Hatha, Ashtanga) & YTT batches. Call +91 87969 89667.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/studio-noida-sector-45',
+  },
+  openGraph: {
+    title: 'Yoga Studio in Sector 45 Noida | Classes & YTT | KayaSadhak',
+    description:
+      'Visit KayaSadhak Yoga Studio at BJ Residency, Sector-45, Noida. Daily group & private classes (Hatha, Ashtanga) & YTT batches. Call +91 87969 89667.',
+    url: 'https://www.kayasadhak.com/studio-noida-sector-45',
+    siteName: 'KayaSadhak',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Yoga Studio in Sector 45 Noida | Classes & YTT | KayaSadhak',
+    description:
+      'Visit KayaSadhak Yoga Studio at BJ Residency, Sector-45, Noida. Daily group & private classes (Hatha, Ashtanga) & YTT batches. Call +91 87969 89667.',
   },
 };
 

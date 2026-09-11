@@ -18,17 +18,80 @@ import {
 } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'About KayaSadhak | Founder Nivil Chaudhary Story & Institutional Lineage',
+  title: 'About KayaSadhak | Founder Story & Lineage | Delhi NCR',
   description:
-    'Discover the journey of founder Nivil Chaudhary (12+ yrs exp), KayaSadhak’s verified 3-tier teacher ecosystem, and institutional tie-ups with Indian Federation of Yoga, Yoga Alliance USA & AYUSH Ministry.',
+    "Discover founder Nivil Chaudhary's 12+ years experience, KayaSadhak's 3-tier teacher standards, and tie-ups with Indian Federation of Yoga & Yoga Alliance.",
   alternates: {
     canonical: 'https://www.kayasadhak.com/about-us',
+  },
+  openGraph: {
+    title: 'About KayaSadhak | Founder Story & Lineage | Delhi NCR',
+    description:
+      "Discover founder Nivil Chaudhary's 12+ years experience, KayaSadhak's 3-tier teacher standards, and tie-ups with Indian Federation of Yoga & Yoga Alliance.",
+    url: 'https://www.kayasadhak.com/about-us',
+    siteName: 'KayaSadhak',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About KayaSadhak | Founder Story & Lineage | Delhi NCR',
+    description:
+      "Discover founder Nivil Chaudhary's 12+ years experience, KayaSadhak's 3-tier teacher standards, and tie-ups with Indian Federation of Yoga & Yoga Alliance.",
   },
 };
 
 export default function AboutPage() {
+  const aboutSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': 'https://www.kayasadhak.com/about-us#webpage',
+    url: 'https://www.kayasadhak.com/about-us',
+    name: 'About KayaSadhak',
+    description:
+      'Learn about KayaSadhak, our founder Nivil Chaudhary, our 3-tier certified teacher ecosystem, and authentic yogic lineage.',
+    mainEntity: {
+      '@type': 'Person',
+      '@id': 'https://www.kayasadhak.com/about-us#nivil-chaudhary',
+      name: 'Nivil Chaudhary',
+      jobTitle: 'Founder & Lead Yoga Instructor',
+      description:
+        'Certified yoga master with 12+ years of clinical, home yoga, and teacher training experience.',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'KayaSadhak',
+      },
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About Us',
+        item: 'https://www.kayasadhak.com/about-us',
+      },
+    ],
+  };
+
   return (
     <div className="space-y-16 sm:space-y-24 pb-20 bg-[#F3EEE2] text-[#26241F]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* 1. Full-Bleed Editorial Hero Banner */}
       <section className="relative bg-[#16302B] text-white pt-16 sm:pt-20 pb-20 sm:pb-28 overflow-hidden border-b border-brand-gold-500/20">
         {/* Subtle background overlay */}

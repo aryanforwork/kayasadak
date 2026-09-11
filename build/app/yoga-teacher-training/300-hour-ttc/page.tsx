@@ -8,19 +8,25 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaAward, FaUniversity, FaHeartbeat, FaBookOpen } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: '300-Hour Advanced Yoga Teacher Training Delhi | KayaSadhak',
+  title: '300-Hour Advanced Yoga Teacher Training Course | KayaSadhak',
   description:
-    'Advanced 300-hour YTT in Delhi NCR for 200-hour graduates — deeper philosophy, therapeutic yoga & pranayama. Tie-up with Yoga Alliance USA. Enquire now.',
+    'Elevate to RYT-500 with 300-Hour Advanced Yoga TTC in tie-up with Indian Federation of Yoga & Yoga Alliance USA. Advanced sequencing & philosophy.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-teacher-training/300-hour-ttc',
   },
   openGraph: {
-    title: '300-Hour Advanced Yoga Teacher Training Delhi | KayaSadhak',
+    title: '300-Hour Advanced Yoga Teacher Training Course | KayaSadhak',
     description:
-      'Advanced 300-hour YTT in Delhi NCR for 200-hour graduates — deeper philosophy, therapeutic yoga & pranayama. Tie-up with Yoga Alliance USA. Enquire now.',
+      'Elevate to RYT-500 with 300-Hour Advanced Yoga TTC in tie-up with Indian Federation of Yoga & Yoga Alliance USA. Advanced sequencing & philosophy.',
     url: 'https://www.kayasadhak.com/yoga-teacher-training/300-hour-ttc',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '300-Hour Advanced Yoga Teacher Training Course | KayaSadhak',
+    description:
+      'Elevate to RYT-500 with 300-Hour Advanced Yoga TTC in tie-up with Indian Federation of Yoga & Yoga Alliance USA. Advanced sequencing & philosophy.',
   },
 };
 
@@ -83,9 +89,38 @@ export default function YTT300HourPage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Yoga Teacher Training',
+        item: 'https://www.kayasadhak.com/yoga-teacher-training/200-hour-ttc',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: '300-Hour TTC',
+        item: 'https://www.kayasadhak.com/yoga-teacher-training/300-hour-ttc',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
@@ -100,10 +135,10 @@ export default function YTT300HourPage() {
         <img
           src="/images/hero_ytt_advanced_master.jpg"
           alt="300-Hour Advanced Yoga Teacher Training in Delhi NCR"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

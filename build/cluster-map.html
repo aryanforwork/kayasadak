@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KayaSadhak — Semantic Topic Cluster Map</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: #0A1B16; color: #F3EEE2; overflow: hidden; display: flex; flex-direction: column; height: 100vh; }
+    
+    /* Header Bar */
+    header {
+      background: #06120E;
+      border-bottom: 1px solid rgba(192, 138, 62, 0.3);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 20;
+    }
+    .brand-title { display: flex; align-items: center; gap: 12px; }
+    .brand-title h1 { font-size: 18px; font-weight: 700; color: #FFF; letter-spacing: 0.5px; }
+    .brand-title span { font-size: 11px; background: rgba(192, 138, 62, 0.2); color: #C08A3E; border: 1px solid rgba(192, 138, 62, 0.4); padding: 2px 8px; rounded: 12px; border-radius: 999px; text-transform: uppercase; }
+    
+    .stats-strip { display: flex; gap: 20px; font-size: 12px; }
+    .stat-pill { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 4px 12px; border-radius: 8px; display: flex; gap: 6px; }
+    .stat-pill strong { color: #D4A855; }
+
+    /* Canvas Area */
+    #graph-container { flex: 1; position: relative; width: 100%; height: 100%; }
+    svg { width: 100%; height: 100%; cursor: grab; }
+    svg:active { cursor: grabbing; }
+
+    /* Controls Panel */
+    .controls {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(6, 18, 14, 0.9);
+      border: 1px solid rgba(192, 138, 62, 0.3);
+      border-radius: 12px;
+      padding: 14px;
+      width: 280px;
+      backdrop-filter: blur(8px);
+      z-index: 10;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .search-box { width: 100%; padding: 8px 12px; border-radius: 6px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); color: #FFF; font-size: 13px; margin-bottom: 12px; outline: none; }
+    .search-box:focus { border-color: #C08A3E; }
+    .legend-item { display: flex; align-items: center; gap: 10px; font-size: 11px; margin-bottom: 8px; cursor: pointer; opacity: 0.85; }
+    .legend-item:hover { opacity: 1; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+    /* Node Detail Sidebar */
+    .detail-sidebar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 340px;
+      background: rgba(6, 18, 14, 0.95);
+      border: 1px solid rgba(192, 138, 62, 0.4);
+      border-radius: 16px;
+      padding: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+      z-index: 10;
+      display: none;
+      animation: fadeIn 0.2s ease-out;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+    .detail-sidebar h2 { font-size: 15px; color: #FFF; margin-bottom: 10px; font-weight: 700; line-height: 1.4; }
+    .detail-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; display: inline-block; margin-bottom: 12px; }
+    .detail-row { display: flex; justify-content: space-between; font-size: 12px; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .detail-row span:first-child { color: rgba(243, 238, 226, 0.6); }
+    .detail-row span:last-child { color: #FFF; font-weight: 600; }
+    .detail-url { word-break: break-all; color: #D4A855; font-size: 11px; text-decoration: none; margin-top: 12px; display: inline-block; }
+    .detail-url:hover { text-decoration: underline; }
+    .close-btn { position: absolute; top: 14px; right: 14px; background: none; border: none; color: #999; font-size: 18px; cursor: pointer; }
+    .close-btn:hover { color: #FFF; }
+
+    /* SVG Elements */
+    .link { stroke-opacity: 0.35; stroke-width: 1.5px; transition: stroke-opacity 0.3s; }
+    .link.highlighted { stroke-opacity: 0.9; stroke-width: 2.5px; }
+    .node circle { stroke: #FFF; stroke-width: 1.5px; transition: transform 0.2s; cursor: pointer; }
+    .node circle:hover { stroke-width: 3px; }
+    .node text { font-size: 10px; fill: #F3EEE2; pointer-events: none; text-shadow: 0 1px 3px rgba(0,0,0,0.9); }
+    .node.pillar text { font-size: 12px; font-weight: 700; fill: #FFF; }
+  </style>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="brand-title">
+      <h1>KayaSadhak Content Architecture Map</h1>
+      <span>Hub-and-Spoke Engine</span>
+    </div>
+    <div class="stats-strip">
+      <div class="stat-pill">Pillars: <strong>1</strong></div>
+      <div class="stat-pill">Spoke Clusters: <strong>5</strong></div>
+      <div class="stat-pill">Total Nodes: <strong>21</strong></div>
+      <div class="stat-pill">Total Internal Links: <strong>34</strong></div>
+      <div class="stat-pill">Est. Word Count: <strong>33,600</strong></div>
+    </div>
+  </header>
+
+  <div id="graph-container">
+    <div class="controls">
+      <input type="text" id="search" class="search-box" placeholder="Search keywords, URLs or clusters..." />
+      <div id="legend"></div>
+    </div>
+
+    <div class="detail-sidebar" id="sidebar">
+      <button class="close-btn" onclick="closeSidebar()">&times;</button>
+      <span class="detail-tag" id="sidebar-tag">Pillar</span>
+      <h2 id="sidebar-title">Title Here</h2>
+      <div class="detail-row"><span>Target Keyword</span><span id="sidebar-keyword">-</span></div>
+      <div class="detail-row"><span>Monthly Volume</span><span id="sidebar-volume">-</span></div>
+      <div class="detail-row"><span>Content Template</span><span id="sidebar-template">-</span></div>
+      <div class="detail-row"><span>Word Count Target</span><span id="sidebar-words">-</span></div>
+      <div class="detail-row"><span>SERP Intent</span><span id="sidebar-intent">-</span></div>
+      <a href="#" target="_blank" class="detail-url" id="sidebar-url">Open Page &rarr;</a>
+    </div>
+
+    <svg id="cluster-svg"></svg>
+  </div>
+
+  <script>
+    const CLUSTER_DATA = {
+      pillar: {
+        id: "pillar",
+        title: "Personal Yoga Teacher at Home Hub",
+        keyword: "personal yoga teacher at home delhi ncr",
+        volume: 2800,
+        template: "ultimate-guide",
+        wordCount: 3500,
+        url: "https://www.kayasadhak.com/services/yoga-at-home",
+        cluster: "Pillar Hub",
+        color: "#529983",
+        intent: "Commercial Investigation"
+      },
+      clusters: [
+        {
+          name: "Pricing & Onboarding",
+          color: "#C08A3E",
+          posts: [
+            { id: "pricing", title: "Home Yoga Pricing Matrix", keyword: "yoga teacher at home cost in delhi", volume: 1600, template: "comparison", wordCount: 1600, url: "https://www.kayasadhak.com/pricing", intent: "Commercial" },
+            { id: "fitness", title: "Personal Fitness Trainer at Home", keyword: "personal fitness trainer at home delhi", volume: 1200, template: "landing-page", wordCount: 1500, url: "https://www.kayasadhak.com/services/personal-fitness-trainer", intent: "Transactional" },
+            { id: "free-class", title: "Free Trial Yoga Class Funnel", keyword: "free trial yoga class at home delhi", volume: 950, template: "landing-page", wordCount: 1300, url: "https://www.kayasadhak.com/book-a-free-class", intent: "Transactional" }
+          ]
+        },
+        {
+          name: "Demographic Programs",
+          color: "#1F4A3C",
+          posts: [
+            { id: "corp", title: "Corporate Wellness Programs", keyword: "corporate yoga classes delhi ncr", volume: 880, template: "landing-page", wordCount: 1500, url: "https://www.kayasadhak.com/services/corporate-yoga", intent: "B2B Commercial" },
+            { id: "senior", title: "Senior Citizen Mobility Yoga", keyword: "yoga for senior citizens at home delhi", volume: 720, template: "explainer", wordCount: 1400, url: "https://www.kayasadhak.com/services/senior-citizen-yoga", intent: "Informational" },
+            { id: "kids", title: "Kids & Teens Focus Yoga", keyword: "kids yoga classes at home delhi", volume: 650, template: "how-to", wordCount: 1400, url: "https://www.kayasadhak.com/services/kids-yoga", intent: "Informational" },
+            { id: "prenatal", title: "Prenatal & Postnatal Yoga Care", keyword: "prenatal yoga teacher at home delhi", volume: 1100, template: "ultimate-guide", wordCount: 1600, url: "https://www.kayasadhak.com/services/prenatal-postnatal-yoga", intent: "Commercial" }
+          ]
+        },
+        {
+          name: "Therapeutic Conditions",
+          color: "#945823",
+          posts: [
+            { id: "backpain", title: "Therapeutic Yoga for Back Pain", keyword: "yoga for back pain at home delhi", volume: 1900, template: "how-to", wordCount: 1700, url: "https://www.kayasadhak.com/yoga-for-conditions/back-pain", intent: "Informational" },
+            { id: "pcod", title: "Yoga for PCOD / PCOS Balance", keyword: "yoga for pcod and pcos at home", volume: 1500, template: "explainer", wordCount: 1600, url: "https://www.kayasadhak.com/yoga-for-conditions/pcod-pcos", intent: "Informational" },
+            { id: "thyroid", title: "Yoga Therapy for Thyroid Health", keyword: "yoga for thyroid at home delhi", volume: 1300, template: "explainer", wordCount: 1500, url: "https://www.kayasadhak.com/yoga-for-conditions/thyroid", intent: "Informational" },
+            { id: "weightloss", title: "Dynamic Yoga for Weight Loss", keyword: "yoga for weight loss at home delhi", volume: 2400, template: "best-of", wordCount: 1700, url: "https://www.kayasadhak.com/yoga-for-conditions/weight-loss", intent: "Commercial" }
+          ]
+        },
+        {
+          name: "Locality Clusters",
+          color: "#3B7A68",
+          posts: [
+            { id: "southdelhi", title: "South Delhi Home Yoga", keyword: "yoga teacher at home south delhi", volume: 1400, template: "landing-page", wordCount: 1500, url: "https://www.kayasadhak.com/yoga-teacher-at-home/delhi/south-delhi", intent: "Local Commercial" },
+            { id: "eastdelhi", title: "East Delhi Home Yoga", keyword: "yoga teacher at home east delhi", volume: 850, template: "landing-page", wordCount: 1400, url: "https://www.kayasadhak.com/yoga-teacher-at-home/delhi/east-delhi", intent: "Local Commercial" },
+            { id: "northdelhi", title: "North Delhi Home Yoga", keyword: "yoga teacher at home north delhi", volume: 800, template: "landing-page", wordCount: 1400, url: "https://www.kayasadhak.com/yoga-teacher-at-home/delhi/north-delhi", intent: "Local Commercial" },
+            { id: "westdelhi", title: "West Delhi Home Yoga", keyword: "yoga teacher at home west delhi", volume: 950, template: "landing-page", wordCount: 1400, url: "https://www.kayasadhak.com/yoga-teacher-at-home/delhi/west-delhi", intent: "Local Commercial" },
+            { id: "studio45", title: "Sector 45 Noida Yoga Studio", keyword: "yoga teacher in noida sector 45", volume: 1200, template: "landing-page", wordCount: 1600, url: "https://www.kayasadhak.com/studio-noida-sector-45", intent: "Local Commercial" }
+          ]
+        },
+        {
+          name: "YTT Academy & Ashrams",
+          color: "#D4A855",
+          posts: [
+            { id: "ytt200", title: "200-Hour Foundation Yoga TTC", keyword: "200 hour yoga teacher training course delhi", volume: 2100, template: "ultimate-guide", wordCount: 2000, url: "https://www.kayasadhak.com/yoga-teacher-training/200-hour-ttc", intent: "Educational" },
+            { id: "ytt300", title: "300-Hour Advanced Yoga TTC", keyword: "300 hour advanced yoga teacher training", volume: 1400, template: "ultimate-guide", wordCount: 1800, url: "https://www.kayasadhak.com/yoga-teacher-training/300-hour-ttc", intent: "Educational" },
+            { id: "ytt500", title: "500-Hour Master Yoga TTC", keyword: "500 hour master yoga teacher training", volume: 900, template: "ultimate-guide", wordCount: 1900, url: "https://www.kayasadhak.com/yoga-teacher-training/500-hour-ttc", intent: "Educational" },
+            { id: "rishikesh", title: "Rishikesh Ashram Center", keyword: "yoga teacher training rishikesh ashram", volume: 3200, template: "landing-page", wordCount: 1800, url: "https://www.kayasadhak.com/yoga-teacher-training/locations/rishikesh", intent: "Destination YTT" }
+          ]
+        }
+      ]
+    };
+
+    // Flatten Nodes & Links
+    const nodes = [CLUSTER_DATA.pillar];
+    const links = [];
+
+    CLUSTER_DATA.clusters.forEach(c => {
+      c.posts.forEach(p => {
+        p.cluster = c.name;
+        p.color = c.color;
+        nodes.push(p);
+
+        // Mandatory Pillar Links
+        links.push({ source: "pillar", target: p.id, color: c.color, type: "pillar-spoke" });
+      });
+
+      // Sibling links inside cluster
+      for (let i = 0; i < c.posts.length - 1; i++) {
+        links.push({ source: c.posts[i].id, target: c.posts[i+1].id, color: c.color, type: "sibling" });
+      }
+    });
+
+    // Cross Cluster Bridge Links
+    links.push({ source: "backpain", target: "pricing", color: "#888", type: "cross" });
+    links.push({ source: "studio45", target: "ytt200", color: "#888", type: "cross" });
+    links.push({ source: "free-class", target: "southdelhi", color: "#888", type: "cross" });
+
+    // Render Legend
+    const legendDiv = document.getElementById("legend");
+    const clusterTypes = [{ name: "Pillar Hub", color: "#529983" }].concat(CLUSTER_DATA.clusters);
+    clusterTypes.forEach(c => {
+      const item = document.createElement("div");
+      item.className = "legend-item";
+      item.innerHTML = `<span class="legend-dot" style="background: ${c.color}"></span><span>${c.name}</span>`;
+      legendDiv.appendChild(item);
+    });
+
+    // D3 Simulation Setup
+    const width = window.innerWidth;
+    const height = window.innerHeight - 60;
+
+    const svg = d3.select("#cluster-svg")
+      .attr("viewBox", [-width / 2, -height / 2, width, height]);
+
+    const g = svg.append("g");
+
+    // Zoom behavior
+    svg.call(d3.zoom().scaleExtent([0.3, 3]).on("zoom", (event) => {
+      g.attr("transform", event.transform);
+    }));
+
+    const simulation = d3.forceSimulation(nodes)
+      .force("link", d3.forceLink(links).id(d => d.id).distance(d => d.type === "pillar-spoke" ? 180 : 90))
+      .force("charge", d3.forceManyBody().strength(-450))
+      .force("collision", d3.forceCollide().radius(d => d.id === "pillar" ? 60 : 35))
+      .force("center", d3.forceCenter(0, 0));
+
+    // Render Links
+    const link = g.append("g")
+      .selectAll("line")
+      .data(links)
+      .join("line")
+      .attr("class", "link")
+      .attr("stroke", d => d.color);
+
+    // Render Nodes
+    const node = g.append("g")
+      .selectAll("g")
+      .data(nodes)
+      .join("g")
+      .attr("class", d => d.id === "pillar" ? "node pillar" : "node")
+      .call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended))
+      .on("click", (event, d) => showDetails(d));
+
+    node.append("circle")
+      .attr("r", d => d.id === "pillar" ? 32 : 18)
+      .attr("fill", d => d.color);
+
+    node.append("text")
+      .attr("dy", d => d.id === "pillar" ? 45 : 30)
+      .attr("text-anchor", "middle")
+      .text(d => d.title.length > 24 ? d.title.substring(0, 22) + "..." : d.title);
+
+    simulation.on("tick", () => {
+      link
+        .attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
+
+      node.attr("transform", d => `translate(${d.x},${d.y})`);
+    });
+
+    function dragstarted(event, d) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      d.fx = d.x;
+      d.fy = d.y;
+    }
+
+    function dragged(event, d) {
+      d.fx = event.x;
+      d.fy = event.y;
+    }
+
+    function dragended(event, d) {
+      if (!event.active) simulation.alphaTarget(0);
+      d.fx = null;
+      d.fy = null;
+    }
+
+    // Sidebar Details
+    function showDetails(d) {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.style.display = "block";
+      document.getElementById("sidebar-title").innerText = d.title;
+      document.getElementById("sidebar-tag").innerText = d.cluster;
+      document.getElementById("sidebar-tag").style.background = d.color;
+      document.getElementById("sidebar-tag").style.color = "#FFF";
+      document.getElementById("sidebar-keyword").innerText = d.keyword;
+      document.getElementById("sidebar-volume").innerText = d.volume.toLocaleString() + "/mo";
+      document.getElementById("sidebar-template").innerText = d.template;
+      document.getElementById("sidebar-words").innerText = d.wordCount.toLocaleString() + " words";
+      document.getElementById("sidebar-intent").innerText = d.intent;
+      document.getElementById("sidebar-url").href = d.url;
+      document.getElementById("sidebar-url").innerText = d.url;
+
+      // Highlight links
+      link.classed("highlighted", l => l.source.id === d.id || l.target.id === d.id);
+    }
+
+    function closeSidebar() {
+      document.getElementById("sidebar").style.display = "none";
+      link.classed("highlighted", false);
+    }
+
+    // Search filter
+    document.getElementById("search").addEventListener("input", (e) => {
+      const q = e.target.value.toLowerCase();
+      node.style("opacity", d => {
+        if (!q) return 1;
+        const match = d.title.toLowerCase().includes(q) || d.keyword.toLowerCase().includes(q) || d.cluster.toLowerCase().includes(q);
+        return match ? 1 : 0.15;
+      });
+      link.style("opacity", l => {
+        if (!q) return 0.35;
+        const sourceMatch = l.source.title.toLowerCase().includes(q) || l.source.keyword.toLowerCase().includes(q);
+        const targetMatch = l.target.title.toLowerCase().includes(q) || l.target.keyword.toLowerCase().includes(q);
+        return (sourceMatch || targetMatch) ? 0.9 : 0.05;
+      });
+    });
+  </script>
+</body>
+</html>

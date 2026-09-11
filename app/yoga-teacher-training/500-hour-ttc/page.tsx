@@ -8,19 +8,25 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaAward, FaUniversity, FaGraduationCap, FaCheckCircle } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: '500-Hour Master Yoga Teacher Training Delhi | KayaSadhak',
+  title: '500-Hour Master Yoga Teacher Training Certification | KayaSadhak',
   description:
-    'Complete 500-hour master-level YTT in Delhi NCR — 200 + 300 hour curriculum combined, clinical therapeutics & lineage training. Enquire on WhatsApp.',
+    'Comprehensive 500-Hour Master Yoga Teacher Training in tie-up with Indian Federation of Yoga & Yoga Alliance USA. Master classical Hatha & Ashtanga.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-teacher-training/500-hour-ttc',
   },
   openGraph: {
-    title: '500-Hour Master Yoga Teacher Training Delhi | KayaSadhak',
+    title: '500-Hour Master Yoga Teacher Training Certification | KayaSadhak',
     description:
-      'Complete 500-hour master-level YTT in Delhi NCR — 200 + 300 hour curriculum combined, clinical therapeutics & lineage training. Enquire on WhatsApp.',
+      'Comprehensive 500-Hour Master Yoga Teacher Training in tie-up with Indian Federation of Yoga & Yoga Alliance USA. Master classical Hatha & Ashtanga.',
     url: 'https://www.kayasadhak.com/yoga-teacher-training/500-hour-ttc',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '500-Hour Master Yoga Teacher Training Certification | KayaSadhak',
+    description:
+      'Comprehensive 500-Hour Master Yoga Teacher Training in tie-up with Indian Federation of Yoga & Yoga Alliance USA. Master classical Hatha & Ashtanga.',
   },
 };
 
@@ -83,9 +89,38 @@ export default function YTT500HourPage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Yoga Teacher Training',
+        item: 'https://www.kayasadhak.com/yoga-teacher-training/200-hour-ttc',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: '500-Hour Master TTC',
+        item: 'https://www.kayasadhak.com/yoga-teacher-training/500-hour-ttc',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
@@ -100,10 +135,10 @@ export default function YTT500HourPage() {
         <img
           src="/images/hero_ytt_advanced_master.jpg"
           alt="500-Hour Master Yoga Teacher Training"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

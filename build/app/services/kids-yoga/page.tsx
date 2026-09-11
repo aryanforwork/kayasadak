@@ -9,19 +9,25 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaChild, FaSmile, FaBrain, FaGraduationCap } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Kids & Teen Yoga at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+  title: 'Kids & Teen Yoga at Home in Delhi NCR | KayaSadhak',
   description:
-    'Certified kids\' yoga teacher at home in Delhi NCR & Chandigarh Tricity. Builds focus, flexibility & calm for exam stress. From ₹500/session. Free trial.',
+    'Certified kids yoga teacher at home in Delhi NCR & Chandigarh. Builds concentration, posture & calm for exam stress. From ₹500/session. Free trial.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/services/kids-yoga',
   },
   openGraph: {
-    title: 'Kids & Teen Yoga at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+    title: 'Kids & Teen Yoga at Home in Delhi NCR | KayaSadhak',
     description:
-      'Certified kids\' yoga teacher at home in Delhi NCR & Chandigarh Tricity. Builds focus, flexibility & calm for exam stress. From ₹500/session. Free trial.',
+      'Certified kids yoga teacher at home in Delhi NCR & Chandigarh. Builds concentration, posture & calm for exam stress. From ₹500/session. Free trial.',
     url: 'https://www.kayasadhak.com/services/kids-yoga',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kids & Teen Yoga at Home in Delhi NCR | KayaSadhak',
+    description:
+      'Certified kids yoga teacher at home in Delhi NCR & Chandigarh. Builds concentration, posture & calm for exam stress. From ₹500/session. Free trial.',
   },
 };
 
@@ -171,9 +177,38 @@ export default function KidsYogaPage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://www.kayasadhak.com/services/yoga-at-home',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Kids Yoga',
+        item: 'https://www.kayasadhak.com/services/kids-yoga',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -188,10 +223,10 @@ export default function KidsYogaPage() {
         <img
           src="/images/hero_kids_yoga.jpg"
           alt="Kids & Teen Yoga at Home in Delhi NCR & Chandigarh Tricity"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

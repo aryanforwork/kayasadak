@@ -9,19 +9,25 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaShieldAlt, FaFeatherAlt, FaWind, FaHeartbeat } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Yoga for Thyroid Health at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+  title: 'Yoga for Thyroid Health at Home | Delhi NCR | KayaSadhak',
   description:
-    '1-on-1 therapeutic yoga at home for hypothyroid & hyperthyroid support in Delhi NCR & Chandigarh Tricity — Jalandhara Bandha, Ujjayi breathing. Not medical advice. Enquire.',
+    '1-on-1 therapeutic yoga at home for thyroid support in Delhi NCR & Chandigarh — Jalandhara Bandha, Ujjayi pranayama. Not medical advice. Enquire now.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-for-conditions/thyroid',
   },
   openGraph: {
-    title: 'Yoga for Thyroid Health at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+    title: 'Yoga for Thyroid Health at Home | Delhi NCR | KayaSadhak',
     description:
-      '1-on-1 therapeutic yoga at home for hypothyroid & hyperthyroid support in Delhi NCR & Chandigarh Tricity — Jalandhara Bandha, Ujjayi breathing. Not medical advice. Enquire.',
+      '1-on-1 therapeutic yoga at home for thyroid support in Delhi NCR & Chandigarh — Jalandhara Bandha, Ujjayi pranayama. Not medical advice. Enquire now.',
     url: 'https://www.kayasadhak.com/yoga-for-conditions/thyroid',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Yoga for Thyroid Health at Home | Delhi NCR | KayaSadhak',
+    description:
+      '1-on-1 therapeutic yoga at home for thyroid support in Delhi NCR & Chandigarh — Jalandhara Bandha, Ujjayi pranayama. Not medical advice. Enquire now.',
   },
 };
 
@@ -84,9 +90,38 @@ export default function ThyroidYogaPage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Yoga for Conditions',
+        item: 'https://www.kayasadhak.com/yoga-for-conditions/back-pain',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Thyroid Support',
+        item: 'https://www.kayasadhak.com/yoga-for-conditions/thyroid',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
@@ -101,10 +136,10 @@ export default function ThyroidYogaPage() {
         <img
           src="/images/hero_thyroid_yoga.jpg"
           alt="Yoga for Thyroid Health at Home"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

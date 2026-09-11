@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { HeroSlider } from '@/components/HeroSlider';
 import { ServicesCarousel } from '@/components/ServicesCarousel';
@@ -12,6 +13,41 @@ import { ConditionChips } from '@/components/ConditionChips';
 import { FaqAccordion } from '@/components/FaqAccordion';
 import { KayaLeafMotif } from '@/components/KayaLeafMotif';
 import { FaArrowRight, FaAward, FaMapMarkedAlt, FaUniversity, FaUserCheck, FaClock } from 'react-icons/fa';
+
+export const metadata: Metadata = {
+  title: 'Personal Home Yoga, YTT & Fitness in Delhi NCR | KayaSadhak',
+  description:
+    'Book certified 1-on-1 yoga teachers & fitness trainers at home in Delhi NCR & Chandigarh Tricity. Certified YTT courses & home Panchkarma. Free trial session.',
+  alternates: {
+    canonical: 'https://www.kayasadhak.com',
+  },
+  openGraph: {
+    title: 'Personal Home Yoga, YTT & Fitness in Delhi NCR | KayaSadhak',
+    description:
+      'Book certified 1-on-1 yoga teachers & fitness trainers at home in Delhi NCR & Chandigarh Tricity. Certified YTT courses & home Panchkarma. Free trial session.',
+    url: 'https://www.kayasadhak.com',
+    siteName: 'KayaSadhak',
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: '/images/hero_home_yoga_ncr.webp',
+        width: 1200,
+        height: 630,
+        alt: 'KayaSadhak Home Yoga, YTT & Fitness',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Personal Home Yoga, YTT & Fitness in Delhi NCR | KayaSadhak',
+    description:
+      'Book certified 1-on-1 yoga teachers & fitness trainers at home in Delhi NCR & Chandigarh Tricity. Certified YTT courses & home Panchkarma. Free trial session.',
+    site: '@kayasadhak',
+    creator: '@kayasadhak',
+    images: ['/images/hero_home_yoga_ncr.webp'],
+  },
+};
 
 export default function HomePage() {
   const homeFaqs = [
@@ -42,8 +78,88 @@ export default function HomePage() {
     },
   ];
 
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://www.kayasadhak.com/#website',
+    url: 'https://www.kayasadhak.com',
+    name: 'KayaSadhak',
+    description:
+      'Verified personal home yoga teachers, fitness trainers, certified YTT courses, and authentic home Panchkarma in Delhi NCR & Chandigarh Tricity.',
+    potentialAction: {
+      '@type': 'ReserveAction',
+      target: 'https://www.kayasadhak.com/book-a-free-class',
+      name: 'Book a Free Trial Yoga Class',
+    },
+  };
+
+  const businessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HealthAndBeautyBusiness',
+    '@id': 'https://www.kayasadhak.com/#business',
+    name: 'KayaSadhak Home Yoga & Wellness',
+    image: 'https://www.kayasadhak.com/images/hero_home_yoga_ncr.webp',
+    url: 'https://www.kayasadhak.com',
+    telephone: '+91-8273264561',
+    priceRange: '₹500 - ₹2,000',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'BJ Residency, Sadarpur Main Road, Sector-45',
+      addressLocality: 'Noida',
+      addressRegion: 'Uttar Pradesh',
+      postalCode: '201303',
+      addressCountry: 'IN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '28.5447',
+      longitude: '77.3481',
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Delhi' },
+      { '@type': 'City', name: 'Noida' },
+      { '@type': 'City', name: 'Gurugram' },
+      { '@type': 'City', name: 'Ghaziabad' },
+      { '@type': 'City', name: 'Faridabad' },
+      { '@type': 'City', name: 'Chandigarh' },
+      { '@type': 'City', name: 'Mohali' },
+      { '@type': 'City', name: 'Panchkula' },
+    ],
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: homeFaqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <div className="space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
+      {/* Semantic H1 for SEO Crawlers & Screen Readers */}
+      <h1 className="sr-only">
+        Personal Yoga Teacher at Home, Certified Yoga Teacher Training (YTT) &amp; Personal Fitness in Delhi NCR &amp; Chandigarh Tricity — KayaSadhak
+      </h1>
+
       {/* 1. Full-Bleed Interactive Hero Slider Carousel */}
       <HeroSlider />
 

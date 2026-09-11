@@ -9,19 +9,25 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaHeartbeat, FaFemale, FaShieldAlt, FaCalendarCheck } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Prenatal & Postnatal Yoga at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+  title: 'Prenatal & Postnatal Yoga at Home | Delhi NCR | KayaSadhak',
   description:
-    'Trimester-wise prenatal yoga & postpartum recovery sessions at home in Delhi NCR & Chandigarh Tricity. Certified female teachers available. Free trial.',
+    'Doctor-guided prenatal & postnatal yoga at home across Delhi NCR & Chandigarh. Pelvic floor tone, breathing & recovery. Certified instructors.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/services/prenatal-postnatal-yoga',
   },
   openGraph: {
-    title: 'Prenatal & Postnatal Yoga at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+    title: 'Prenatal & Postnatal Yoga at Home | Delhi NCR | KayaSadhak',
     description:
-      'Trimester-wise prenatal yoga & postpartum recovery sessions at home in Delhi NCR & Chandigarh Tricity. Certified female teachers available. Free trial.',
+      'Doctor-guided prenatal & postnatal yoga at home across Delhi NCR & Chandigarh. Pelvic floor tone, breathing & recovery. Certified instructors.',
     url: 'https://www.kayasadhak.com/services/prenatal-postnatal-yoga',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Prenatal & Postnatal Yoga at Home | Delhi NCR | KayaSadhak',
+    description:
+      'Doctor-guided prenatal & postnatal yoga at home across Delhi NCR & Chandigarh. Pelvic floor tone, breathing & recovery. Certified instructors.',
   },
 };
 
@@ -171,9 +177,38 @@ export default function PrenatalPostnatalYogaPage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://www.kayasadhak.com/services/yoga-at-home',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Prenatal & Postnatal Yoga',
+        item: 'https://www.kayasadhak.com/services/prenatal-postnatal-yoga',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -188,10 +223,10 @@ export default function PrenatalPostnatalYogaPage() {
         <img
           src="/images/hero_prenatal_yoga.jpg"
           alt="Prenatal & Postnatal Yoga at Home in Delhi NCR & Chandigarh Tricity"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

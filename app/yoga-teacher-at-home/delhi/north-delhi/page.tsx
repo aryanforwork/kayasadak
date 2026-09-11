@@ -23,6 +23,12 @@ export const metadata: Metadata = {
     siteName: 'KayaSadhak',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Personal Yoga Teacher at Home in North Delhi | KayaSadhak',
+    description:
+      'Certified yoga teacher at home in North Delhi — Rohini, Pitampura, Model Town & Shalimar Bagh. Transparent pricing from ₹500/session. Free trial.',
+  },
 };
 
 export default function NorthDelhiLocalityPage() {
@@ -92,9 +98,38 @@ export default function NorthDelhiLocalityPage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Delhi NCR Home Yoga',
+        item: 'https://www.kayasadhak.com/services/yoga-at-home',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'North Delhi',
+        item: 'https://www.kayasadhak.com/yoga-teacher-at-home/delhi/north-delhi',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
@@ -109,10 +144,10 @@ export default function NorthDelhiLocalityPage() {
         <img
           src="/images/hero_home_yoga_ncr.webp"
           alt="Personal Yoga Teacher at Home in North Delhi"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

@@ -9,19 +9,25 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaFire, FaShieldAlt, FaDumbbell, FaHeartbeat } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Therapeutic Yoga for Weight Loss at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+  title: 'Yoga for Weight Loss at Home | Delhi NCR | KayaSadhak',
   description:
-    '1-on-1 yoga at home in Delhi NCR & Chandigarh Tricity for healthy weight management — metabolic-boosting core work & Agnisar kriya. Not medical advice. Enquire on WhatsApp.',
+    '1-on-1 dynamic yoga at home in Delhi NCR & Chandigarh for healthy weight loss — core metabolism & Agnisar kriya. Not medical advice. Free consultation.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-for-conditions/weight-loss',
   },
   openGraph: {
-    title: 'Therapeutic Yoga for Weight Loss at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+    title: 'Yoga for Weight Loss at Home | Delhi NCR | KayaSadhak',
     description:
-      '1-on-1 yoga at home in Delhi NCR & Chandigarh Tricity for healthy weight management — metabolic-boosting core work & Agnisar kriya. Not medical advice. Enquire on WhatsApp.',
+      '1-on-1 dynamic yoga at home in Delhi NCR & Chandigarh for healthy weight loss — core metabolism & Agnisar kriya. Not medical advice. Free consultation.',
     url: 'https://www.kayasadhak.com/yoga-for-conditions/weight-loss',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Yoga for Weight Loss at Home | Delhi NCR | KayaSadhak',
+    description:
+      '1-on-1 dynamic yoga at home in Delhi NCR & Chandigarh for healthy weight loss — core metabolism & Agnisar kriya. Not medical advice. Free consultation.',
   },
 };
 
@@ -89,9 +95,38 @@ export default function WeightLossYogaPage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Yoga for Conditions',
+        item: 'https://www.kayasadhak.com/yoga-for-conditions/back-pain',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Weight Loss Yoga',
+        item: 'https://www.kayasadhak.com/yoga-for-conditions/weight-loss',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
@@ -106,10 +141,10 @@ export default function WeightLossYogaPage() {
         <img
           src="/images/hero_weight_loss_yoga.jpg"
           alt="Therapeutic Yoga for Weight Loss at Home"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

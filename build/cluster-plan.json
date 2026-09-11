@@ -1,0 +1,296 @@
+{
+  "version": "1.9.0",
+  "seed_keyword": "personal yoga teacher at home delhi ncr",
+  "created_at": "2026-09-11T16:02:00+05:30",
+  "pillar": {
+    "title": "Personal Yoga Teacher at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak",
+    "keyword": "personal yoga teacher at home delhi ncr",
+    "volume": 2800,
+    "template": "ultimate-guide",
+    "wordCount": 3500,
+    "url": "https://www.kayasadhak.com/services/yoga-at-home",
+    "status": "written"
+  },
+  "clusters": [
+    {
+      "name": "Cluster 1: Pricing, Tiers & Onboarding",
+      "color": "#C08A3E",
+      "posts": [
+        {
+          "title": "Home Yoga Pricing: Silver, Gold & Platinum Tier Breakdown",
+          "keyword": "yoga teacher at home cost in delhi",
+          "volume": 1600,
+          "template": "comparison",
+          "wordCount": 1600,
+          "url": "https://www.kayasadhak.com/pricing",
+          "status": "written"
+        },
+        {
+          "title": "Personal Fitness Trainer at Home vs Yoga Instructor",
+          "keyword": "personal fitness trainer at home delhi",
+          "volume": 1200,
+          "template": "landing-page",
+          "wordCount": 1500,
+          "url": "https://www.kayasadhak.com/services/personal-fitness-trainer",
+          "status": "written"
+        },
+        {
+          "title": "Book a Free 1-on-1 Home Yoga Trial Session",
+          "keyword": "free trial yoga class at home delhi",
+          "volume": 950,
+          "template": "landing-page",
+          "wordCount": 1300,
+          "url": "https://www.kayasadhak.com/book-a-free-class",
+          "status": "written"
+        }
+      ]
+    },
+    {
+      "name": "Cluster 2: Demographic & Lifestyle Home Yoga",
+      "color": "#1F4A3C",
+      "posts": [
+        {
+          "title": "Corporate Yoga & Employee Desk Wellness in Delhi NCR",
+          "keyword": "corporate yoga classes delhi ncr",
+          "volume": 880,
+          "template": "landing-page",
+          "wordCount": 1500,
+          "url": "https://www.kayasadhak.com/services/corporate-yoga",
+          "status": "written"
+        },
+        {
+          "title": "Gentle Mobility & Chair Yoga for Senior Citizens at Home",
+          "keyword": "yoga for senior citizens at home delhi",
+          "volume": 720,
+          "template": "explainer",
+          "wordCount": 1400,
+          "url": "https://www.kayasadhak.com/services/senior-citizen-yoga",
+          "status": "written"
+        },
+        {
+          "title": "Kids & Teen Yoga at Home: Posture & Exam Focus",
+          "keyword": "kids yoga classes at home delhi",
+          "volume": 650,
+          "template": "how-to",
+          "wordCount": 1400,
+          "url": "https://www.kayasadhak.com/services/kids-yoga",
+          "status": "written"
+        },
+        {
+          "title": "Doctor-Guided Prenatal & Postnatal Yoga at Home",
+          "keyword": "prenatal yoga teacher at home delhi",
+          "volume": 1100,
+          "template": "ultimate-guide",
+          "wordCount": 1600,
+          "url": "https://www.kayasadhak.com/services/prenatal-postnatal-yoga",
+          "status": "written"
+        }
+      ]
+    },
+    {
+      "name": "Cluster 3: Therapeutic Condition Care at Home",
+      "color": "#945823",
+      "posts": [
+        {
+          "title": "Therapeutic Yoga for Chronic Back Pain & Sciatica Relief",
+          "keyword": "yoga for back pain at home delhi",
+          "volume": 1900,
+          "template": "how-to",
+          "wordCount": 1700,
+          "url": "https://www.kayasadhak.com/yoga-for-conditions/back-pain",
+          "status": "written"
+        },
+        {
+          "title": "Pelvic Alignment & Hormone Regulating Yoga for PCOD/PCOS",
+          "keyword": "yoga for pcod and pcos at home",
+          "volume": 1500,
+          "template": "explainer",
+          "wordCount": 1600,
+          "url": "https://www.kayasadhak.com/yoga-for-conditions/pcod-pcos",
+          "status": "written"
+        },
+        {
+          "title": "Endocrine Balancing Yoga Therapy for Thyroid Health",
+          "keyword": "yoga for thyroid at home delhi",
+          "volume": 1300,
+          "template": "explainer",
+          "wordCount": 1500,
+          "url": "https://www.kayasadhak.com/yoga-for-conditions/thyroid",
+          "status": "written"
+        },
+        {
+          "title": "Dynamic Yoga & Core Metabolic Boost for Weight Loss",
+          "keyword": "yoga for weight loss at home delhi",
+          "volume": 2400,
+          "template": "best-of",
+          "wordCount": 1700,
+          "url": "https://www.kayasadhak.com/yoga-for-conditions/weight-loss",
+          "status": "written"
+        }
+      ]
+    },
+    {
+      "name": "Cluster 4: Delhi-NCR & Tricity Locality Footprint",
+      "color": "#285848",
+      "posts": [
+        {
+          "title": "Personal Yoga Teacher at Home in South Delhi",
+          "keyword": "yoga teacher at home south delhi",
+          "volume": 1400,
+          "template": "landing-page",
+          "wordCount": 1500,
+          "url": "https://www.kayasadhak.com/yoga-teacher-at-home/delhi/south-delhi",
+          "status": "written"
+        },
+        {
+          "title": "Personal Yoga Teacher at Home in East Delhi",
+          "keyword": "yoga teacher at home east delhi",
+          "volume": 850,
+          "template": "landing-page",
+          "wordCount": 1400,
+          "url": "https://www.kayasadhak.com/yoga-teacher-at-home/delhi/east-delhi",
+          "status": "written"
+        },
+        {
+          "title": "Personal Yoga Teacher at Home in North Delhi",
+          "keyword": "yoga teacher at home north delhi",
+          "volume": 800,
+          "template": "landing-page",
+          "wordCount": 1400,
+          "url": "https://www.kayasadhak.com/yoga-teacher-at-home/delhi/north-delhi",
+          "status": "written"
+        },
+        {
+          "title": "Personal Yoga Teacher at Home in West Delhi",
+          "keyword": "yoga teacher at home west delhi",
+          "volume": 950,
+          "template": "landing-page",
+          "wordCount": 1400,
+          "url": "https://www.kayasadhak.com/yoga-teacher-at-home/delhi/west-delhi",
+          "status": "written"
+        },
+        {
+          "title": "Yoga Studio in Sector 45 Noida & Home Classes",
+          "keyword": "yoga teacher in noida sector 45",
+          "volume": 1200,
+          "template": "landing-page",
+          "wordCount": 1600,
+          "url": "https://www.kayasadhak.com/studio-noida-sector-45",
+          "status": "written"
+        }
+      ]
+    },
+    {
+      "name": "Cluster 5: Yoga Teacher Training & Ashram Hubs",
+      "color": "#D4A855",
+      "posts": [
+        {
+          "title": "200-Hour Foundation Yoga Teacher Training Course (YTT)",
+          "keyword": "200 hour yoga teacher training course delhi",
+          "volume": 2100,
+          "template": "ultimate-guide",
+          "wordCount": 2000,
+          "url": "https://www.kayasadhak.com/yoga-teacher-training/200-hour-ttc",
+          "status": "written"
+        },
+        {
+          "title": "300-Hour Advanced Yoga Teacher Training Certification",
+          "keyword": "300 hour advanced yoga teacher training",
+          "volume": 1400,
+          "template": "ultimate-guide",
+          "wordCount": 1800,
+          "url": "https://www.kayasadhak.com/yoga-teacher-training/300-hour-ttc",
+          "status": "written"
+        },
+        {
+          "title": "500-Hour Master Yoga Teacher Training Certification",
+          "keyword": "500 hour master yoga teacher training",
+          "volume": 900,
+          "template": "ultimate-guide",
+          "wordCount": 1900,
+          "url": "https://www.kayasadhak.com/yoga-teacher-training/500-hour-ttc",
+          "status": "written"
+        },
+        {
+          "title": "Residential Yoga Teacher Training at Rishikesh Sai Ghat",
+          "keyword": "yoga teacher training rishikesh ashram",
+          "volume": 3200,
+          "template": "landing-page",
+          "wordCount": 1800,
+          "url": "https://www.kayasadhak.com/yoga-teacher-training/locations/rishikesh",
+          "status": "written"
+        }
+      ]
+    }
+  ],
+  "links": [
+    { "from": "pillar", "to": "https://www.kayasadhak.com/pricing", "type": "mandatory", "anchor": "transparent home yoga pricing tiers" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/book-a-free-class", "type": "mandatory", "anchor": "book a free trial class at home" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/services/personal-fitness-trainer", "type": "mandatory", "anchor": "personal fitness trainer at home" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/services/corporate-yoga", "type": "mandatory", "anchor": "corporate yoga programs" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/services/senior-citizen-yoga", "type": "mandatory", "anchor": "senior citizen yoga at home" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/services/kids-yoga", "type": "mandatory", "anchor": "kids yoga sessions" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/services/prenatal-postnatal-yoga", "type": "mandatory", "anchor": "prenatal and postnatal yoga" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/yoga-for-conditions/back-pain", "type": "mandatory", "anchor": "therapeutic yoga for back pain" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/yoga-for-conditions/pcod-pcos", "type": "mandatory", "anchor": "yoga for PCOD and PCOS" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/yoga-for-conditions/thyroid", "type": "mandatory", "anchor": "yoga for thyroid regulation" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/yoga-for-conditions/weight-loss", "type": "mandatory", "anchor": "dynamic yoga for weight loss" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/yoga-teacher-at-home/delhi/south-delhi", "type": "mandatory", "anchor": "home yoga teachers in South Delhi" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/studio-noida-sector-45", "type": "mandatory", "anchor": "Sector 45 Noida Yoga Studio" },
+    { "from": "pillar", "to": "https://www.kayasadhak.com/yoga-teacher-training/200-hour-ttc", "type": "mandatory", "anchor": "200-Hour Yoga Teacher Training" },
+    { "from": "https://www.kayasadhak.com/pricing", "to": "pillar", "type": "mandatory", "anchor": "personal yoga teacher at home" },
+    { "from": "https://www.kayasadhak.com/pricing", "to": "https://www.kayasadhak.com/book-a-free-class", "type": "cluster", "anchor": "claim your free home assessment" },
+    { "from": "https://www.kayasadhak.com/services/personal-fitness-trainer", "to": "pillar", "type": "mandatory", "anchor": "home yoga instructor" },
+    { "from": "https://www.kayasadhak.com/services/personal-fitness-trainer", "to": "https://www.kayasadhak.com/pricing", "type": "cluster", "anchor": "trainer tier rates" },
+    { "from": "https://www.kayasadhak.com/book-a-free-class", "to": "pillar", "type": "mandatory", "anchor": "KayaSadhak home yoga service" },
+    { "from": "https://www.kayasadhak.com/services/corporate-yoga", "to": "pillar", "type": "mandatory", "anchor": "private home yoga sessions" },
+    { "from": "https://www.kayasadhak.com/services/senior-citizen-yoga", "to": "pillar", "type": "mandatory", "anchor": "certified home yoga instructors" },
+    { "from": "https://www.kayasadhak.com/services/kids-yoga", "to": "pillar", "type": "mandatory", "anchor": "family home yoga instruction" },
+    { "from": "https://www.kayasadhak.com/services/prenatal-postnatal-yoga", "to": "pillar", "type": "mandatory", "anchor": "personalized home yoga teachers" },
+    { "from": "https://www.kayasadhak.com/yoga-for-conditions/back-pain", "to": "pillar", "type": "mandatory", "anchor": "1-on-1 home yoga instruction" },
+    { "from": "https://www.kayasadhak.com/yoga-for-conditions/back-pain", "to": "https://www.kayasadhak.com/pricing", "type": "cross-cluster", "anchor": "therapeutic home yoga pricing" },
+    { "from": "https://www.kayasadhak.com/yoga-for-conditions/pcod-pcos", "to": "pillar", "type": "mandatory", "anchor": "personal home yoga teacher" },
+    { "from": "https://www.kayasadhak.com/yoga-for-conditions/thyroid", "to": "pillar", "type": "mandatory", "anchor": "customized home yoga program" },
+    { "from": "https://www.kayasadhak.com/yoga-for-conditions/weight-loss", "to": "pillar", "type": "mandatory", "anchor": "home yoga personal training" },
+    { "from": "https://www.kayasadhak.com/yoga-teacher-at-home/delhi/south-delhi", "to": "pillar", "type": "mandatory", "anchor": "Delhi NCR home yoga" },
+    { "from": "https://www.kayasadhak.com/studio-noida-sector-45", "to": "pillar", "type": "mandatory", "anchor": "home yoga teachers across NCR" },
+    { "from": "https://www.kayasadhak.com/studio-noida-sector-45", "to": "https://www.kayasadhak.com/yoga-teacher-training/200-hour-ttc", "type": "cross-cluster", "anchor": "on-site YTT batches" },
+    { "from": "https://www.kayasadhak.com/yoga-teacher-training/200-hour-ttc", "to": "pillar", "type": "mandatory", "anchor": "KayaSadhak master faculty" },
+    { "from": "https://www.kayasadhak.com/yoga-teacher-training/locations/rishikesh", "to": "https://www.kayasadhak.com/yoga-teacher-training/200-hour-ttc", "type": "cluster", "anchor": "200-Hour TTC syllabus" }
+  ],
+  "serp_matrix": {
+    "keywords": [
+      "personal yoga teacher at home delhi ncr",
+      "yoga teacher at home cost in delhi",
+      "personal fitness trainer at home delhi",
+      "free trial yoga class at home delhi",
+      "corporate yoga classes delhi ncr",
+      "yoga for back pain at home delhi",
+      "yoga for weight loss at home delhi",
+      "yoga teacher at home south delhi",
+      "yoga teacher in noida sector 45",
+      "200 hour yoga teacher training course delhi",
+      "yoga teacher training rishikesh ashram"
+    ],
+    "scores": [
+      [10, 6, 5, 6, 4, 3, 3, 7, 5, 2, 1],
+      [6, 10, 4, 5, 3, 2, 2, 4, 3, 1, 1],
+      [5, 4, 10, 4, 3, 2, 4, 4, 3, 1, 0],
+      [6, 5, 4, 10, 3, 3, 3, 5, 4, 1, 0],
+      [4, 3, 3, 3, 10, 1, 2, 3, 2, 1, 0],
+      [3, 2, 2, 3, 1, 10, 5, 2, 1, 0, 0],
+      [3, 2, 4, 3, 2, 5, 10, 3, 1, 0, 0],
+      [7, 4, 4, 5, 3, 2, 3, 10, 4, 1, 0],
+      [5, 3, 3, 4, 2, 1, 1, 4, 10, 2, 1],
+      [2, 1, 1, 1, 1, 0, 0, 1, 2, 10, 6],
+      [1, 1, 0, 0, 0, 0, 0, 0, 1, 6, 10]
+    ]
+  },
+  "scorecard": {
+    "coverage": 1.0,
+    "linkDensity": 3.8,
+    "orphanPages": 0,
+    "cannibalization": 0,
+    "contentGaps": 0
+  }
+}

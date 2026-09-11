@@ -1,0 +1,18 @@
+import { MetadataRoute } from 'next';
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
+      },
+      {
+        userAgent: ['PerplexityBot', 'GPTBot', 'ClaudeBot', 'Google-Extended', 'Amazonbot'],
+        allow: '/',
+      },
+    ],
+    sitemap: 'https://www.kayasadhak.com/sitemap.xml',
+  };
+}

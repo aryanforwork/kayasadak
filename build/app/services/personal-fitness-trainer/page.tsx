@@ -23,27 +23,25 @@ import {
 } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Personal Fitness Trainer at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+  title: 'Personal Fitness Trainer at Home | Delhi NCR | KayaSadhak',
   description:
-    'Certified 1-on-1 personal fitness trainer at your home across Delhi NCR & Chandigarh Tricity. Silver (₹1,000), Gold (₹1,500), Platinum (₹2,000) tiers. Book a home trial on WhatsApp.',
+    'Certified 1-on-1 personal fitness trainer at home across Delhi NCR & Chandigarh Tricity. Silver (₹1,000), Gold (₹1,500), Platinum (₹2,000). Free trial.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/services/personal-fitness-trainer',
   },
   openGraph: {
-    title: 'Personal Fitness Trainer at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+    title: 'Personal Fitness Trainer at Home | Delhi NCR | KayaSadhak',
     description:
-      'Certified 1-on-1 personal fitness trainer at your home across Delhi NCR & Chandigarh Tricity. Silver (₹1,000), Gold (₹1,500), Platinum (₹2,000) tiers. Book a home trial on WhatsApp.',
+      'Certified 1-on-1 personal fitness trainer at home across Delhi NCR & Chandigarh Tricity. Silver (₹1,000), Gold (₹1,500), Platinum (₹2,000). Free trial.',
     url: 'https://www.kayasadhak.com/services/personal-fitness-trainer',
     siteName: 'KayaSadhak',
-    images: [
-      {
-        url: 'https://www.kayasadhak.com/images/hero_personal_fitness_trainer.jpg',
-        width: 1200,
-        height: 675,
-        alt: 'Personal Fitness Trainer Coaching Client at Home',
-      },
-    ],
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Personal Fitness Trainer at Home | Delhi NCR | KayaSadhak',
+    description:
+      'Certified 1-on-1 personal fitness trainer at home across Delhi NCR & Chandigarh Tricity. Silver (₹1,000), Gold (₹1,500), Platinum (₹2,000). Free trial.',
   },
 };
 
@@ -240,10 +238,10 @@ export default function PersonalFitnessTrainerPage() {
         <img
           src="/images/hero_personal_fitness_trainer.jpg"
           alt="Personal Fitness Trainer Coaching Client at Home in Delhi NCR & Chandigarh Tricity"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-70 scale-105 transition-opacity duration-500"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

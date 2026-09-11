@@ -20,17 +20,23 @@ import {
 export const metadata: Metadata = {
   title: 'Personal Yoga Teacher at Home in Noida | KayaSadhak',
   description:
-    'Verified personal yoga instructors at home across Noida — Sector 45, 50, 62, 78, 93, 104, 137 & Expressway. Also visit our Sector 45 studio. From ₹500/session.',
+    'Certified 1-on-1 yoga teachers at home in Noida — Sectors 15, 18, 50, 74-78, 137 & Expressway. Silver, Gold & Platinum tiers. Free trial session.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-teacher-at-home/noida',
   },
   openGraph: {
     title: 'Personal Yoga Teacher at Home in Noida | KayaSadhak',
     description:
-      'Verified personal yoga instructors at home across Noida. Platinum, Gold & Silver tiers. Plus our walk-in studio in Sector 45, Noida.',
+      'Certified 1-on-1 yoga teachers at home in Noida — Sectors 15, 18, 50, 74-78, 137 & Expressway. Silver, Gold & Platinum tiers. Free trial session.',
     url: 'https://www.kayasadhak.com/yoga-teacher-at-home/noida',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Personal Yoga Teacher at Home in Noida | KayaSadhak',
+    description:
+      'Certified 1-on-1 yoga teachers at home in Noida — Sectors 15, 18, 50, 74-78, 137 & Expressway. Silver, Gold & Platinum tiers. Free trial session.',
   },
 };
 
@@ -97,9 +103,38 @@ export default function NoidaLocalityPage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Delhi NCR Home Yoga',
+        item: 'https://www.kayasadhak.com/services/yoga-at-home',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Noida Sectors',
+        item: 'https://www.kayasadhak.com/yoga-teacher-at-home/noida',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body space-y-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

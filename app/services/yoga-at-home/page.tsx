@@ -9,19 +9,25 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaUserCheck, FaMapMarkerAlt, FaShieldAlt, FaClock, FaCalendarAlt } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Personal Yoga Teacher at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+  title: 'Personal Yoga Teacher at Home in Delhi NCR | KayaSadhak',
   description:
-    'Certified yoga teacher at your home in Delhi NCR & Chandigarh Tricity. Transparent Silver, Gold & Platinum pricing from ₹500/session. Free trial on WhatsApp.',
+    'Book verified female & male personal yoga teachers at home across Delhi NCR & Chandigarh. Silver, Gold & Platinum tiers. Free trial session.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/services/yoga-at-home',
   },
   openGraph: {
-    title: 'Personal Yoga Teacher at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+    title: 'Personal Yoga Teacher at Home in Delhi NCR | KayaSadhak',
     description:
-      'Certified yoga teacher at your home in Delhi NCR & Chandigarh Tricity. Transparent Silver, Gold & Platinum pricing from ₹500/session. Free trial on WhatsApp.',
+      'Book verified female & male personal yoga teachers at home across Delhi NCR & Chandigarh. Silver, Gold & Platinum tiers. Free trial session.',
     url: 'https://www.kayasadhak.com/services/yoga-at-home',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Personal Yoga Teacher at Home in Delhi NCR | KayaSadhak',
+    description:
+      'Book verified female & male personal yoga teachers at home across Delhi NCR & Chandigarh. Silver, Gold & Platinum tiers. Free trial session.',
   },
 };
 
@@ -171,9 +177,38 @@ export default function YogaAtHomePage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://www.kayasadhak.com/services/yoga-at-home',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Yoga at Home',
+        item: 'https://www.kayasadhak.com/services/yoga-at-home',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -188,10 +223,10 @@ export default function YogaAtHomePage() {
         <img
           src="/images/hero_home_yoga_ncr.webp"
           alt="Personal Yoga Teacher at Home in Delhi NCR & Chandigarh Tricity"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-75 scale-105 transition-opacity duration-500"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

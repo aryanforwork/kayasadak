@@ -168,8 +168,8 @@ export const HeroSlider: React.FC = () => {
             />
 
             {/* Gradient Overlays for Contrast */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/30 sm:to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
           </div>
         );
       })}

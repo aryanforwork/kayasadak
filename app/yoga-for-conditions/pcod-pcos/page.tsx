@@ -9,19 +9,25 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaShieldAlt, FaFemale, FaHeartbeat, FaLeaf } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Yoga for PCOD & PCOS at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+  title: 'Yoga for PCOD & PCOS at Home | Delhi NCR | KayaSadhak',
   description:
-    'Therapeutic 1-on-1 yoga at home for PCOD/PCOS hormonal balance in Delhi NCR & Chandigarh Tricity — pelvic circulation & stress reduction focus. Not medical advice. Enquire.',
+    'Therapeutic 1-on-1 yoga at home for PCOD/PCOS hormonal balance in Delhi NCR & Chandigarh — pelvic circulation & stress relief. Not medical advice.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-for-conditions/pcod-pcos',
   },
   openGraph: {
-    title: 'Yoga for PCOD & PCOS at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+    title: 'Yoga for PCOD & PCOS at Home | Delhi NCR | KayaSadhak',
     description:
-      'Therapeutic 1-on-1 yoga at home for PCOD/PCOS hormonal balance in Delhi NCR & Chandigarh Tricity — pelvic circulation & stress reduction focus. Not medical advice. Enquire.',
+      'Therapeutic 1-on-1 yoga at home for PCOD/PCOS hormonal balance in Delhi NCR & Chandigarh — pelvic circulation & stress relief. Not medical advice.',
     url: 'https://www.kayasadhak.com/yoga-for-conditions/pcod-pcos',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Yoga for PCOD & PCOS at Home | Delhi NCR | KayaSadhak',
+    description:
+      'Therapeutic 1-on-1 yoga at home for PCOD/PCOS hormonal balance in Delhi NCR & Chandigarh — pelvic circulation & stress relief. Not medical advice.',
   },
 };
 
@@ -89,9 +95,38 @@ export default function PcodPcosYogaPage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Yoga for Conditions',
+        item: 'https://www.kayasadhak.com/yoga-for-conditions/back-pain',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'PCOD & PCOS Care',
+        item: 'https://www.kayasadhak.com/yoga-for-conditions/pcod-pcos',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
@@ -106,10 +141,10 @@ export default function PcodPcosYogaPage() {
         <img
           src="/images/hero_pcod_yoga.jpg"
           alt="Yoga for PCOD & PCOS Hormonal Balance"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

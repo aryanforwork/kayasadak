@@ -9,19 +9,25 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaUserCheck, FaHeart, FaShieldAlt, FaChair, FaWalking } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Senior Citizen Yoga at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+  title: 'Senior Citizen Yoga at Home in Delhi NCR | KayaSadhak',
   description:
-    'Gentle chair yoga, joint mobility & fall-prevention sessions for seniors, taught at home in Delhi NCR & Chandigarh Tricity. From ₹500/session. Free trial.',
+    'Gentle chair & floor yoga at home for senior citizens in Delhi NCR & Chandigarh. Joint mobility, balance & fall prevention. Verified teachers.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/services/senior-citizen-yoga',
   },
   openGraph: {
-    title: 'Senior Citizen Yoga at Home in Delhi NCR & Chandigarh Tricity | KayaSadhak',
+    title: 'Senior Citizen Yoga at Home in Delhi NCR | KayaSadhak',
     description:
-      'Gentle chair yoga, joint mobility & fall-prevention sessions for seniors, taught at home in Delhi NCR & Chandigarh Tricity. From ₹500/session. Free trial.',
+      'Gentle chair & floor yoga at home for senior citizens in Delhi NCR & Chandigarh. Joint mobility, balance & fall prevention. Verified teachers.',
     url: 'https://www.kayasadhak.com/services/senior-citizen-yoga',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Senior Citizen Yoga at Home in Delhi NCR | KayaSadhak',
+    description:
+      'Gentle chair & floor yoga at home for senior citizens in Delhi NCR & Chandigarh. Joint mobility, balance & fall prevention. Verified teachers.',
   },
 };
 
@@ -171,9 +177,38 @@ export default function SeniorCitizenYogaPage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://www.kayasadhak.com/services/yoga-at-home',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Senior Citizen Yoga',
+        item: 'https://www.kayasadhak.com/services/senior-citizen-yoga',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -188,10 +223,10 @@ export default function SeniorCitizenYogaPage() {
         <img
           src="/images/card_senior_yoga.webp"
           alt="Senior Citizen Yoga at Home"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">

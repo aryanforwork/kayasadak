@@ -11,11 +11,81 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.kayasadhak.com/contact-us',
   },
+  openGraph: {
+    title: 'Contact KayaSadhak | Call or WhatsApp +91-8273264561',
+    description:
+      'Contact KayaSadhak for home yoga tutor booking, YTT course enrollment, or corporate wellness inquiries. Call/WhatsApp +91-8273264561 or email us.',
+    url: 'https://www.kayasadhak.com/contact-us',
+    siteName: 'KayaSadhak',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact KayaSadhak | Call or WhatsApp +91-8273264561',
+    description:
+      'Contact KayaSadhak for home yoga tutor booking, YTT course enrollment, or corporate wellness inquiries. Call/WhatsApp +91-8273264561 or email us.',
+  },
 };
 
 export default function ContactPage() {
+  const contactSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    '@id': 'https://www.kayasadhak.com/contact-us#webpage',
+    url: 'https://www.kayasadhak.com/contact-us',
+    name: 'Contact KayaSadhak',
+    description: 'Direct contact details, WhatsApp line, phone, and address for KayaSadhak home yoga and YTT inquiries.',
+    mainEntity: {
+      '@type': 'LocalBusiness',
+      name: 'KayaSadhak',
+      telephone: '+91-8273264561',
+      email: 'contact@kayasadhak.com',
+      url: 'https://www.kayasadhak.com',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'BJ Residency, Sadarpur Main Road, Sector-45',
+        addressLocality: 'Noida',
+        addressRegion: 'Uttar Pradesh',
+        postalCode: '201303',
+        addressCountry: 'IN',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: '28.5447',
+        longitude: '77.3481',
+      },
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Contact Us',
+        item: 'https://www.kayasadhak.com/contact-us',
+      },
+    ],
+  };
+
   return (
     <div className="space-y-12 sm:space-y-20 pb-16 bg-[#F3EEE2] text-[#26241F]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Banner */}
       <section className="relative bg-[#16302B] text-white pt-10 sm:pt-16 pb-14 sm:pb-24 overflow-hidden border-b border-brand-gold-500/20">
         <div className="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style={{ backgroundImage: "url('/images/logo.webp')" }}></div>

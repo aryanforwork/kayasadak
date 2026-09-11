@@ -8,19 +8,25 @@ import { CONTACT_INFO } from '@/config/pricing';
 import { FaWhatsapp, FaPhoneAlt, FaMountain, FaOm, FaTree, FaHotel, FaPlane } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Yoga Teacher Training in Dharamshala | KayaSadhak',
+  title: 'Yoga Teacher Training in Dharamshala Himalayas | KayaSadhak',
   description:
-    'Residential 200/300/500-hour YTT in Dharamshala & McLeod Ganj — Himalayan meditation retreat setting. Tie-up with Yoga Alliance USA. Enquire now.',
+    'Immersive Himalayan Yoga TTC in Dharamshala McLeod Ganj in tie-up with Indian Federation of Yoga & Yoga Alliance USA. Pure mountain meditation & asana.',
   alternates: {
     canonical: 'https://www.kayasadhak.com/yoga-teacher-training/locations/dharamshala',
   },
   openGraph: {
-    title: 'Yoga Teacher Training in Dharamshala | KayaSadhak',
+    title: 'Yoga Teacher Training in Dharamshala Himalayas | KayaSadhak',
     description:
-      'Residential 200/300/500-hour YTT in Dharamshala & McLeod Ganj — Himalayan meditation retreat setting. Tie-up with Yoga Alliance USA. Enquire now.',
+      'Immersive Himalayan Yoga TTC in Dharamshala McLeod Ganj in tie-up with Indian Federation of Yoga & Yoga Alliance USA. Pure mountain meditation & asana.',
     url: 'https://www.kayasadhak.com/yoga-teacher-training/locations/dharamshala',
     siteName: 'KayaSadhak',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Yoga Teacher Training in Dharamshala Himalayas | KayaSadhak',
+    description:
+      'Immersive Himalayan Yoga TTC in Dharamshala McLeod Ganj in tie-up with Indian Federation of Yoga & Yoga Alliance USA. Pure mountain meditation & asana.',
   },
 };
 
@@ -83,9 +89,38 @@ export default function DharamshalaYTTPage() {
       },
     })),
   };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.kayasadhak.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Yoga Teacher Training',
+        item: 'https://www.kayasadhak.com/yoga-teacher-training/200-hour-ttc',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Dharamshala Retreat',
+        item: 'https://www.kayasadhak.com/yoga-teacher-training/locations/dharamshala',
+      }
+    ],
+  };
+
 
   return (
     <div className="pb-16 bg-[#F3EEE2] text-[#26241F] font-body">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
@@ -100,10 +135,10 @@ export default function DharamshalaYTTPage() {
         <img
           src="/images/hero_dharamshala_ytt.jpg"
           alt="Yoga Teacher Training in Dharamshala"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 scale-105 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
 
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16 text-white text-left">
           <div className="max-w-3xl space-y-4 sm:space-y-6">
